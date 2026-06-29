@@ -54,9 +54,8 @@ def _detect_format(ws) -> int:
     1 = narrative (G starts with date like "08/2015")
     2 = parallel columns (G and H are both numbered lists in separate columns)
     3 = consolidated prose (fallback — G contains plain prose, not a date or numbered list)
-    4 = row-per-project (each project is its own row; identified by the "Toimeksiantaja"
-        column header). Mandatory rows carry the first project; extra projects follow in
-        rows with empty B/C.
+    4 = row-per-project table (each project is its own row, with a labelled column header
+        row). Identified by a "Nro" header row that has several headed columns in G..N.
     Inspects only mandatory requirement rows for detection (1/2/3).
     """
     # Single pass over the sheet. Re-iterating an openpyxl read-only worksheet can
@@ -69,8 +68,11 @@ def _detect_format(ws) -> int:
         g = str(row[6]).strip() if len(row) > 6 and row[6] else ""
         h = str(row[7]).strip() if len(row) > 7 and row[7] else ""
 
-        # Format 4 (row-per-project) is identified by its distinctive column header.
-        if g == "Toimeksiantaja":
+        # Format 4 (row-per-project) is a column header row ("Nro" in B) with several
+        # headed project-attribute columns in G..N. Genuine Format 1/2/3 sheets have at
+        # most 1-2 headed columns there; row-per-project tables have 5+, so the threshold
+        # cleanly separates them and is template-agnostic (any client's column names work).
+        if str(b or "").strip() == "Nro" and sum(1 for i in range(6, 14) if _s(row, i)) >= _FMT4_MIN_HEADED:
             return 4
 
         if not _is_req_row(b) or not c or not g:
@@ -181,29 +183,42 @@ def _evidence_fmt2(row, is_scoring: bool) -> str:
     return "" if _is_template(val) else val
 
 
-# Format 4 columns: one project per row. Labels mirror the source column headers.
-_FMT4_LABELS = [
-    ("Toimeksiantaja", 6),
-    ("Yhteyshenkilö", 7),
-    ("Ajankohta", 8),
-    ("Projektin laajuus (htp)", 9),
-    ("Oma työmäärä (htp)", 10),
-    ("Rooli", 11),
-]
+# Format 4 (row-per-project) is header-driven: each project is a row, and evidence is
+# built from the columns that have a header, labelled by that header. Columns with no
+# header (e.g. a client's "Projekti 1" placeholder column) are ignored. The minimum number
+# of headed G..N columns that marks a sheet as a project table (vs a 1-2 column Format 1/2/3
+# sheet) — observed data shows a clean gap (Format 1/2/3 ≤ 2, project tables ≥ 5).
+_FMT4_MIN_HEADED = 4
 
-def _is_fmt4_project_row(row) -> bool:
-    """A continuation/project row: not a requirement row, not the header, has a client."""
+def _fmt4_header_cols(rows) -> list:
+    """[(col_index, label)] for the headed G..N columns of the 'Nro' header row."""
+    for row in rows:
+        if str((row[1] if len(row) > 1 else "") or "").strip() == "Nro":
+            cols = []
+            for i in range(6, 14):
+                label = _s(row, i)
+                if label:
+                    cols.append((i, re.sub(r"\s+", " ", label).strip()))
+            if len(cols) >= _FMT4_MIN_HEADED:
+                return cols
+    return []
+
+def _is_fmt4_project_row(row, header_cols) -> bool:
+    """A project/continuation row: not a requirement row, not a repeated header row,
+    and carrying a value in at least one headed column."""
     if _is_req_row(row[1] if len(row) > 1 else None):
         return False
-    g = _s(row, 6)
-    return bool(g) and g != "Toimeksiantaja"
+    if str((row[1] if len(row) > 1 else "") or "").strip() == "Nro":
+        return False
+    return any(_s(row, idx) for idx, _ in header_cols)
 
-def _evidence_fmt4(project_rows) -> str:
-    """One labelled block per project row, values verbatim, empty cells omitted."""
+def _evidence_fmt4(project_rows, header_cols) -> str:
+    """One labelled block per project row, values verbatim, empty cells omitted.
+    Labels are the source column headers; headerless columns are not included."""
     blocks = []
     for row in project_rows:
         lines = []
-        for label, idx in _FMT4_LABELS:
+        for idx, label in header_cols:
             val = _s(row, idx)
             if val:
                 lines.append(f"{label}: {val}")
@@ -273,10 +288,12 @@ def _extract_sheet_fmt4(ws, developer_name: str, role: str, rel_path: str,
                         file_name: str, mtime: str, today: str) -> list[dict]:
     """Format 4: each requirement's evidence spans several rows (one per project).
 
-    For each requirement row, gather its own project (columns G–L on that row) plus the
-    following continuation rows, until the next requirement row, header, or blank row.
+    The requirement row carries the first project; following continuation rows carry the
+    rest. Evidence is built from the headed columns (labelled by the source header row),
+    so headerless placeholder columns (e.g. a client's "Projekti 1") are ignored.
     """
     rows = list(ws.iter_rows(min_row=2, values_only=True))
+    header_cols = _fmt4_header_cols(rows)
     records = []
     i, n = 0, len(rows)
     while i < n:
@@ -292,11 +309,11 @@ def _extract_sheet_fmt4(ws, developer_name: str, role: str, rel_path: str,
 
         project_rows = [row]  # the requirement row carries the first project
         j = i + 1
-        while j < n and _is_fmt4_project_row(rows[j]):
+        while j < n and _is_fmt4_project_row(rows[j], header_cols):
             project_rows.append(rows[j])
             j += 1
 
-        evidence = _evidence_fmt4(project_rows)
+        evidence = _evidence_fmt4(project_rows, header_cols)
         if evidence:
             records.append({
                 "developer_name": developer_name,

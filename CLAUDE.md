@@ -60,7 +60,7 @@ Three formats — all use the same extraction principle (one req row → one rec
 - **Format 1 (narrative)**: G = date-prefixed free text per project line. evidence = G (mandatory) or H (scoring).
 - **Format 2 (parallel columns)**: Separate numbered lists in G=clients, H=projects, I=dates, J=roles, K=htp. evidence = each non-empty column stored verbatim under a label (never split/zipped, so unequal column lengths can't drop or mis-pair items). Free-text rows in a Format-2 sheet are stored verbatim without labels.
 - **Format 3 (consolidated prose)**: G = full prose narrative (mandatory); H = full prose (scoring). evidence = G or H verbatim.
-- **Format 4 (row-per-project)**: each project is its own row (G=client, H=contact, I=dates, J=project scope htp, K=own workload htp, L=role); the requirement row carries the first project, continuation rows (empty B/C) carry the rest. evidence = one labelled block per project, verbatim. Detected by the `Toimeksiantaja` column header.
+- **Format 4 (row-per-project table)**: header-driven layout where each project is its own row; the requirement row carries the first project, continuation rows carry the rest. evidence = one labelled block per project, one `Header: value` line per **headed** column (labels taken from the source header row; headerless placeholder columns like a client's `Projekti 1` are ignored). Detected by a `Nro` header row with ≥4 headed columns in G–N (Format 1/2/3 have ≤2). Different client templates (HUS, Istekki, etc.) all use this one path.
 
 Format detection is per-sheet in `_detect_format()`. Scans all mandatory requirement
 rows before deciding — does not short-circuit on plain-text rows (e.g. "Koulutus").

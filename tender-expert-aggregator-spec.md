@@ -208,32 +208,36 @@ Detection: both `[G]` and `[H]` cells start with `\d+\.\s*\S` (numbered list pat
 
 Detection: fallback — neither Format 1 nor Format 2 pattern found in any mandatory row.
 
-### Format 4 — Row-per-project
+### Format 4 — Row-per-project table
 
-Each requirement is a block with its own repeated column-header row, and **each past
-project occupies its own physical row** (not a numbered list inside one cell):
+A header-driven layout where the sheet has a labelled column-header row and **each past
+project occupies its own physical row** (not a numbered list inside one cell). Different
+tendering clients use different column sets (e.g. client / contact / dates / scope / workload
+/ role, or project description / scope / dates split across columns), so extraction is driven
+by the actual headers rather than fixed positions.
 
-- `[B]` = requirement number, `[C]` = requirement text, `[D]` = pakollisuus
-- `[G]` = client, `[H]` = client contact person, `[I]` = dates, `[J]` = project scope (htp),
-  `[K]` = expert's own workload (htp), `[L]` = role in project
+- The header row has `[B]` = `Nro` and several headed columns in `[G]`–`[N]`.
+- A requirement row (`[B]` = number, `[C]` = text) carries the first project; additional
+  projects follow in rows with empty/non-number `[B]`. Extraction gathers the requirement
+  row plus those continuation rows (stopping at the next requirement row, repeated header,
+  or a row with no value in any headed column).
 
-The requirement row carries the first project in `[G]`–`[L]`; additional projects follow in
-rows with empty `[B]`/`[C]`. Extraction gathers the requirement row plus those continuation
-rows (stopping at the next requirement row, header, or blank row).
-
-`evidence` = one labelled block per project, values verbatim, empty cells omitted:
+`evidence` = one labelled block per project, one `Header: value` line per **headed** column,
+values verbatim, empty cells omitted. Columns with **no header** are ignored — this is how a
+client's placeholder column (e.g. an unlabelled `[G]` holding `Projekti 1`, `Asiakkuus 1`) is
+dropped while the real data in the headed columns is kept. Example:
 ```
 Toimeksiantaja: Stora Enso Oyj
-Yhteyshenkilö: ...
-Ajankohta: 11/2024 - Jatkuu edelleen
+Ajankohta kk/vv-kk/vv: 11/2024 - Jatkuu edelleen
 Projektin laajuus (htp): 350
-Oma työmäärä (htp): 120
-Rooli: Cloud Architect
+...
 
 Toimeksiantaja: ...
 ```
 
-Detection: a column-header row whose `[G]` cell is exactly `Toimeksiantaja`.
+Detection: a `Nro` header row with at least 4 headed columns in `[G]`–`[N]`. Genuine
+Format 1/2/3 sheets have at most 1–2 headed columns there, so the threshold separates them
+cleanly and works for any client's column naming.
 
 ---
 
