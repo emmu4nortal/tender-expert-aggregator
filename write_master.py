@@ -59,9 +59,15 @@ HEADER_LABELS = {
 # ── dedupe key ────────────────────────────────────────────────────────────────
 
 def _dedupe_key(rec: dict) -> tuple:
+    # evidence is included so a mandatory row and a scoring row that share the same
+    # requirement_text (different requirement rows, different G/H evidence) are kept as
+    # the two distinct rows they are, instead of collapsing to one. Identical
+    # re-extractions still collapse (same evidence). evidence is an existing master
+    # column, so the sync path can reconstruct this key for existing rows.
     return (
         (rec.get("developer_name") or "").strip().lower(),
         (rec.get("requirement_text") or "").strip().lower(),
+        (rec.get("evidence") or "").strip(),
         (rec.get("source_relative_path") or "").strip(),
         (rec.get("source_sheet") or "").strip(),
     )
@@ -104,7 +110,7 @@ def load_records(json_path: Path) -> list[dict]:
 # ── row-level dedupe ──────────────────────────────────────────────────────────
 
 def dedupe(records: list[dict]) -> list[dict]:
-    """Keep newest mtime per (developer_name, requirement_text, source_relative_path, source_sheet)."""
+    """Keep newest mtime per (developer_name, requirement_text, evidence, source_relative_path, source_sheet)."""
     groups: dict[tuple, list[dict]] = {}
     for rec in records:
         key = _dedupe_key(rec)

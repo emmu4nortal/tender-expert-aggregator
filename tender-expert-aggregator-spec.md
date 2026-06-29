@@ -243,7 +243,13 @@ Detection: a column-header row whose `[G]` cell is exactly `Toimeksiantaja`.
 See section 5. Run by `dedupe.py` via `enumerate_candidates()`.
 
 ### Row-level (after extraction, before write)
-Dedup key: `(developer_name, requirement_text, source_relative_path, source_sheet)`
+Dedup key: `(developer_name, requirement_text, evidence, source_relative_path, source_sheet)`
+
+`evidence` is part of the key because one requirement can appear in a sheet as both a
+mandatory (`Pakollinen`) and a scoring (`Pisteytettävä`) row — different requirement rows
+with the same `requirement_text` but different evidence. They must stay as two rows, so the
+key must distinguish them; `evidence` is the field that does (and it is an existing column,
+so the sync path can reconstruct the key from the master).
 
 Keep the record with the lexicographically largest `source_last_modified` when duplicates
 exist. This handles:
@@ -304,7 +310,7 @@ files pending extraction.
 | `short_description` was constructed, not verbatim | `evidence` = verbatim source cell, never constructed |
 | `requirement_text` never captured | Column C captured as `requirement_text` |
 | `extraction_batches/` batch files have no traceability | New flow: one `extraction_batch.json` per sync run; source path in each record |
-| Dedup key used constructed fields | New dedup key uses structural fields (path, sheet, req number) |
+| Dedup key used constructed fields | New dedup key uses structural fields (developer, requirement_text, evidence, path, sheet) |
 | Full re-extraction required on schema change | After migration, incremental sync runs only changed files |
 | content_batch.json overwritten on each scan | Eliminated: new flow writes directly to extraction_batch.json |
 
@@ -348,7 +354,7 @@ Files to KEEP and UPDATE:
 Changes:
 - Replace `COLUMNS`, `COLUMN_WIDTHS`, `HEADER_LABELS` with the table in section 6.
 - Row height for data rows: 60 pt.
-- Update `dedupe()` key to `(developer_name, requirement_number, source_relative_path, source_sheet)`.
+- Update `dedupe()` key to `(developer_name, requirement_text, evidence, source_relative_path, source_sheet)`. (`requirement_number` is not stored — see Milestone 2 — so the key uses `evidence` to separate a requirement's mandatory and scoring rows.)
 - `load_records()`: no logic changes needed; `rec.get(col_key)` already handles new fields.
 
 **Exit criteria**: `write_master.py` imports cleanly; column constants match section 6 exactly.
@@ -379,21 +385,20 @@ For each expert sheet (skip helper sheets: "pisteet", "data-", "ohjeet"):
   1. Find developer_name: scan col D rows 10–20 for first non-empty, non-header value.
      Candidate header markers: "Asiantuntijan N rooli:" in col B same row.
   2. Find role: col B of that same row, strip "Asiantuntijan N rooli: " prefix.
-  3. Detect format (Format 1 / 2 / 3) by inspecting the first non-empty [G] cell
-     in a requirement row (see section 7 detection rules).
+  3. Detect format (Format 1 / 2 / 3 / 4) by inspecting requirement rows / the column
+     header (see section 7 detection rules).
   4. Walk rows:
-     a. If col B matches r'^[A-EZ]?\s?\d+' → this is a requirement row.
-     b. requirement_number = col B value (stripped)
-     c. requirement_text   = col C value
-     d. requirement_type   = "pakollinen" if col D contains "pakollinen" (case-insensitive),
-                             else "pisteytettävä"
-     e. Build evidence per format (section 7).
-     f. points = int(col G) if scoring row and col G is numeric, else null.
-     g. Skip row if evidence is None or is a template instruction (starts with
+     a. If col B matches r'^[A-EZ]?\s?\d+' → this is a requirement row (this gate is the
+        requirement-number check; the number itself is not stored).
+     b. requirement_text = col C value.
+     c. is scoring row? = col D contains "pisteytettävä" (case-insensitive). Used only to
+        pick the evidence column (G mandatory / H scoring); not stored as a field.
+     d. Build evidence per format (section 7).
+     e. Skip row if evidence is None or is a template instruction (starts with
         "Kuvaus", "Asiakkaat", "Toimeksiantojen").
-     h. Skip row if requirement_number is empty/None.
   5. technologies and domain_or_industry: leave as "" — filled in enrichment step.
-  6. Emit record with all fields from section 6.
+  6. Emit record with all fields from section 6. (requirement_number, requirement_type and
+     points are NOT stored — they are bookkeeping only and would not help the reader.)
 ```
 
 CLI:
