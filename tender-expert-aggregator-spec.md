@@ -165,39 +165,41 @@ Detection: `[G]` cell starts with a date pattern `\d{1,2}/\d{4}`.
 
 ### Format 2 — Parallel columns
 
-Each requirement row has separate numbered lists:
-- `[G]` = numbered client list
-- `[H]` = numbered project name list
-- `[I]` = numbered date list
-- `[J]` = numbered role list
-- `[K]` = numbered HTP list
-- `[L]` = description (often empty)
+Each requirement row has separate numbered lists in adjacent columns (client list, project
+list, dates, role, htp, …). The set and order of columns varies by client template, so the
+columns are **labelled from the sheet's own sub-header row** rather than by fixed position.
 
-`evidence` stores each non-empty source column **verbatim** under a label, never split
-or zipped:
+Each requirement section has a `Nro` header row followed by a **sub-header row** whose
+headed columns name the lists (the `Nro` row's `[G]` is just a section title like
+`Kuvaus vähimmäisvaatimuksen täyttymisestä`). The label is the header's first line.
+
+`evidence` stores each headed column **verbatim** under its header label, never split or
+zipped (zipping was abandoned because unequal column lengths silently dropped or mis-paired
+items). Headerless columns are skipped. Example:
 ```
 Asiakkaat:
 1. SSAB Europe Oy
 2. ...
 
-Projektit:
+Toimeksiantojen nimet:
 1. ...
 
-Ajankohta:
+Toimeksiantojen ajankohdat:
 ...
 ```
-Zipping into per-item lines was abandoned: the columns frequently have unequal lengths
-(a missing client/role, a wrapped cell, or a restarted sub-block), and positional zipping
-silently dropped fields or could mis-pair the wrong client with the wrong project. Storing
-the columns verbatim preserves the source exactly and is faithful to the "verbatim" rule.
+Driving labels from the sub-header row (instead of hardcoded positions) means a template
+with extra columns — e.g. a `Toimeksiantojen tarkennukset` description column and a
+`Projektin kokonaislaajuus` scope column — is labelled correctly and no column is dropped.
 
-A requirement row inside a Format-2 sheet whose primary column is **not** a numbered list
-(e.g. a free-text `Koulutus` or certification answer) is stored verbatim without labels,
-scanning the content columns for the answer.
+A requirement row whose first headed column is **not** a numbered list (e.g. a free-text
+`Koulutus` or certification answer) is stored verbatim without labels, joining the headed
+columns' values.
 
-Scoring rows are shifted one column right (`[G]` = numeric score, clients start at `[H]`).
+Scoring sections shift one column right (`[G]` = numeric score), which the sub-header row
+reflects automatically — its headed columns simply start at `[H]`.
 
-Detection: both `[G]` and `[H]` cells start with `\d+\.\s*\S` (numbered list pattern).
+Detection: both `[G]` and `[H]` cells of a requirement row start with `\d+\.\s*\S`
+(numbered list pattern).
 
 ### Format 3 — Consolidated prose
 

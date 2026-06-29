@@ -152,33 +152,38 @@ def _evidence_fmt1_fmt3(row, is_scoring: bool) -> str:
     return _s(row, 7 if is_scoring else 6)
 
 
-# Column labels for Format 2 evidence, in source order (clients..description).
-_FMT2_LABELS = ["Asiakkaat", "Projektit", "Ajankohta", "Rooli", "HTP", "Kuvaus"]
+# Fallback Format-2 column labels (source order G..L) when a sheet has no sub-header row.
+_FMT2_DEFAULT = [(6, "Asiakkaat"), (7, "Projektit"), (8, "Ajankohta"),
+                 (9, "Rooli"), (10, "HTP"), (11, "Kuvaus")]
 
-def _evidence_fmt2(row, is_scoring: bool) -> str:
+def _fmt2_header_map(row) -> list:
+    """[(col_index, label)] for the headed G..N columns of a Format-2 sub-header row.
+    The label is the header's first line (the rest is filler like "Vastauksesta tulee...").
+    Mandatory sections head columns from G; scoring sections from H (G is the score)."""
+    cols = [(i, _s(row, i).split("\n")[0].strip()) for i in range(6, 14) if _s(row, i)]
+    return cols if len(cols) >= 2 else []
+
+def _evidence_fmt2(row, header_cols) -> str:
     """
-    Format 2: parallel numbered-list columns. Stored verbatim — never split or
-    zipped — so unequal column lengths cannot silently drop or mis-pair items.
-
-    Mandatory rows  → clients=G(6) projects=H(7) dates=I(8) roles=J(9) htps=K(10) desc=L(11)
-    Scoring rows    → score=G(6)   clients=H(7) projects=I(8) dates=J(9) roles=K(10) htps=L(11) desc=M(12)
+    Format 2: parallel numbered-list columns. Stored verbatim — never split or zipped —
+    so unequal column lengths cannot silently drop or mis-pair items. Columns are labelled
+    by the sheet's own sub-header row (header_cols), so different templates' column sets and
+    orders are handled; headerless columns are skipped.
     """
-    primary = 7 if is_scoring else 6           # first content column (clients)
-    content_idx = range(primary, primary + 6)  # clients..description
+    first_idx = header_cols[0][0]
 
-    # Genuine parallel numbered lists → store each non-empty column verbatim, labelled.
-    if re.match(r'^\d+\.\s', _s(row, primary)):
+    # Genuine parallel numbered lists → store each headed column verbatim, labelled.
+    if re.match(r'^\d+\.\s', _s(row, first_idx)):
         blocks = []
-        for label, idx in zip(_FMT2_LABELS, content_idx):
+        for idx, label in header_cols:
             val = _s(row, idx)
             if val:
                 blocks.append(f"{label}:\n{val}")
         return "\n\n".join(blocks)
 
     # Free-text row inside a Format-2 sheet (e.g. "Koulutus", a certification answer).
-    # Not a column structure → join non-empty cells verbatim, no labels, no numbering.
-    # The answer may sit in any column (some rows leave clients empty), so scan all.
-    parts = [_s(row, idx) for idx in content_idx]
+    # Not a column structure → join non-empty headed cells verbatim, no labels.
+    parts = [_s(row, idx) for idx, _ in header_cols]
     val = "\n".join(p for p in parts if p)
     return "" if _is_template(val) else val
 
@@ -238,8 +243,12 @@ def _extract_sheet(ws, rel_path: str, file_name: str,
     if fmt == 4:
         return _extract_sheet_fmt4(ws, developer_name, role,
                                    rel_path, file_name, mtime, today)
+    if fmt == 2:
+        return _extract_sheet_fmt2(ws, developer_name, role,
+                                   rel_path, file_name, mtime, today)
     records = []
 
+    # Format 1/3: evidence is the single G (mandatory) or H (scoring) cell.
     for row in ws.iter_rows(min_row=2, values_only=True):
         if len(row) < 4:
             continue
@@ -255,17 +264,65 @@ def _extract_sheet(ws, rel_path: str, file_name: str,
 
         is_scoring = bool(d and "pisteytettävä" in str(d).lower())
 
-        if fmt == 2:
-            # Labelled Format-2 evidence starts with "Asiakkaat:" etc., which would
-            # false-match the template-noise list; its template filtering happens inside
-            # _evidence_fmt2 (free-text branch), so only the empty check applies here.
-            evidence = _evidence_fmt2(row, is_scoring)
-            if not evidence:
-                continue
-        else:
-            evidence = _evidence_fmt1_fmt3(row, is_scoring)
-            if not evidence or _is_template(evidence):
-                continue
+        evidence = _evidence_fmt1_fmt3(row, is_scoring)
+        if not evidence or _is_template(evidence):
+            continue
+
+        records.append({
+            "developer_name": developer_name,
+            "role": role,
+            "requirement_text": req_text,
+            "evidence": evidence,
+            "technologies": "",
+            "domain_or_industry": "",
+            "source_file_name": file_name,
+            "source_relative_path": rel_path,
+            "source_sheet": ws.title,
+            "source_last_modified": mtime,
+            "extracted_date": today,
+        })
+
+    return records
+
+
+def _extract_sheet_fmt2(ws, developer_name: str, role: str, rel_path: str,
+                        file_name: str, mtime: str, today: str) -> list[dict]:
+    """Format 2: parallel numbered-list columns, labelled by the sheet's own sub-header
+    row. Each requirement section has a "Nro" row followed by a sub-header row whose headed
+    columns name the lists; requirement rows in that section are labelled from it. This
+    handles templates with different column sets/orders (and the per-section scoring shift,
+    where the sub-header starts at H because G holds the score)."""
+    rows = list(ws.iter_rows(min_row=2, values_only=True))
+    records = []
+    headers = _FMT2_DEFAULT          # used until the first sub-header row is seen
+    prev_was_nro = False
+    for row in rows:
+        b = row[1] if len(row) > 1 else None
+        b_str = str(b or "").strip()
+
+        # The row right after a "Nro" row is the per-section sub-header row.
+        if prev_was_nro:
+            prev_was_nro = False
+            if not _is_req_row(b):
+                hm = _fmt2_header_map(row)
+                if hm:
+                    headers = hm
+                continue  # sub-header row is not a requirement
+        if b_str == "Nro":
+            prev_was_nro = True
+            continue
+
+        if not _is_req_row(b):
+            continue
+        req_text = str(row[2] or "").strip()  # col C
+        if not req_text or _is_template(req_text):
+            continue
+
+        # Labelled evidence starts with a header like "Asiakkaat:"; the empty check is the
+        # only gate here (template filtering happens in _evidence_fmt2's free-text branch).
+        evidence = _evidence_fmt2(row, headers)
+        if not evidence:
+            continue
 
         records.append({
             "developer_name": developer_name,

@@ -58,7 +58,7 @@ Lähdetiedosto | Polku | Taulukko | Tiedosto muokattu | Poimittu
 ## Source file format types
 Three formats — all use the same extraction principle (one req row → one record):
 - **Format 1 (narrative)**: G = date-prefixed free text per project line. evidence = G (mandatory) or H (scoring).
-- **Format 2 (parallel columns)**: Separate numbered lists in G=clients, H=projects, I=dates, J=roles, K=htp. evidence = each non-empty column stored verbatim under a label (never split/zipped, so unequal column lengths can't drop or mis-pair items). Free-text rows in a Format-2 sheet are stored verbatim without labels.
+- **Format 2 (parallel columns)**: Separate numbered lists in adjacent columns (clients, projects, dates, role, htp, …). evidence = each headed column stored verbatim (never split/zipped), labelled from the sheet's own **sub-header row** (the row below `Nro`; label = header's first line) so different templates' column sets/orders work and no column is dropped. Headerless columns skipped; free-text rows stored verbatim without labels.
 - **Format 3 (consolidated prose)**: G = full prose narrative (mandatory); H = full prose (scoring). evidence = G or H verbatim.
 - **Format 4 (row-per-project table)**: header-driven layout where each project is its own row; the requirement row carries the first project, continuation rows carry the rest. evidence = one labelled block per project, one `Header: value` line per **headed** column (labels taken from the source header row; headerless placeholder columns like a client's `Projekti 1` are ignored). Detected by a `Nro` header row with ≥4 headed columns in G–N (Format 1/2/3 have ≤2). Different client templates (HUS, Istekki, etc.) all use this one path.
 
