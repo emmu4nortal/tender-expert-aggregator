@@ -58,7 +58,7 @@ Lähdetiedosto | Polku | Taulukko | Tiedosto muokattu | Poimittu
 ## Source file format types
 Three formats — all use the same extraction principle (one req row → one record):
 - **Format 1 (narrative)**: G = date-prefixed free text per project line. evidence = G (mandatory) or H (scoring).
-- **Format 2 (parallel columns)**: Separate numbered lists in G=clients, H=projects, I=dates, J=roles, K=htp. evidence = columns joined per item.
+- **Format 2 (parallel columns)**: Separate numbered lists in G=clients, H=projects, I=dates, J=roles, K=htp. evidence = each non-empty column stored verbatim under a label (never split/zipped, so unequal column lengths can't drop or mis-pair items). Free-text rows in a Format-2 sheet are stored verbatim without labels.
 - **Format 3 (consolidated prose)**: G = full prose narrative (mandatory); H = full prose (scoring). evidence = G or H verbatim.
 
 Format detection is per-sheet in `_detect_format()`. Scans all mandatory requirement

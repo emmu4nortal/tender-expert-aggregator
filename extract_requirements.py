@@ -140,40 +140,35 @@ def _evidence_fmt1_fmt3(row, is_scoring: bool) -> str:
     return _s(row, 7 if is_scoring else 6)
 
 
+# Column labels for Format 2 evidence, in source order (clients..description).
+_FMT2_LABELS = ["Asiakkaat", "Projektit", "Ajankohta", "Rooli", "HTP", "Kuvaus"]
+
 def _evidence_fmt2(row, is_scoring: bool) -> str:
     """
-    Format 2: numbered lists in parallel columns, zipped into per-item lines.
+    Format 2: parallel numbered-list columns. Stored verbatim — never split or
+    zipped — so unequal column lengths cannot silently drop or mis-pair items.
 
     Mandatory rows  → clients=G(6) projects=H(7) dates=I(8) roles=J(9) htps=K(10) desc=L(11)
     Scoring rows    → score=G(6)   clients=H(7) projects=I(8) dates=J(9) roles=K(10) htps=L(11) desc=M(12)
     """
-    if is_scoring:
-        offsets = (7, 8, 9, 10, 11, 12)
-    else:
-        offsets = (6, 7, 8, 9, 10, 11)
+    primary = 7 if is_scoring else 6           # first content column (clients)
+    content_idx = range(primary, primary + 6)  # clients..description
 
-    def split_numbered(idx):
-        raw = _s(row, idx)
-        if not raw:
-            return []
-        items = []
-        for part in raw.split("\n"):
-            part = re.sub(r'^\d+\.\s*', '', part.strip())
-            if part:
-                items.append(part)
-        return items
+    # Genuine parallel numbered lists → store each non-empty column verbatim, labelled.
+    if re.match(r'^\d+\.\s', _s(row, primary)):
+        blocks = []
+        for label, idx in zip(_FMT2_LABELS, content_idx):
+            val = _s(row, idx)
+            if val:
+                blocks.append(f"{label}:\n{val}")
+        return "\n\n".join(blocks)
 
-    cols = [split_numbered(i) for i in offsets]
-    n = max((len(c) for c in cols), default=0)
-    if n == 0:
-        return ""
-
-    lines = []
-    for i in range(n):
-        parts = [c[i] for c in cols if i < len(c) and c[i]]
-        if parts:
-            lines.append(f"{i + 1}. " + " | ".join(parts))
-    return "\n".join(lines)
+    # Free-text row inside a Format-2 sheet (e.g. "Koulutus", a certification answer).
+    # Not a column structure → join non-empty cells verbatim, no labels, no numbering.
+    # The answer may sit in any column (some rows leave clients empty), so scan all.
+    parts = [_s(row, idx) for idx in content_idx]
+    val = "\n".join(p for p in parts if p)
+    return "" if _is_template(val) else val
 
 
 # ── per-sheet extraction ──────────────────────────────────────────────────────
@@ -202,12 +197,16 @@ def _extract_sheet(ws, rel_path: str, file_name: str,
         is_scoring = bool(d and "pisteytettävä" in str(d).lower())
 
         if fmt == 2:
+            # Labelled Format-2 evidence starts with "Asiakkaat:" etc., which would
+            # false-match the template-noise list; its template filtering happens inside
+            # _evidence_fmt2 (free-text branch), so only the empty check applies here.
             evidence = _evidence_fmt2(row, is_scoring)
+            if not evidence:
+                continue
         else:
             evidence = _evidence_fmt1_fmt3(row, is_scoring)
-
-        if not evidence or _is_template(evidence):
-            continue
+            if not evidence or _is_template(evidence):
+                continue
 
         records.append({
             "developer_name": developer_name,

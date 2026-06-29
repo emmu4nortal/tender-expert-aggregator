@@ -171,12 +171,31 @@ Each requirement row has separate numbered lists:
 - `[I]` = numbered date list
 - `[J]` = numbered role list
 - `[K]` = numbered HTP list
+- `[L]` = description (often empty)
 
-`evidence` = join G+H+I+J+K into per-item lines:
+`evidence` stores each non-empty source column **verbatim** under a label, never split
+or zipped:
 ```
-1. SSAB Europe Oy | Käyttöliittymä- ja UX-suunnittelu | 07/2024–11/2024 | Senior Service Designer | 80 htp
+Asiakkaat:
+1. SSAB Europe Oy
+2. ...
+
+Projektit:
+1. ...
+
+Ajankohta:
+...
 ```
-Parse by splitting each column on `\n`, then zip by index.
+Zipping into per-item lines was abandoned: the columns frequently have unequal lengths
+(a missing client/role, a wrapped cell, or a restarted sub-block), and positional zipping
+silently dropped fields or could mis-pair the wrong client with the wrong project. Storing
+the columns verbatim preserves the source exactly and is faithful to the "verbatim" rule.
+
+A requirement row inside a Format-2 sheet whose primary column is **not** a numbered list
+(e.g. a free-text `Koulutus` or certification answer) is stored verbatim without labels,
+scanning the content columns for the answer.
+
+Scoring rows are shifted one column right (`[G]` = numeric score, clients start at `[H]`).
 
 Detection: both `[G]` and `[H]` cells start with `\d+\.\s*\S` (numbered list pattern).
 
