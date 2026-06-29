@@ -1,0 +1,13 @@
+# Generated outputs — rebuilt by running the scripts
+state.json
+extraction_batch.json
+
+# Python
+__pycache__/
+*.py[cod]
+
+# macOS
+.DS_Store
+
+# Claude Code tool config (personal/local)
+.claude/
