@@ -208,6 +208,33 @@ Detection: both `[G]` and `[H]` cells start with `\d+\.\s*\S` (numbered list pat
 
 Detection: fallback — neither Format 1 nor Format 2 pattern found in any mandatory row.
 
+### Format 4 — Row-per-project
+
+Each requirement is a block with its own repeated column-header row, and **each past
+project occupies its own physical row** (not a numbered list inside one cell):
+
+- `[B]` = requirement number, `[C]` = requirement text, `[D]` = pakollisuus
+- `[G]` = client, `[H]` = client contact person, `[I]` = dates, `[J]` = project scope (htp),
+  `[K]` = expert's own workload (htp), `[L]` = role in project
+
+The requirement row carries the first project in `[G]`–`[L]`; additional projects follow in
+rows with empty `[B]`/`[C]`. Extraction gathers the requirement row plus those continuation
+rows (stopping at the next requirement row, header, or blank row).
+
+`evidence` = one labelled block per project, values verbatim, empty cells omitted:
+```
+Toimeksiantaja: Stora Enso Oyj
+Yhteyshenkilö: ...
+Ajankohta: 11/2024 - Jatkuu edelleen
+Projektin laajuus (htp): 350
+Oma työmäärä (htp): 120
+Rooli: Cloud Architect
+
+Toimeksiantaja: ...
+```
+
+Detection: a column-header row whose `[G]` cell is exactly `Toimeksiantaja`.
+
 ---
 
 ## 8. Deduplication

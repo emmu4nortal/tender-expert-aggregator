@@ -54,14 +54,24 @@ def _detect_format(ws) -> int:
     1 = narrative (G starts with date like "08/2015")
     2 = parallel columns (G and H are both numbered lists in separate columns)
     3 = consolidated prose (fallback — G contains plain prose, not a date or numbered list)
-    Inspects only mandatory requirement rows for detection.
+    4 = row-per-project (each project is its own row; identified by the "Toimeksiantaja"
+        column header). Mandatory rows carry the first project; extra projects follow in
+        rows with empty B/C.
+    Inspects only mandatory requirement rows for detection (1/2/3).
     """
+    # Single pass over the sheet. Re-iterating an openpyxl read-only worksheet can
+    # mis-read cells, so Format-4 detection is folded into this same loop rather than
+    # done in a separate pass.
     for row in ws.iter_rows(min_row=2, values_only=True):
         b = row[1] if len(row) > 1 else None
         c = row[2] if len(row) > 2 else None
         d = row[3] if len(row) > 3 else None
         g = str(row[6]).strip() if len(row) > 6 and row[6] else ""
         h = str(row[7]).strip() if len(row) > 7 and row[7] else ""
+
+        # Format 4 (row-per-project) is identified by its distinctive column header.
+        if g == "Toimeksiantaja":
+            return 4
 
         if not _is_req_row(b) or not c or not g:
             continue
@@ -171,6 +181,37 @@ def _evidence_fmt2(row, is_scoring: bool) -> str:
     return "" if _is_template(val) else val
 
 
+# Format 4 columns: one project per row. Labels mirror the source column headers.
+_FMT4_LABELS = [
+    ("Toimeksiantaja", 6),
+    ("Yhteyshenkilö", 7),
+    ("Ajankohta", 8),
+    ("Projektin laajuus (htp)", 9),
+    ("Oma työmäärä (htp)", 10),
+    ("Rooli", 11),
+]
+
+def _is_fmt4_project_row(row) -> bool:
+    """A continuation/project row: not a requirement row, not the header, has a client."""
+    if _is_req_row(row[1] if len(row) > 1 else None):
+        return False
+    g = _s(row, 6)
+    return bool(g) and g != "Toimeksiantaja"
+
+def _evidence_fmt4(project_rows) -> str:
+    """One labelled block per project row, values verbatim, empty cells omitted."""
+    blocks = []
+    for row in project_rows:
+        lines = []
+        for label, idx in _FMT4_LABELS:
+            val = _s(row, idx)
+            if val:
+                lines.append(f"{label}: {val}")
+        if lines:
+            blocks.append("\n".join(lines))
+    return "\n\n".join(blocks)
+
+
 # ── per-sheet extraction ──────────────────────────────────────────────────────
 
 def _extract_sheet(ws, rel_path: str, file_name: str,
@@ -179,6 +220,9 @@ def _extract_sheet(ws, rel_path: str, file_name: str,
     if _is_fake_name(developer_name):
         return []
     fmt = _detect_format(ws)
+    if fmt == 4:
+        return _extract_sheet_fmt4(ws, developer_name, role,
+                                   rel_path, file_name, mtime, today)
     records = []
 
     for row in ws.iter_rows(min_row=2, values_only=True):
@@ -221,6 +265,53 @@ def _extract_sheet(ws, rel_path: str, file_name: str,
             "source_last_modified": mtime,
             "extracted_date": today,
         })
+
+    return records
+
+
+def _extract_sheet_fmt4(ws, developer_name: str, role: str, rel_path: str,
+                        file_name: str, mtime: str, today: str) -> list[dict]:
+    """Format 4: each requirement's evidence spans several rows (one per project).
+
+    For each requirement row, gather its own project (columns G–L on that row) plus the
+    following continuation rows, until the next requirement row, header, or blank row.
+    """
+    rows = list(ws.iter_rows(min_row=2, values_only=True))
+    records = []
+    i, n = 0, len(rows)
+    while i < n:
+        row = rows[i]
+        if not _is_req_row(row[1] if len(row) > 1 else None):
+            i += 1
+            continue
+
+        req_text = str(row[2] or "").strip()  # col C
+        if not req_text or _is_template(req_text):
+            i += 1
+            continue
+
+        project_rows = [row]  # the requirement row carries the first project
+        j = i + 1
+        while j < n and _is_fmt4_project_row(rows[j]):
+            project_rows.append(rows[j])
+            j += 1
+
+        evidence = _evidence_fmt4(project_rows)
+        if evidence:
+            records.append({
+                "developer_name": developer_name,
+                "role": role,
+                "requirement_text": req_text,
+                "evidence": evidence,
+                "technologies": "",
+                "domain_or_industry": "",
+                "source_file_name": file_name,
+                "source_relative_path": rel_path,
+                "source_sheet": ws.title,
+                "source_last_modified": mtime,
+                "extracted_date": today,
+            })
+        i = j
 
     return records
 
