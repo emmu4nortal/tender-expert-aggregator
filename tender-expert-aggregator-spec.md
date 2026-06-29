@@ -1,6 +1,6 @@
 # Specification: Tender Expert Experience Aggregator (v2)
 
-> **Status**: v2 — all milestones 0–5 complete. 696 rows in master Excel, 549 source
+> **Status**: v2 — milestones 0–5 complete. 719 rows in master Excel, 549 source
 > files tracked. Milestone 6 (enrichment) is optional and not yet implemented.
 
 ---
@@ -105,7 +105,7 @@ This replaces the old project-centric model where one record = one project exper
 The old model was wrong because:
 - Source files are structured by requirement, not by project.
 - Splitting one requirement's multi-project evidence into multiple records lost context.
-- `requirement_text` (column C) and `requirement_number` (column B) were never captured.
+- `requirement_text` (column C) was never captured.
 - `short_description` was constructed, not verbatim.
 
 ### JSON record fields (`extraction_batch.json`)
@@ -114,7 +114,7 @@ The old model was wrong because:
 developer_name        — expert's full name
 role                  — role declared in the tender file
 requirement_text      — verbatim column C text (never transformed)
-evidence              — verbatim source cell content (never transformed; see format rules)
+evidence              — source experience text; verbatim cell for Formats 1/3, verbatim column values under labels for Formats 2/4 (see §7)
 technologies          — comma-separated tech tags (enrichment step; may be empty)
 domain_or_industry    — industry tags (enrichment step; may be empty)
 source_file_name      — basename of source file
@@ -140,7 +140,9 @@ extracted_date        — date extraction was run (YYYY-MM-DD)
 | J | source_last_modified | Tiedosto muokattu | 20 |
 | K | extracted_date | Poimittu | 14 |
 
-`requirement_text` and `evidence` are verbatim source cell values — never constructed or transformed.
+`requirement_text` is always the verbatim column-C value. `evidence` is the verbatim source
+cell for Formats 1/3; for the column/table Formats 2/4 it is the source column values stored
+verbatim under labels (never zipped or paraphrased) — see §7.
 
 Row height: 60 pt (evidence cells are multi-line). Freeze pane at B2. Auto-filter on row 1.
 
@@ -148,7 +150,7 @@ Row height: 60 pt (evidence cells are multi-line). Freeze pane at B2. Auto-filte
 
 ## 7. Source file format types
 
-Source files use one of three formats. `extract_requirements.py` detects the format
+Source files use one of four formats. `extract_requirements.py` detects the format
 per sheet and handles each accordingly.
 
 ### Format 1 — Narrative
@@ -313,7 +315,7 @@ files pending extraction.
 |---|---|
 | Flat cell dump lost row-level context | `extract_requirements.py` reads Excel row by row; groups B+C+D+G/H per requirement |
 | Multiple manual Claude Code sessions required for initial extraction | Deterministic script; no agent sessions for extraction |
-| `short_description` was constructed, not verbatim | `evidence` = verbatim source cell, never constructed |
+| `short_description` was constructed, not verbatim | `evidence` = source cell verbatim (Formats 1/3) or verbatim column values under labels (Formats 2/4) — never paraphrased |
 | `requirement_text` never captured | Column C captured as `requirement_text` |
 | `extraction_batches/` batch files have no traceability | New flow: one `extraction_batch.json` per sync run; source path in each record |
 | Dedup key used constructed fields | New dedup key uses structural fields (developer, requirement_text, evidence, path, sheet) |
@@ -322,7 +324,10 @@ files pending extraction.
 
 ---
 
-## 11. Milestones (remaining work)
+## 11. Milestones
+
+Milestones 0–5 are complete and are kept below as a build record. **Milestone 6
+(enrichment) is the only open/remaining milestone.**
 
 ### Milestone 0 — Codebase cleanup
 
@@ -415,8 +420,8 @@ python extract_requirements.py --all                   # extract all candidates 
 
 Output: `extraction_batch.json` (creates or overwrites).
 
-**Exit criteria**: Script runs on 3 test files (one per format) without error; output
-records have non-empty `requirement_number`, `requirement_text`, and `evidence` for all rows.
+**Exit criteria**: Script runs on test files (one per format) without error; output
+records have non-empty `requirement_text` and `evidence` for all rows.
 
 ---
 
@@ -426,12 +431,11 @@ records have non-empty `requirement_number`, `requirement_text`, and `evidence` 
 master Excel, and let the user verify the output before the full run.
 
 Steps:
-1. Run `extract_requirements.py` on sample files covering all three format types.
+1. Run `extract_requirements.py` on sample files covering all format types.
 2. Run `python run.py write extraction_batch.json` → writes sample master.
 3. User opens `Asiantuntijat_Master.xlsx` in OneDrive and inspects:
    - Are `requirement_text` values correct (verbatim column C)?
-   - Is `evidence` verbatim (not constructed)?
-   - Are `requirement_type` values correctly classified?
+   - Is `evidence` correct (verbatim cell for narrative/prose; correctly labelled columns for the table formats)?
    - Are row heights and column widths readable?
 4. User confirms or requests fixes before full run.
 
@@ -446,11 +450,11 @@ without approval.
 from scratch using the new schema.
 
 Steps:
-1. Run `python run.py sync --all` — enumerates all candidates, extracts every file via
-   `extract_requirements.py`, and writes the master.
+1. Run `python extract_requirements.py --all` then `python run.py write extraction_batch.json`
+   — extracts every candidate and rebuilds the master from scratch.
    - Cross-check: source paths in `extraction_batch_v1_backup.json` confirm which files
      were in the v1 master; all should still be present in the sync root.
-2. Verify: `python -c "import json; recs=json.load(open('extraction_batch.json')); print(len(recs), 'records,', sum(1 for r in recs if not r.get('requirement_number')), 'missing req numbers')"` → second number must be 0.
+2. Verify: `python -c "import json; recs=json.load(open('extraction_batch.json')); print(len(recs), 'records,', sum(1 for r in recs if not r.get('evidence')), 'missing evidence')"` → second number must be 0.
 3. Spot-checks:
    - Essi Suo-Heikki: should have ~5 rows (D1, D3, D8, D9, D10).
    - Mikko Keiho / Valtiokonttori: `evidence` must contain full date-prefixed narrative.
@@ -466,8 +470,9 @@ Steps:
 files. No full re-extraction, no manual steps.
 
 Changes to `run.py`:
-- Add `cmd_sync(force_all=False)` implementing the algorithm in section 9.
-- Wire `sync` and `sync --all` in `main()`.
+- Add `cmd_sync()` implementing the algorithm in section 9.
+- Wire `sync` in `main()`. (Full re-extraction is `extract_requirements.py --all` +
+  `run.py write`, not a `sync` flag — there is no `sync --all`.)
 - Remove or deprecate `scan` command (it produces `content_batch.json` for the old agent
   flow which no longer exists).
 - Update `status` to show pending new/changed file count.
@@ -480,7 +485,8 @@ rather than crashing, and `cmd_sync()` should report skipped files to the user.
 **Exit criteria**:
 - `python run.py sync` on a clean run → "0 files changed, nothing to do."
 - Manually touch a source file (update its mtime) → sync detects and re-extracts it.
-- `python run.py sync --all` re-extracts all files and produces same row count.
+- `python extract_requirements.py --all` + `python run.py write extraction_batch.json`
+  rebuilds all files and produces the same row count.
 
 ---
 
