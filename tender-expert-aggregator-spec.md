@@ -277,10 +277,10 @@ different evidence. They must stay as two rows, and `evidence` is what distingui
 `developer_name` already separates different experts.
 
 Keep the record with the lexicographically largest `source_last_modified` when duplicates
-exist. This handles:
+exist. Dedup always runs over the full batch (see §9), so this handles:
 - Same expert extracted twice from the same file (idempotent re-runs)
-- A file re-extracted after an edit (stale rows are first removed by path, then new rows
-  are deduped)
+- A file re-extracted after an edit (its batch records are replaced, then the whole set is
+  deduped — no stale rows even if it now yields fewer or zero records)
 - The same content in a draft and a final (or across tenders) — collapsed to one row
 
 ---
@@ -304,19 +304,32 @@ Full re-extraction of all files on every run is not acceptable.
 }
 ```
 
+### Source of truth: `extraction_batch.json`
+
+`extraction_batch.json` is the full, pre-dedup record set and the **single source of truth**.
+The master Excel is a generated artifact — **`master = dedup(extraction_batch.json)`**, rebuilt
+in full rather than patched in place. Nothing reads the master back. This is what keeps sync
+correct: re-extracting a file replaces *its* records in the batch, and dedup then runs over the
+whole current set, so a file that drops to 0 records loses its rows (no orphans), and content
+shared across files is never lost when one of them changes.
+
 ### `python run.py sync` — the daily command
 
 1. **Enumerate** candidates via `enumerate_candidates()` + file-level dedupe (`dedupe.py`).
 2. **Classify** each candidate: new (not in state), changed (mtime differs), unchanged.
 3. **Extract** only new and changed files using `extract_file()` from `extract_requirements.py`.
-   Records are held in memory — not written to `extraction_batch.json`.
-4. **Write** master via `_merge_and_write()`:
-   - Remove stale rows from master for the re-processed source paths.
-   - Merge new records.
-   - Dedup on key.
-   - Write Excel.
+4. **Update the batch and rebuild the master:**
+   - Load `extraction_batch.json`, group records by source path.
+   - Replace each successfully-processed file's records (0 records ⇒ empty ⇒ rows dropped).
+     Failed files (open errors) are left untouched so they retry next run.
+   - Write `extraction_batch.json`, then rebuild `master = dedup(batch)`.
 5. **Update** `state.json`: record new mtime/size for successfully processed files; update `last_run`.
    Failed files are reported but not marked as synced — they will be retried next run.
+
+`python run.py write <json>` follows the same model: it merges the json's records into the batch
+by source path (a partial json patches only its files; a full `--all` batch replaces everything)
+and rebuilds the master. **Not handled:** records for files deleted from disk are not pruned
+(a known deletion gap; a full `--all` reconciles it).
 
 If no files have changed since last run: print a summary and exit without writing.
 

@@ -83,6 +83,15 @@ and runs `_extract_fmt13_rows()` on each so every requirement is attributed to t
 take the single-expert path unchanged. Stacked-roster layouts that are Format 4 (one shared
 table for several listed experts) are not handled by this and remain a known gap.
 
+## Source of truth
+`extraction_batch.json` is the full, pre-dedup record set and the single source of truth. The
+master Excel is a generated artifact: **`master = dedup(extraction_batch.json)`**, rebuilt in
+full each time rather than patched in place. `sync` updates the batch per source file (replacing
+a re-extracted file's records — 0 records removes its rows, fixing orphans) and `write` merges a
+json into the batch by source path; both then rebuild the master. Nothing reads the master back.
+(Future Milestone 6 enrichment must therefore live in the batch or a content-keyed side table
+joined at rebuild time — never only on the regenerated master.)
+
 ## Scripts
 - `run.py` — main entry point. Commands: `sync`, `write <json>`, `status`
 - `extract_requirements.py` — deterministic requirement-row extractor; `--all` processes all candidates. A workbook that fails to open propagates the error (not silently treated as 0 records), so `run.py sync` reports it failed and retries it next run instead of marking it synced; `--all` logs and skips it.

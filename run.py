@@ -24,7 +24,11 @@ import openpyxl
 from config import SYNC_ROOT, MASTER_PATH, STATE_FILE
 from enumerate_candidates import enumerate_candidates
 from dedupe import deduplicate
-from write_master import load_records, dedupe, write_excel, HEADER_LABELS
+from write_master import load_records, dedupe, write_excel
+
+# The full, pre-dedup record set is the single source of truth; the master Excel is a generated
+# artifact rebuilt as dedup(batch). Same file extract_requirements.py --all writes.
+BATCH_FILE = Path(__file__).parent / "extraction_batch.json"
 
 
 # ── state helpers ─────────────────────────────────────────────────────────────
@@ -58,48 +62,34 @@ def file_key(path: Path) -> str:
     return _nfc(str(path.relative_to(SYNC_ROOT)))
 
 
-# ── master reader (shared by write and sync) ──────────────────────────────────
+# ── batch (source of truth) + master rebuild ──────────────────────────────────
 
-def _load_master_records() -> list[dict]:
-    """Read all rows from the existing master Excel, remapped to field keys."""
-    if not MASTER_PATH.exists():
+def _load_batch() -> list[dict]:
+    """Load the full pre-dedup record set from extraction_batch.json ([] if absent)."""
+    if not BATCH_FILE.exists():
         return []
-    try:
-        wb = openpyxl.load_workbook(MASTER_PATH)
-        ws = wb.active
-        headers = [cell.value for cell in ws[1]]
-        inv = {v: k for k, v in HEADER_LABELS.items()}
-        records = []
-        for row in ws.iter_rows(min_row=2, values_only=True):
-            rec = {}
-            for h, v in zip(headers, row):
-                key = inv.get(h, h)
-                rec[key] = str(v) if v is not None else ""
-            records.append(rec)
-        wb.close()
-        print(f"Existing master rows: {len(records)}")
-        return records
-    except Exception as e:
-        print(f"Warning: could not read existing master ({e}) — starting fresh")
-        return []
+    return load_records(BATCH_FILE)
 
 
-# ── merge + write (shared by write and sync) ──────────────────────────────────
+def _write_batch(records: list[dict]) -> None:
+    BATCH_FILE.write_text(json.dumps(records, ensure_ascii=False, indent=2), encoding="utf-8")
 
-def _merge_and_write(new_records: list[dict], existing_records: list[dict]) -> None:
-    """Remove stale rows for re-extracted sources, merge, dedupe, write master."""
-    new_sources = {_nfc(r["source_relative_path"]) for r in new_records if r.get("source_relative_path")}
-    kept_existing = [r for r in existing_records if _nfc(r.get("source_relative_path", "")) not in new_sources]
-    removed = len(existing_records) - len(kept_existing)
-    if removed:
-        print(f"Removed {removed} stale row(s) for re-extracted source(s)")
 
-    all_records = kept_existing + new_records
-    deduped = dedupe(all_records)
-    collapsed = len(all_records) - len(deduped)
-    print(f"Total after merge:  {len(all_records)}")
+def _group_by_path(records: list[dict]) -> dict:
+    """Group records by NFC source_relative_path (the per-file unit the batch is updated in)."""
+    groups: dict[str, list[dict]] = {}
+    for r in records:
+        groups.setdefault(_nfc(r.get("source_relative_path", "")), []).append(r)
+    return groups
+
+
+def _rebuild_master(records: list[dict]) -> None:
+    """Master = dedup(records). The batch is authoritative; the master is a generated artifact,
+    so it is rebuilt in full from the current record set rather than patched in place."""
+    deduped = dedupe(records)
+    collapsed = len(records) - len(deduped)
+    print(f"Batch records:      {len(records)}")
     print(f"After row dedupe:   {len(deduped)}  ({collapsed} duplicate(s) collapsed)")
-
     write_excel(deduped, MASTER_PATH)
     print(f"Master written to:  {MASTER_PATH}")
     print(f"Relative to root:   {MASTER_PATH.relative_to(SYNC_ROOT)}")
@@ -143,30 +133,37 @@ def cmd_sync() -> None:
         return
 
     print(f"\nExtracting {len(to_process)} file(s)...")
-    all_records: list[dict] = []
     failed: list[Path] = []
+    processed: dict[str, list[dict]] = {}   # file_key -> fresh records (may be empty)
     for i, path in enumerate(to_process, 1):
         label = file_key(path)
         print(f"  [{i}/{len(to_process)}] {label} ...", end="", flush=True)
         try:
             recs = extract_file(path)
-            print(f" {len(recs)} records")
-            all_records.extend(recs)
         except Exception as e:
             print(f" ERROR: {e}")
             failed.append(path)
+            continue
+        print(f" {len(recs)} records")
+        processed[label] = recs
 
-    print(f"\nExtracted {len(all_records)} record(s) from {len(to_process) - len(failed)} file(s).")
+    total_new = sum(len(r) for r in processed.values())
+    print(f"\nExtracted {total_new} record(s) from {len(processed)} file(s).")
     if failed:
         print(f"WARNING: {len(failed)} file(s) failed and will not be marked as synced:")
         for p in failed:
             print(f"  {file_key(p)}")
 
-    if all_records:
-        existing = _load_master_records()
-        _merge_and_write(all_records, existing)
-    else:
-        print("No records extracted — master unchanged.")
+    # Update the batch (source of truth): replace each successfully-processed file's records.
+    # A file that now yields 0 records gets an empty entry, so its old rows are dropped (fixes
+    # orphaned/stale rows). Failed files are left untouched so they retry next run. Then rebuild
+    # the master from the full batch, so dedupe always runs over the current record set.
+    batch_groups = _group_by_path(_load_batch())
+    for key, recs in processed.items():
+        batch_groups[key] = recs
+    merged = [r for recs in batch_groups.values() for r in recs]
+    _write_batch(merged)
+    _rebuild_master(merged)
 
     # Update state only for files that were successfully processed
     successful = [p for p in to_process if p not in failed]
@@ -188,11 +185,18 @@ def cmd_write(extraction_json: str) -> None:
         print(f"ERROR: {json_path} not found", file=sys.stderr)
         sys.exit(1)
 
-    new_records = load_records(json_path)
-    print(f"New records from extraction: {len(new_records)}")
+    incoming = load_records(json_path)
+    print(f"Records from {json_path.name}: {len(incoming)}")
 
-    existing = _load_master_records()
-    _merge_and_write(new_records, existing)
+    # Merge the incoming records into the batch by source path (replace those files' records),
+    # then rebuild the master. A partial json patches only its files; a full --all batch replaces
+    # everything. Writing the canonical batch keeps it and the master in lock-step.
+    batch_groups = _group_by_path(_load_batch())
+    for path, recs in _group_by_path(incoming).items():
+        batch_groups[path] = recs
+    merged = [r for recs in batch_groups.values() for r in recs]
+    _write_batch(merged)
+    _rebuild_master(merged)
 
 
 # ── status command ────────────────────────────────────────────────────────────
