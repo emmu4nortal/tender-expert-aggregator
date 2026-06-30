@@ -1,6 +1,6 @@
 # Specification: Tender Expert Experience Aggregator (v2)
 
-> **Status**: v2 — milestones 0–5 complete. 839 rows in master Excel, 549 source
+> **Status**: v2 — milestones 0–5 complete. 872 rows in master Excel, 549 source
 > files tracked. Milestone 6 (enrichment) is optional and not yet implemented.
 
 ---
@@ -423,8 +423,10 @@ For each expert sheet (skip helper sheets: "pisteet", "data-", "ohjeet"):
   3. Detect format (Format 1 / 2 / 3 / 4) by inspecting requirement rows / the column
      header (see section 7 detection rules).
   4. Walk rows:
-     a. If col B matches r'^[A-EZ]?\s?\d+' → this is a requirement row (this gate is the
-        requirement-number check; the number itself is not stored).
+     a. If col B matches `^[A-Z]{0,2}\s*\d+([.\-]\d{1,3})*\s*$` → this is a requirement row
+        (this gate is the requirement-number check; the number itself is not stored). The
+        pattern accepts sub-numbered ids (`1.1`, `1-2`, `7.12`); sub-parts are capped at 3
+        digits so date/year fragments do not match.
      b. requirement_text = col C value.
      c. Formats 1/3: evidence is read from the section's header-driven evidence column
         (`Kuvaus ... täyttymisestä` / `Kuvaus pisteytettäv...`), falling back to G/H; the

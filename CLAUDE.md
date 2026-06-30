@@ -28,7 +28,7 @@ Match on relative path from the sync root so only these top-level folders and th
 - No msal, no httpx, no anthropic SDK
 
 ## Current state
-All milestones 0–5 complete. 839 rows in master Excel at:
+All milestones 0–5 complete. 872 rows in master Excel at:
 `General/Referenssit/Asiantuntijat/Asiantuntijat_Master.xlsx`
 
 Daily sync: `python run.py sync`
@@ -94,4 +94,4 @@ table for several listed experts) are not handled by this and remain a known gap
 - `enumerate_candidates.py` — walks sync root, filters by keyword and excluded folders
 - `config.py` — SYNC_ROOT, MASTER_PATH, STATE_FILE, EXCLUDED_TOP_LEVEL constants
 - `state.json` — mtime+size per tracked file; updated by `run.py sync`
-- `extraction_batch.json` — last full extraction output (1093 records → 839 unique master rows)
+- `extraction_batch.json` — last full extraction output (1133 records → 872 unique master rows)

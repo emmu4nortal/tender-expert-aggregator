@@ -35,9 +35,12 @@ def _is_helper_sheet(name: str) -> bool:
 
 # ── requirement row detection ─────────────────────────────────────────────────
 
-# Matches "A 1", "A1", "A 10", "D 1", "10", "1" etc. — letter prefix is optional.
-# The $ anchor prevents matching long instruction texts that start with a letter+digit.
-_REQ_ROW_RE = re.compile(r'^[A-Z]{0,2}\s*\d+\s*$', re.IGNORECASE)
+# Matches "A 1", "A1", "A 10", "D 1", "10", "1", and sub-numbered ids like "1.1", "1-2",
+# "7.12", "2-3" — letter prefix is optional. Sub-number parts are capped at 3 digits so genuine
+# requirement ids match but date/year fragments (e.g. "1.2.2024-18.6.2024") do not. The $ anchor
+# prevents matching long instruction texts that start with a letter+digit. A value with no
+# separator reduces to the original pattern, so single-numbered rows match exactly as before.
+_REQ_ROW_RE = re.compile(r'^[A-Z]{0,2}\s*\d+([.\-]\d{1,3})*\s*$', re.IGNORECASE)
 
 def _is_req_row(b_val) -> bool:
     if b_val is None:
