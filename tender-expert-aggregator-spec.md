@@ -415,6 +415,11 @@ For each expert sheet (skip helper sheets: "pisteet", "data-", "ohjeet"):
      "Asiantuntijan N rooli:" marker (name in col D), an "Asiantuntijan nimi:" label (name in
      the adjacent cell, role from sheet title), or role-as-sheet-name (role in col B above the
      `Nro` header, name-like value in D/E). See section 7.
+  2. Multi-expert sheets (Format 1/3): if ≥2 `Asiantuntijan rooli:` markers are present, split
+     the sheet into per-expert blocks (marker_i .. marker_{i+1}) and extract each block with its
+     own name/role, so every requirement is attributed to the right person. <2 markers → one
+     expert over the whole sheet. (A Format-4 roster sheet listing several experts over one
+     shared table is a known gap, not handled here.)
   3. Detect format (Format 1 / 2 / 3 / 4) by inspecting requirement rows / the column
      header (see section 7 detection rules).
   4. Walk rows:
@@ -439,6 +444,10 @@ python extract_requirements.py --all                   # extract all candidates 
 ```
 
 Output: `extraction_batch.json` (creates or overwrites).
+
+A workbook that fails to open (locked, corrupt) propagates the error rather than returning an
+empty record list, so it is distinguishable from a genuinely empty sheet: `run.py sync` reports
+it failed and does not mark it synced (retried next run); `--all` logs and skips it.
 
 **Exit criteria**: Script runs on test files (one per format) without error; output
 records have non-empty `requirement_text` and `evidence` for all rows.

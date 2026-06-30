@@ -329,14 +329,44 @@ def _extract_sheet(ws, rel_path: str, file_name: str,
     if fmt == 2:
         return _extract_sheet_fmt2(ws, developer_name, role,
                                    rel_path, file_name, mtime, today)
-    records = []
 
-    # Format 1/3: evidence is the cell under the section's "Kuvaus ..." header. The column is
-    # tracked forward as section headers are passed (mandatory section, then scoring section),
-    # because its position varies by template (F/G/H). A sheet with no recognisable header
-    # falls back to the fixed G (mandatory) / H (scoring) columns.
+    # Format 1/3. A sheet can stack several experts, each opening with an "Asiantuntijan
+    # rooli:" marker (B = role, D = name) and carrying its own header rows + requirement rows.
+    # With ≥2 markers, split into per-expert blocks so each requirement is attributed to the
+    # right person; otherwise it is one expert over the whole sheet (the common case, unchanged).
+    rows = list(ws.iter_rows(min_row=2, values_only=True))
+    markers = [i for i, r in enumerate(rows)
+               if _ROLE_MARKER.search(_s(r, 1)) and _s(r, 3)]
+    if len(markers) >= 2:
+        records = []
+        for bi, start in enumerate(markers):
+            end = markers[bi + 1] if bi + 1 < len(markers) else len(rows)
+            mrow = rows[start]
+            bname = _s(mrow, 3)
+            if _is_fake_name(bname):
+                continue
+            # Role is usually appended after the marker in B; some templates (e.g. PRH) put the
+            # marker label alone in B and the role text in C, so fall back to C when B is bare.
+            brole = _ROLE_MARKER.sub("", _s(mrow, 1)).strip().rstrip(":") or _s(mrow, 2)
+            records += _extract_fmt13_rows(rows[start:end], bname, brole,
+                                           rel_path, file_name, ws.title, mtime, today)
+        return records
+    return _extract_fmt13_rows(rows, developer_name, role,
+                               rel_path, file_name, ws.title, mtime, today)
+
+
+def _extract_fmt13_rows(rows, developer_name: str, role: str, rel_path: str,
+                        file_name: str, sheet_title: str, mtime: str, today: str) -> list[dict]:
+    """Extract Format 1/3 records for ONE expert from a list of rows.
+
+    Evidence is read from the cell under the section's "Kuvaus ..." header, tracked forward as
+    section headers are passed (mandatory section, then scoring section), because its position
+    varies by template (F/G/H). A row range with no recognisable header falls back to the fixed
+    G (mandatory) / H (scoring) columns.
+    """
+    records = []
     cur_ev_col = None
-    for row in ws.iter_rows(min_row=2, values_only=True):
+    for row in rows:
         if len(row) < 4:
             continue
 
@@ -369,7 +399,7 @@ def _extract_sheet(ws, rel_path: str, file_name: str,
             "domain_or_industry": "",
             "source_file_name": file_name,
             "source_relative_path": rel_path,
-            "source_sheet": ws.title,
+            "source_sheet": sheet_title,
             "source_last_modified": mtime,
             "extracted_date": today,
         })
@@ -492,11 +522,10 @@ def extract_file(path: Path) -> list[dict]:
         mtime = ""
     today = date.today().isoformat()
 
-    try:
-        wb = openpyxl.load_workbook(path, read_only=True, data_only=True)
-    except Exception as e:
-        print(f"  ERROR opening {path.name}: {e}", file=sys.stderr)
-        return []
+    # Let an open failure propagate: a locked or corrupt file is NOT "0 records" — callers
+    # (run.py sync) must be able to tell the difference so they retry it next run instead of
+    # marking it synced. A genuinely empty sheet still returns [] below.
+    wb = openpyxl.load_workbook(path, read_only=True, data_only=True)
 
     records = []
     for ws in wb.worksheets:
@@ -544,7 +573,11 @@ def main():
         except ValueError:
             label = path.name
         print(f"[{i}/{len(paths)}] {label} ... ", end="", flush=True)
-        recs = extract_file(path)
+        try:
+            recs = extract_file(path)
+        except Exception as e:
+            print(f"ERROR: {e}")
+            continue
         print(f"{len(recs)} records")
         all_records.extend(recs)
 

@@ -76,9 +76,16 @@ Name/role is resolved per-sheet by `_find_name_role()`, trying three conventions
 cell, role from sheet title); and role-as-sheet-name layouts (role in col B above the `Nro`
 header, name-like value in D/E). This recovers submissions that earlier produced no rows.
 
+A Format 1/3 sheet can stack several experts, each opening with an `Asiantuntijan rooli:`
+marker. When ≥2 markers are present, `_extract_sheet` splits the sheet into per-expert blocks
+and runs `_extract_fmt13_rows()` on each so every requirement is attributed to the right person
+(role falls back to col C when the marker cell holds only the label). Sheets with <2 markers
+take the single-expert path unchanged. Stacked-roster layouts that are Format 4 (one shared
+table for several listed experts) are not handled by this and remain a known gap.
+
 ## Scripts
 - `run.py` — main entry point. Commands: `sync`, `write <json>`, `status`
-- `extract_requirements.py` — deterministic requirement-row extractor; `--all` processes all candidates
+- `extract_requirements.py` — deterministic requirement-row extractor; `--all` processes all candidates. A workbook that fails to open propagates the error (not silently treated as 0 records), so `run.py sync` reports it failed and retries it next run instead of marking it synced; `--all` logs and skips it.
 - `write_master.py` — Excel writer (11 columns, NFC path normalization). Row-level dedup key
   is `(developer_name, requirement_text, evidence)` — content only; source path/sheet are
   provenance, not identity, so the same fact across a draft and its final (or across tenders)
