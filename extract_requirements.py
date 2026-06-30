@@ -49,6 +49,13 @@ def _is_req_row(b_val) -> bool:
 
 _DATE_PREFIX = re.compile(r'^\d{1,2}/\d{4}')
 
+def _is_scoring(d) -> bool:
+    """True if the requirement-type tag marks a scored (vs mandatory) row. Keyed on the
+    stem 'pisteyt' so inflections (pisteytettävä, pisteytetään, pisteytys, …) all match.
+    'pisteet' (the score column) has no 'y' and is not matched."""
+    return bool(d and "pisteyt" in str(d).lower())
+
+
 def _detect_format(ws) -> int:
     """
     1 = narrative (G starts with date like "08/2015")
@@ -77,7 +84,7 @@ def _detect_format(ws) -> int:
 
         if not _is_req_row(b) or not c or not g:
             continue
-        if d and "pisteytettävä" in str(d).lower():
+        if _is_scoring(d):
             continue  # skip scoring rows for format detection
 
         if _DATE_PREFIX.match(g):
@@ -94,14 +101,70 @@ def _detect_format(ws) -> int:
 
 # Matches "Asiantuntijan rooli:", "Asiantuntijan 1 rooli:", "Asiantuntijan 1. rooli:"
 _ROLE_MARKER = re.compile(r'asiantuntijan[\s\d.]*rooli\s*:\s*', re.IGNORECASE)
+# Matches a "Asiantuntijan nimi:" label cell (name lives in an adjacent cell, not here).
+_NAME_LABEL = re.compile(r'^asiantuntijan\s+nimi\s*:?\s*$', re.IGNORECASE)
+
+
+def _looks_like_name(v: str) -> bool:
+    """Heuristic: 2-4 capitalised whitespace-separated tokens, no digits, not a template
+    label. Used only for structurally-anchored cells (a header row above the requirement
+    table), so the loose shape is acceptable."""
+    v = v.strip()
+    if not v or _is_fake_name(v) or any(ch.isdigit() for ch in v):
+        return False
+    toks = v.split()
+    return 2 <= len(toks) <= 4 and all(t[:1].isupper() for t in toks) and len(v) <= 40
+
 
 def _find_name_role(ws) -> tuple[str, str]:
-    for row in ws.iter_rows(min_row=1, max_row=50, values_only=True):
-        b = str(row[1] or "").strip() if len(row) > 1 else ""
-        d = str(row[3] or "").strip() if len(row) > 3 else ""
+    """Resolve (developer_name, role) for the sheet, trying three conventions in order:
+
+    1. an explicit "Asiantuntijan rooli:" marker in col B with the name in col D;
+    2. an "Asiantuntijan nimi:" label in col B with the name in the next non-empty cell;
+    3. role-as-sheet-name layouts: a header row above the requirement table whose col B is a
+       role label and whose col D or E holds a name-like value.
+
+    Patterns 2/3 are bounded to the rows before the first requirement row (where headers
+    live) and never override pattern 1, so files that already match pattern 1 are unchanged.
+    """
+    rows = list(ws.iter_rows(min_row=1, max_row=50, values_only=True))
+    title = ws.title.strip()
+
+    # Pattern 1 — explicit role marker (unchanged behaviour).
+    for row in rows:
+        b = _s(row, 1)
+        d = _s(row, 3)
         if _ROLE_MARKER.search(b) and d:
-            role = _ROLE_MARKER.sub("", b).strip().rstrip(":")
-            return d, role
+            return d, _ROLE_MARKER.sub("", b).strip().rstrip(":")
+
+    # Only scan the header area (above the requirement table) for patterns 2/3.
+    first_req = next((i for i, r in enumerate(rows)
+                      if _is_req_row(r[1] if len(r) > 1 else None)), len(rows))
+    header_rows = rows[:first_req]
+
+    # Pattern 2 — "Asiantuntijan nimi:" label with the name in an adjacent cell.
+    for row in header_rows:
+        if _NAME_LABEL.match(_s(row, 1)):
+            for ci in (2, 3, 4):  # C, D, E
+                v = _s(row, ci)
+                if v and not _is_fake_name(v):
+                    return v, title
+
+    # Pattern 3 — role in col B, name-like value in col D or E (role-as-sheet-name).
+    for row in header_rows:
+        b = _s(row, 1)
+        if not b or b == "Nro" or b.lower().startswith(("ohje", "tarjoajan nimi")):
+            continue
+        # B must be a role label, not itself a person name — otherwise this is a data row in a
+        # comparison/listing sheet, not a header, and would yield a bogus name/role pair.
+        if _looks_like_name(b):
+            continue
+        for ci in (3, 4):  # D, E
+            v = _s(row, ci)
+            if _looks_like_name(v):
+                role = b.split("\n")[0].strip().rstrip(":") or title
+                return v, role
+
     return "", ""
 
 
@@ -148,8 +211,28 @@ def _s(row, idx: int) -> str:
 # ── evidence builders ─────────────────────────────────────────────────────────
 
 def _evidence_fmt1_fmt3(row, is_scoring: bool) -> str:
-    """Format 1 and 3: G = mandatory evidence, H = scoring evidence."""
+    """Format 1 and 3 fallback: G = mandatory evidence, H = scoring evidence. Used only when a
+    sheet has no recognisable evidence-header row (see _fmt13_evidence_header)."""
     return _s(row, 7 if is_scoring else 6)
+
+
+def _fmt13_evidence_header(row) -> tuple:
+    """If `row` is a Format 1/3 section header, return (evidence_col_index, is_scoring);
+    otherwise None.
+
+    The evidence column is the one headed "Kuvaus ... täyttymisestä" (mandatory section) or
+    "Kuvaus pisteytettäv..." (scoring section). Its position varies by template (seen in F, G
+    and H), so it is located by header text instead of being assumed at G/H. The scoring test
+    is checked first because a scoring header can also contain "täyttymisestä"."""
+    for i in range(2, 14):  # scan C..N
+        s = _s(row, i).split("\n")[0].strip().lower()
+        if not s:
+            continue
+        if s.startswith("kuvaus pisteyt"):
+            return (i, True)
+        if s.startswith("kuvaus") and "täyttymisest" in s:
+            return (i, False)
+    return None
 
 
 # Fallback Format-2 column labels (source order G..L) when a sheet has no sub-header row.
@@ -248,7 +331,11 @@ def _extract_sheet(ws, rel_path: str, file_name: str,
                                    rel_path, file_name, mtime, today)
     records = []
 
-    # Format 1/3: evidence is the single G (mandatory) or H (scoring) cell.
+    # Format 1/3: evidence is the cell under the section's "Kuvaus ..." header. The column is
+    # tracked forward as section headers are passed (mandatory section, then scoring section),
+    # because its position varies by template (F/G/H). A sheet with no recognisable header
+    # falls back to the fixed G (mandatory) / H (scoring) columns.
+    cur_ev_col = None
     for row in ws.iter_rows(min_row=2, values_only=True):
         if len(row) < 4:
             continue
@@ -256,15 +343,20 @@ def _extract_sheet(ws, rel_path: str, file_name: str,
         b, c, d = row[1], row[2], row[3]
 
         if not _is_req_row(b):
+            # Non-requirement row: may be a section header that relocates the evidence column.
+            hdr = _fmt13_evidence_header(row)
+            if hdr is not None:
+                cur_ev_col = hdr[0]
             continue
 
         req_text = str(c or "").strip()
         if not req_text or _is_template(req_text):
             continue
 
-        is_scoring = bool(d and "pisteytettävä" in str(d).lower())
-
-        evidence = _evidence_fmt1_fmt3(row, is_scoring)
+        if cur_ev_col is not None:
+            evidence = _s(row, cur_ev_col)
+        else:
+            evidence = _evidence_fmt1_fmt3(row, _is_scoring(d))
         if not evidence or _is_template(evidence):
             continue
 
@@ -413,7 +505,11 @@ def extract_file(path: Path) -> list[dict]:
         records.extend(_extract_sheet(ws, rel, path.name, mtime, today))
 
     wb.close()
-    return records
+    # Drop rows whose evidence merely echoes the requirement text — that is a non-answer
+    # (seen when a layout has no real evidence column), not experience. Real evidence never
+    # equals the requirement verbatim.
+    return [r for r in records
+            if r["evidence"].strip().lower() != r["requirement_text"].strip().lower()]
 
 
 # ── CLI ───────────────────────────────────────────────────────────────────────

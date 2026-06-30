@@ -1,6 +1,6 @@
 # Specification: Tender Expert Experience Aggregator (v2)
 
-> **Status**: v2 — milestones 0–5 complete. 719 rows in master Excel, 549 source
+> **Status**: v2 — milestones 0–5 complete. 839 rows in master Excel, 549 source
 > files tracked. Milestone 6 (enrichment) is optional and not yet implemented.
 
 ---
@@ -158,12 +158,12 @@ per sheet and handles each accordingly.
 - `[B]` = requirement number
 - `[C]` = requirement text
 - `[D]` = "Pakollinen" or scoring scale text
-- `[G]` = full narrative evidence (date-prefixed lines, one project per line)
-- `[H]` = scoring evidence (for scoring rows)
+- evidence column = the one headed `Kuvaus ... täyttymisestä` (mandatory) / `Kuvaus
+  pisteytettäv...` (scoring) — narrative evidence, date-prefixed lines, one project per line
 
-`evidence` = `[G]` for mandatory rows, `[H]` for scoring rows.
+`evidence` = the cell under the section's evidence header (see "Header-driven columns" below).
 
-Detection: `[G]` cell starts with a date pattern `\d{1,2}/\d{4}`.
+Detection: evidence cell starts with a date pattern `\d{1,2}/\d{4}`.
 
 ### Format 2 — Parallel columns
 
@@ -205,12 +205,25 @@ Detection: both `[G]` and `[H]` cells of a requirement row start with `\d+\.\s*\
 
 ### Format 3 — Consolidated prose
 
-- Mandatory rows: `[G]` = full prose narrative per client+project+dates+role+htp+description
-- Scoring rows: `[G]` = numeric score, `[H]` = full prose narrative
+- Mandatory rows: evidence cell = full prose narrative per client+project+dates+role+htp+description
+- Scoring rows: a numeric score column, plus the evidence cell = full prose narrative
 
-`evidence` = `[G]` for mandatory rows, `[H]` for scoring rows.
+`evidence` = the cell under the section's evidence header (see "Header-driven columns" below).
 
 Detection: fallback — neither Format 1 nor Format 2 pattern found in any mandatory row.
+
+### Header-driven columns (Formats 1 and 3)
+
+The evidence column is **not** fixed at `[G]`/`[H]`: across templates the mandatory-evidence
+header `Kuvaus vähimmäisvaatimuksen täyttymisestä` is seen in `[F]`, `[G]` or `[H]`, and the
+requirement/tag columns shift too. So Formats 1/3 locate the evidence column by its header
+text per section — a sheet has a mandatory block then (usually) a scoring block, each opened
+by its own header row — and read evidence from that column for the rows in that block. A sheet
+with no recognisable evidence header falls back to fixed `[G]` (mandatory) / `[H]` (scoring),
+preserving older files. The scoring tag is matched on the stem `pisteyt` (`_is_scoring()`).
+
+A row whose evidence merely echoes its requirement text is dropped (a non-answer, seen in
+listing/comparison sheets that have no real evidence column).
 
 ### Format 4 — Row-per-project table
 
@@ -251,19 +264,24 @@ cleanly and works for any client's column naming.
 See section 5. Run by `dedupe.py` via `enumerate_candidates()`.
 
 ### Row-level (after extraction, before write)
-Dedup key: `(developer_name, requirement_text, evidence, source_relative_path, source_sheet)`
+Dedup key: `(developer_name, requirement_text, evidence)` — content only.
+
+The master collects **unique** expert experience, so the same fact appearing in several
+source files (a draft and its final submission, or one expert proposed across tenders) is one
+row, not many. Source path/sheet are provenance, **not** identity, and are deliberately *not*
+in the key.
 
 `evidence` is part of the key because one requirement can appear in a sheet as both a
-mandatory (`Pakollinen`) and a scoring (`Pisteytettävä`) row — different requirement rows
-with the same `requirement_text` but different evidence. They must stay as two rows, so the
-key must distinguish them; `evidence` is the field that does (and it is an existing column,
-so the sync path can reconstruct the key from the master).
+mandatory (`Pakollinen`) and a scoring (`Pisteytettävä`) row — same `requirement_text`,
+different evidence. They must stay as two rows, and `evidence` is what distinguishes them.
+`developer_name` already separates different experts.
 
 Keep the record with the lexicographically largest `source_last_modified` when duplicates
 exist. This handles:
 - Same expert extracted twice from the same file (idempotent re-runs)
 - A file re-extracted after an edit (stale rows are first removed by path, then new rows
   are deduped)
+- The same content in a draft and a final (or across tenders) — collapsed to one row
 
 ---
 
@@ -318,7 +336,7 @@ files pending extraction.
 | `short_description` was constructed, not verbatim | `evidence` = source cell verbatim (Formats 1/3) or verbatim column values under labels (Formats 2/4) — never paraphrased |
 | `requirement_text` never captured | Column C captured as `requirement_text` |
 | `extraction_batches/` batch files have no traceability | New flow: one `extraction_batch.json` per sync run; source path in each record |
-| Dedup key used constructed fields | New dedup key uses structural fields (developer, requirement_text, evidence, path, sheet) |
+| Dedup key used constructed fields | New dedup key is content only (developer, requirement_text, evidence) |
 | Full re-extraction required on schema change | After migration, incremental sync runs only changed files |
 | content_batch.json overwritten on each scan | Eliminated: new flow writes directly to extraction_batch.json |
 
@@ -365,7 +383,7 @@ Files to KEEP and UPDATE:
 Changes:
 - Replace `COLUMNS`, `COLUMN_WIDTHS`, `HEADER_LABELS` with the table in section 6.
 - Row height for data rows: 60 pt.
-- Update `dedupe()` key to `(developer_name, requirement_text, evidence, source_relative_path, source_sheet)`. (`requirement_number` is not stored — see Milestone 2 — so the key uses `evidence` to separate a requirement's mandatory and scoring rows.)
+- Update `dedupe()` key to `(developer_name, requirement_text, evidence)` — content only, so the same fact across files/tenders collapses to one row. (`requirement_number` is not stored — see Milestone 2 — so the key uses `evidence` to separate a requirement's mandatory and scoring rows.)
 - `load_records()`: no logic changes needed; `rec.get(col_key)` already handles new fields.
 
 **Exit criteria**: `write_master.py` imports cleanly; column constants match section 6 exactly.
@@ -393,17 +411,19 @@ Algorithm per file:
 
 ```
 For each expert sheet (skip helper sheets: "pisteet", "data-", "ohjeet"):
-  1. Find developer_name: scan col D rows 10–20 for first non-empty, non-header value.
-     Candidate header markers: "Asiantuntijan N rooli:" in col B same row.
-  2. Find role: col B of that same row, strip "Asiantuntijan N rooli: " prefix.
+  1. Find developer_name + role via `_find_name_role()` — three conventions: an
+     "Asiantuntijan N rooli:" marker (name in col D), an "Asiantuntijan nimi:" label (name in
+     the adjacent cell, role from sheet title), or role-as-sheet-name (role in col B above the
+     `Nro` header, name-like value in D/E). See section 7.
   3. Detect format (Format 1 / 2 / 3 / 4) by inspecting requirement rows / the column
      header (see section 7 detection rules).
   4. Walk rows:
      a. If col B matches r'^[A-EZ]?\s?\d+' → this is a requirement row (this gate is the
         requirement-number check; the number itself is not stored).
      b. requirement_text = col C value.
-     c. is scoring row? = col D contains "pisteytettävä" (case-insensitive). Used only to
-        pick the evidence column (G mandatory / H scoring); not stored as a field.
+     c. Formats 1/3: evidence is read from the section's header-driven evidence column
+        (`Kuvaus ... täyttymisestä` / `Kuvaus pisteytettäv...`), falling back to G/H; the
+        scoring tag (`pisteyt` stem) is used only when no header is found. See section 7.
      d. Build evidence per format (section 7).
      e. Skip row if evidence is None or is a template instruction (starts with
         "Kuvaus", "Asiakkaat", "Toimeksiantojen").

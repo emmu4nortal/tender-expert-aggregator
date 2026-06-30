@@ -59,17 +59,17 @@ HEADER_LABELS = {
 # ── dedupe key ────────────────────────────────────────────────────────────────
 
 def _dedupe_key(rec: dict) -> tuple:
-    # evidence is included so a mandatory row and a scoring row that share the same
-    # requirement_text (different requirement rows, different G/H evidence) are kept as
-    # the two distinct rows they are, instead of collapsing to one. Identical
-    # re-extractions still collapse (same evidence). evidence is an existing master
-    # column, so the sync path can reconstruct this key for existing rows.
+    # Identity is the content itself: (developer, requirement, evidence). The master collects
+    # UNIQUE expert experience, so the same fact appearing in several source files (a draft and
+    # its final submission, or one expert proposed across tenders) is one row, not many — the
+    # source path/sheet are provenance, not identity, and are deliberately NOT in the key.
+    # evidence stays in the key so a mandatory row and a scoring row that share a requirement_text
+    # but carry different evidence remain the two distinct rows they are (the R4 fix); only
+    # byte-identical evidence collapses. developer_name already separates different experts.
     return (
         (rec.get("developer_name") or "").strip().lower(),
         (rec.get("requirement_text") or "").strip().lower(),
         (rec.get("evidence") or "").strip(),
-        (rec.get("source_relative_path") or "").strip(),
-        (rec.get("source_sheet") or "").strip(),
     )
 
 
@@ -110,7 +110,7 @@ def load_records(json_path: Path) -> list[dict]:
 # ── row-level dedupe ──────────────────────────────────────────────────────────
 
 def dedupe(records: list[dict]) -> list[dict]:
-    """Keep newest mtime per (developer_name, requirement_text, evidence, source_relative_path, source_sheet)."""
+    """Keep newest mtime per (developer_name, requirement_text, evidence) — see _dedupe_key."""
     groups: dict[tuple, list[dict]] = {}
     for rec in records:
         key = _dedupe_key(rec)
