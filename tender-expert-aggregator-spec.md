@@ -1,7 +1,8 @@
 # Specification: Tender Expert Experience Aggregator (v2)
 
 > **Status**: v2 — milestones 0–5 complete. 872 rows in master Excel, 549 source
-> files tracked. Milestone 6 (enrichment) is optional and not yet implemented.
+> files tracked. Milestone 6 (enrichment) tooling in place (side table + deterministic
+> `auto`); interactive tag gap-filling is ongoing.
 
 ---
 
@@ -374,7 +375,8 @@ files pending extraction.
 ## 11. Milestones
 
 Milestones 0–5 are complete and are kept below as a build record. **Milestone 6
-(enrichment) is the only open/remaining milestone.**
+(enrichment): tooling complete (content-keyed side table + deterministic `auto` pass);
+interactive tag gap-filling is the remaining ongoing work.**
 
 ### Milestone 0 — Codebase cleanup
 
@@ -552,22 +554,43 @@ rather than crashing, and `cmd_sync()` should report skipped files to the user.
 
 ### Milestone 6 — Optional enrichment pass (technologies / domain_or_industry)
 
-**Goal**: Populate the `technologies` and `domain_or_industry` fields, which require
-reading the `evidence` text and tagging it.
+**Goal**: Populate the `technologies` and `domain_or_industry` fields by reading the
+`requirement_text` + `evidence` text and tagging it.
 
-This step is explicitly Claude Code interactive. Since it requires intelligence
-(no deterministic mapping is possible) and cannot use billed API:
-- Claude Code reads `extraction_batch.json` in batches.
-- For each record, reads `evidence` and suggests comma-separated technology tags
-  and domain/industry tags.
-- Writes enriched records back to `extraction_batch.json`.
-- Re-runs `python run.py write extraction_batch.json` to update master.
+**Storage — content-keyed side table.** Enrichment lives in `enrichment.json`, NOT inline in
+the batch. The master is regenerated as `dedupe(batch)` on every sync, and a re-extract replaces
+a file's batch records wholesale, so inline tags would be wiped on re-sync. `enrichment.json`
+maps `content_hash(rec)` (sha1 of the `dedupe_key` tuple — `write_master.content_hash`) to
+`{technologies, domain_or_industry}`, and `write_master.apply_enrichment` joins it onto the
+deduped rows in `run.py _rebuild_master`. Because it is keyed by content, a tag re-attaches after
+re-extraction as long as the row's content is unchanged.
 
-This milestone is **optional** for the daily sync. The master is fully usable without
-it (evidence cells contain all information; technologies/domain are convenience filters).
+**Method — hybrid (no LLM).** Constraint §2 forbids billed/local LLMs, so `enrich.py`'s
+automated pass is pure deterministic string matching; judgment-based tagging is done by Claude
+Code interactively.
+- `python3 enrich.py auto` — matches curated dictionaries against each unique row:
+  `enrich_tech.json` (canonical tech tag → surface patterns, token-boundary matched so `java`
+  ≠ `javascript`; standalone/hyphenated forms, not glued Finnish suffixes) and
+  `enrich_industry.json` (top-level client folder → Finnish industry tag). Writes `enrichment.json`.
+- `python3 enrich.py todo [--limit N] [--field tech|domain|both] [--out FILE]` — emits the
+  un-covered unique rows (content_hash + context) for Claude Code to tag interactively.
+- Claude Code reads that batch and produces `{content_hash: {technologies, domain_or_industry}}`.
+- `python3 enrich.py apply <tagged.json>` — merges those tags into `enrichment.json`.
+- `python3 run.py write extraction_batch.json` — rebuilds the master with the join applied.
+- `python3 enrich.py status` — coverage report + unmapped client folders.
 
-**Exit criteria**: At least the 24 source files' records have non-empty `technologies`
-and `domain_or_industry` values.
+This milestone is **optional** for the daily sync (the join is applied automatically on every
+rebuild, but is a no-op when `enrichment.json` is absent/empty). The master is fully usable
+without it — evidence cells hold all information; technologies/domain are convenience filters.
+
+**First-pass result (deterministic `auto` over 872 unique rows):** domain_or_industry 96%
+(client-folder mapping; the only gap is the ambiguous `IT-konsultointi 2018-2022 (DPS)` framework
+folder), technologies 27% (a precision-first seed — many rows are non-technical roles/education;
+glued Finnish inflections are skipped). Remaining gaps are filled interactively via `todo`/`apply`.
+
+**Exit criteria**: `enrichment.json` exists and the bulk of rows carry non-empty
+`domain_or_industry`; `technologies` populated where the evidence/requirement supports it
+(empty is valid for non-technical rows).
 
 ---
 

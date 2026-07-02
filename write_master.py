@@ -1,4 +1,5 @@
 """Write the master Excel file from extracted records (v2 requirement-row schema)."""
+import hashlib
 import json
 import re
 import sys
@@ -58,7 +59,7 @@ HEADER_LABELS = {
 
 # ── dedupe key ────────────────────────────────────────────────────────────────
 
-def _dedupe_key(rec: dict) -> tuple:
+def dedupe_key(rec: dict) -> tuple:
     # Identity is the content itself: (developer, requirement, evidence). The master collects
     # UNIQUE expert experience, so the same fact appearing in several source files (a draft and
     # its final submission, or one expert proposed across tenders) is one row, not many — the
@@ -71,6 +72,39 @@ def _dedupe_key(rec: dict) -> tuple:
         (rec.get("requirement_text") or "").strip().lower(),
         (rec.get("evidence") or "").strip(),
     )
+
+
+# Backwards-compatible private alias (kept so existing internal refs keep working).
+_dedupe_key = dedupe_key
+
+
+def content_hash(rec: dict) -> str:
+    """Stable string id for a record's CONTENT, used as the key of the enrichment side table
+    (`enrichment.json`). It hashes the exact `dedupe_key` tuple, so an enrichment entry maps 1:1
+    to a deduped master row and re-attaches after re-extraction as long as the content is
+    unchanged. NUL-joined because none of the fields can contain NUL, so the join is unambiguous."""
+    return hashlib.sha1("\x00".join(dedupe_key(rec)).encode("utf-8")).hexdigest()
+
+
+def apply_enrichment(records: list[dict], enrichment: dict) -> int:
+    """Fill `technologies` / `domain_or_industry` on each record from the content-keyed side
+    table (authoritative for these two fields). Returns the number of records that received at
+    least one non-empty tag. Called at master-rebuild time so enrichment lives outside the batch
+    and survives re-sync. Records absent from the table are left untouched."""
+    touched = 0
+    for rec in records:
+        entry = enrichment.get(content_hash(rec))
+        if not entry:
+            continue
+        tech = (entry.get("technologies") or "").strip()
+        dom = (entry.get("domain_or_industry") or "").strip()
+        if tech:
+            rec["technologies"] = tech
+        if dom:
+            rec["domain_or_industry"] = dom
+        if tech or dom:
+            touched += 1
+    return touched
 
 
 # ── bookkeeping: resolve mtime from disk ─────────────────────────────────────

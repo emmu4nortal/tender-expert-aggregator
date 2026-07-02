@@ -24,11 +24,16 @@ import openpyxl
 from config import SYNC_ROOT, MASTER_PATH, STATE_FILE
 from enumerate_candidates import enumerate_candidates
 from dedupe import deduplicate
-from write_master import load_records, dedupe, write_excel
+from write_master import load_records, dedupe, write_excel, apply_enrichment
 
 # The full, pre-dedup record set is the single source of truth; the master Excel is a generated
 # artifact rebuilt as dedup(batch). Same file extract_requirements.py --all writes.
 BATCH_FILE = Path(__file__).parent / "extraction_batch.json"
+
+# Content-keyed enrichment side table (M6): {content_hash: {technologies, domain_or_industry}}.
+# Joined onto the deduped records at rebuild time so tags live outside the batch and survive
+# re-extraction. Managed by enrich.py. Absent file → no enrichment (empty dict).
+ENRICHMENT_FILE = Path(__file__).parent / "enrichment.json"
 
 
 # ── state helpers ─────────────────────────────────────────────────────────────
@@ -107,13 +112,28 @@ def _reconcile_batch(batch_groups: dict, processed: dict, live_keys: set,
     return merged, pruned
 
 
+def _load_enrichment() -> dict:
+    """Load the content-keyed enrichment side table ({} if absent/empty)."""
+    if not ENRICHMENT_FILE.exists():
+        return {}
+    try:
+        return json.loads(ENRICHMENT_FILE.read_text(encoding="utf-8")) or {}
+    except json.JSONDecodeError:
+        print(f"WARNING: {ENRICHMENT_FILE.name} is not valid JSON; skipping enrichment.")
+        return {}
+
+
 def _rebuild_master(records: list[dict]) -> None:
-    """Master = dedup(records). The batch is authoritative; the master is a generated artifact,
-    so it is rebuilt in full from the current record set rather than patched in place."""
+    """Master = dedup(records), with the enrichment side table joined in. The batch is
+    authoritative; the master is a generated artifact, rebuilt in full rather than patched.
+    Enrichment (technologies/domain_or_industry) is applied here — outside the batch — so it
+    survives re-extraction of any source file."""
     deduped = dedupe(records)
     collapsed = len(records) - len(deduped)
+    enriched = apply_enrichment(deduped, _load_enrichment())
     print(f"Batch records:      {len(records)}")
     print(f"After row dedupe:   {len(deduped)}  ({collapsed} duplicate(s) collapsed)")
+    print(f"Enriched rows:      {enriched}  (from {ENRICHMENT_FILE.name})")
     write_excel(deduped, MASTER_PATH)
     print(f"Master written to:  {MASTER_PATH}")
     print(f"Relative to root:   {MASTER_PATH.relative_to(SYNC_ROOT)}")

@@ -33,8 +33,15 @@ All milestones 0–5 complete. 872 rows in master Excel at:
 
 Daily sync: `python run.py sync`
 
-**Open to-do**: Milestone 6 enrichment — `technologies` and `domain_or_industry`
-columns are empty for all rows. Not yet implemented.
+**Milestone 6 enrichment (`technologies` / `domain_or_industry`)** — tooling in place.
+Enrichment lives in a content-keyed side table `enrichment.json` (`content_hash(rec)` →
+`{technologies, domain_or_industry}`), joined onto the deduped rows at rebuild time by
+`write_master.apply_enrichment` (called in `run.py _rebuild_master`), so tags survive
+re-extraction. Managed by `enrich.py` (`status` / `auto` / `todo` / `apply`); `auto` is pure
+deterministic dictionary matching (`enrich_tech.json`, `enrich_industry.json`) — NO LLM.
+Interactive gap-filling: `enrich.py todo` → Claude Code tags a batch → `enrich.py apply` →
+`python run.py write extraction_batch.json`. First `auto` pass: domain 96%, technologies 27%
+of 872 rows. Remaining: interactive gap-filling (ongoing).
 
 ## Data model
 The unit of record is a **requirement row**: one master row = one requirement row
@@ -98,8 +105,8 @@ master tracks disk without a full `--all`; pruning is skipped when enumeration y
 candidates (sync root unavailable) to avoid wiping the batch. `write` merges a json into the
 batch by source path (no deletion prune — it has no enumeration to compare against); both then
 rebuild the master. Nothing reads the master back.
-(Future Milestone 6 enrichment must therefore live in the batch or a content-keyed side table
-joined at rebuild time — never only on the regenerated master.)
+Milestone 6 enrichment therefore lives in a content-keyed side table (`enrichment.json`) joined
+at rebuild time — never only on the regenerated master (see the M6 note above).
 
 ## Scripts
 - `run.py` — main entry point. Commands: `sync`, `write <json>`, `status`
@@ -111,5 +118,9 @@ joined at rebuild time — never only on the regenerated master.)
 - `dedupe.py` — file-level deduplication (keeps newest mtime per normalised name)
 - `enumerate_candidates.py` — walks sync root, filters by keyword and excluded folders
 - `config.py` — SYNC_ROOT, MASTER_PATH, STATE_FILE, EXCLUDED_TOP_LEVEL constants
+- `enrich.py` — M6 enrichment CLI (`status`/`auto`/`todo`/`apply`); pure string matching, no LLM.
+  Reuses `load_records`/`dedupe`/`content_hash` from `write_master`.
+- `enrich_tech.json` / `enrich_industry.json` — curated dictionaries for the `auto` pass.
+- `enrichment.json` — content-keyed enrichment side table (`content_hash` → tags); joined at rebuild.
 - `state.json` — mtime+size per tracked file; updated by `run.py sync`
 - `extraction_batch.json` — last full extraction output (1133 records → 872 unique master rows)

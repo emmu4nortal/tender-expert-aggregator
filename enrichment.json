@@ -1,0 +1,3636 @@
+{
+  "00f5cef7d1db1a4fb1a21ae427b99443634f6b12": {
+    "_ctx": "Tiina Uutela · Kokemus liiketoimintaprosessien kehittämisen proje",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "010fd7786c8a0145b8bdfd3757a68af789c2ed99": {
+    "_ctx": "Ulf Nyström · Laaja kokemus ratkaisuarkkitehdin roolissa toimimi",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "011382adb5631b1d2449d644964467be803e3efd": {
+    "_ctx": "Aki Pehkonen · Asiantuntija on suorittanut AWS Associate tai Prof",
+    "domain_or_industry": "Liikenne",
+    "technologies": "AWS"
+  },
+  "016f8ce0014156e0cdb8311b742401914c161eb0": {
+    "_ctx": "Eemeli Vaheristo · Kokemus liiketoimintaprosessien kehittämisen proje",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "01850486ff830b4132632a957bba620fe127c2e3": {
+    "_ctx": "Jani Lusikka · Osaaminen web-teknologioista",
+    "domain_or_industry": "Rahapelit",
+    "technologies": "JavaScript, TypeScript, React, C#, .NET, SQL, PostgreSQL"
+  },
+  "02b11694eb44d1767835511bd7a4fd4ce60a54a8": {
+    "_ctx": "Sasu Suominen · Asiantuntijalla on vähimmäisvaatimuksen nro B 3 ko",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "030e5d4c1d787d0ea0269037b452fd2be391c600": {
+    "_ctx": "Vasilije Abazovic · Sähköisten käyttöliittymien toteutuskokemus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "03460bc6b06467fcdbd68f843f28c268b55fa2af": {
+    "_ctx": "Taneli Kulo · Asiantuntijalla on työkokemusta visuaalisesta suun",
+    "domain_or_industry": "Liikenne"
+  },
+  "0382c6e7d71cd35a7979c8d8761f740436ada4c5": {
+    "_ctx": "Joseph Deksnys · Henkilöllä on kokemusta Bootstrapin tai vastaavan ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "03d1540c1b706b330215d95863f715ee4ff2f752": {
+    "_ctx": "Eemeli Vaheristo · Hyvä kirjallinen ja suullinen suomen ja englannin ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "03d433cae0c45d4a19828e727dd45444385a3282": {
+    "_ctx": "Arto Niemi · Henkilöllä on kokemusta Microsoft Dynamics 365 CRM",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "04036832f8ef5d183bf6e82e01d0370893861c0a": {
+    "_ctx": "Heikki · Asiantuntijalla on kokemusta käyttöoikeuksien / ra",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "044f65ee88c08c7d775e0776d227a347b9a2be4f": {
+    "_ctx": "Juho Mehtonen · Kokemus front-end, full-stack tai back-end ohjelmo",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "045e26656f25f762d18f49d657d081984bd18d5d": {
+    "_ctx": "Antti Leinonen · Kokemus IT-infrastruktuurin määrittelyprojekteista",
+    "domain_or_industry": "Terveydenhuolto"
+  },
+  "048a916df39309f3c6597c37d3fb6508234e997b": {
+    "_ctx": "Heikki Tuohiniemi · Kokemusta Confluencen käytöstä asiakasprojekteissa",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "05697ff47049c8510284f8abbd1e8b4d71cea3d9": {
+    "_ctx": "Jovica Dimitrijevic · Koulutus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "05900c9164b46fec9a2ca94422347052e3723f07": {
+    "_ctx": "Ulf Nyström · Asianantuntijalla on kokemusta SQL ohjelmoinnista ",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "SQL"
+  },
+  "05db39e8e44747febbf080a54075f4753d15138e": {
+    "_ctx": "Otto Sassi · Kokemusta Confluencen käytöstä asiakasprojekteissa",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "06223e6d1944bd88c467993421ec96e1aa696cb7": {
+    "_ctx": "Juho Valkonen · Henkilöllä on kokemusta julkishallinnolle tuotetui",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "071371e7fe460acc9b308a350bdf7ab401c18f11": {
+    "_ctx": "Veli-Matti Heikkinen · Pystyy toimimaan tässä projektissa scrum masterin ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "07250f96d4c31b92950eeaf4a56b74448eab489e": {
+    "_ctx": "Semi Rantanen · Työkokemus Microsoft Dynamics (CRM) -ratkaisun ja ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "0818d93a66038500b0ac05f85156c5931796ebe2": {
+    "_ctx": "Stefan Rimaila · Henkilöillä on kokemusta Angular-alustalla toteute",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Angular, C#"
+  },
+  "0872b5fa5017459d5588234ebe98f0a60d44b847": {
+    "_ctx": "Juuso Liljavirta · Työkokemus Microsoft Dynamics (CRM) ja Azure-ratka",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "JavaScript, Azure"
+  },
+  "08932b46996de585af572256526d3cb57a4c4ff8": {
+    "_ctx": "Taina Ylisirniö · Asiantuntijalla on työkokemusta tietojärjestelmän ",
+    "domain_or_industry": "Koulutus"
+  },
+  "093bc0c487ce418274f2eca3022f7cf8ed2690c1": {
+    "_ctx": "Otto Sassi · Asiantuntijalla on C2 vaatimuksen mukaista kokemus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "094eeae64b161af545ae1f05310521e3f09c1b1f": {
+    "_ctx": "Esa Määttä · Henkilöillä on kokemusta sovelluskehittäjänä tai i",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure, Linux, Microservices"
+  },
+  "095ab4fc40b745d2a4ba2f0910a781b5f12304a6": {
+    "_ctx": "Juho Valkonen · henkilöllä on vähimmäisvaatimuksen nro A 1 ylittäv",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "0a1cdb3b2309280ae02ca8b1f93f083080c7540f": {
+    "_ctx": "Otto Sassi · Asiantuntijalla on E1 vaatimuksen mukaista kokemus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "0a5fc380cd9f423421b6a5f3f8c162e46b14e0cf": {
+    "_ctx": "Keijo Poutiainen · Henkilöillä on kokemusta käyttövarmaksi ja vikasie",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "C#, Azure"
+  },
+  "0a702cf2fbad2ccfc76a7b82399237595b006f4e": {
+    "_ctx": "Ahti Rossi · Asiantuntijalla on kokemusta Power BI  tietomalli-",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "0abeceef2d63e43bbe96b86d0459d0d148548814": {
+    "_ctx": "Antti Leinonen · Kokemus projektipäällikkönä toimimisesta ketteräss",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "0b0a8d3c79a20d9f5e6bb5f85f96766309f6be2a": {
+    "_ctx": "Kimmo Lindman · Suomen kielen taito: erinomainen (ammatillinen vie",
+    "domain_or_industry": "Asuminen ja kiinteistöt"
+  },
+  "0b0f5173d39f011276f1e2d1c26acdb94d21cf69": {
+    "_ctx": "Olli-Petteri Tuuttila · Asiantuntijalla on  IaC- kokemusta Terraformista",
+    "domain_or_industry": "Liikenne"
+  },
+  "0bbf9dc13b8a1c36290bb7240c03380f9249e260": {
+    "_ctx": "Sasu Suominen · Asiantuntijalla on vähimmäisvaatimuksen nro B 5 ko",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "0c092b343882e1ed24b56961f06cb92cd816fbe6": {
+    "_ctx": "Nortal Oy · Asiantuntijalla on työkokemusta tietojärjestelmän ",
+    "domain_or_industry": "Liikenne"
+  },
+  "0c523070ba8ab77a5c7ea75f4e6707bc9d7d5488": {
+    "_ctx": "Otto Sassi · Asiantuntijalla on kokemusta raporttien toteuttami",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "0d1d9dbfc9df4871c6c9ac429764266184a43ebf": {
+    "_ctx": "Ivan Jevtovic · Kokemusta sovelluskehittäjänä projekteissa tai vas",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "0d40c8981482279b4cd9e39b60141398762cf3ff": {
+    "_ctx": "Kostiainen? Timo T? · Kokemus pilviarkkitehtuurista",
+    "domain_or_industry": "Terveydenhuolto"
+  },
+  "0df298ad10fbe04df3d0e26b19c976085548876f": {
+    "_ctx": "Kacper Kozak · Henkilöllä on kokemusta WCAG 2.0 tai WCAG 2.1 -sta",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "React"
+  },
+  "0e75c8c02c9a4a815d39000e0f6951b216befe19": {
+    "_ctx": "Keijo Poutiainen · Henkilöllä on vähimmäisvaatimuksen nro F 1 ylittäv",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "C#, .NET, Azure"
+  },
+  "0ea26a876fb27bcf5e329cd5f9cab762031fddfd": {
+    "_ctx": "Heikki · Asiantuntijalla on kokemusta vähintään 100 htp:tä ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "0ec4f2dd18a1ee9345d0dbaa8f448c548ed039c3": {
+    "_ctx": "Eemeli Vaheristo · Projektipäällikköllä on vähintään 2 vuoden kokemus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "0fa66c99955c823d3c1c151fb5a2674191738422": {
+    "_ctx": "Antti Leinonen · Kokemus päätoimisesta Scrum Master -tehtävästä ohj",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "React"
+  },
+  "0fe7408abc44654d475ef7884def3bc6edf8d577": {
+    "_ctx": "Tuomo Hokkanen · Asiantuntijalla on kokemusta Azure-ympäristön prov",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Kubernetes, Azure"
+  },
+  "101fc99f86cdf2d1c9e4bb414c7afa2c44a313f7": {
+    "_ctx": "Marko Manner-Raappana · Henkilöllä on vähimmäisvaatimuksen nro F 1 ylittäv",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "105b622452ecc71f0a88856ec4bc204e44dc5bbe": {
+    "_ctx": "Marko Leiviskä · Testauskokemus (testitapausten luonti vaatimuksist",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "106b70940cc6313e1c164008364215422e5f24c5": {
+    "_ctx": "Henrik Hyyppä · Kokemus sähköisten asiointipalveluiden kehittämise",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "10a987bf86227344b87bb88bdead8b5f79c3c7d4": {
+    "_ctx": "Mika Kirveennummi · Projektipäälliköllä on kokemusta työmäärältään laa",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "1186a87462c285d128b6df362dc5476aa3ff80e2": {
+    "_ctx": "Marko Paavola · Kokemusta päätoimisena arkkitehtina (yritys, ratka",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "11aeea797a80957daa234ac27f5982c03e4d7e71": {
+    "_ctx": "Adolis Kliucevičius · Asiantuntijalla on  IaC- kokemusta Terraformista",
+    "domain_or_industry": "Liikenne"
+  },
+  "11f197171d5a8a4777709a44d420030bd65bf7f3": {
+    "_ctx": "Ahti Rossi · Kokemus projekteista, joissa käsitellään henkilöti",
+    "domain_or_industry": "Asuminen ja kiinteistöt",
+    "technologies": "Azure"
+  },
+  "12cb46af89270bdcb122b4fc78bd455328a34052": {
+    "_ctx": "Marko Manner-Raappana · Vähimmäisvaatimuksen ylittävä työkokemus toiminnan",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "12df9672a60f5f2ff4a8a4ff7de06c3bab690618": {
+    "_ctx": "Taina Ylisirniö · Asiantuntijalla on työkokemusta käyttöliittymätest",
+    "domain_or_industry": "Koulutus"
+  },
+  "1312d1aa02f5a8d28fb255e1ef4e6a81567b4e21": {
+    "_ctx": "Vasilije Abazovic · Angular tai React kokemusta jommasta kummasta tai ",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "React, Angular"
+  },
+  "134f4e9b63663771a52df9527ee7d404bfa09b7d": {
+    "_ctx": "Sanna/Reko/Annastiina/Antti · Kokemus Jiran hyödyntämisesta projektien johtamise",
+    "domain_or_industry": "Terveydenhuolto"
+  },
+  "13b879aeace7b7de201d7684e6c654ab066cd65d": {
+    "_ctx": "Eemeli Vaheristo · Kokemus päävastuullisena projektipäällikkönä järje",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "SQL"
+  },
+  "14baf955b41bbdcd18c742ed829fc4ff95888d79": {
+    "_ctx": "Miika Kuha · Projektitoteutuksia, joissa on soveltanut Archimat",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "1510be78833c82b76bef930ee54cebe89c6bfcb3": {
+    "_ctx": "Taina Ylisirniö · Asiantuntijalla on vähimmäisvaatimuksen nro B6 kok",
+    "domain_or_industry": "Koulutus"
+  },
+  "1524a7fb9a4b2ea772b74caa5c52728b02eacd54": {
+    "_ctx": "Keijo Poutiainen · Henkilöillä on kokemusta Azuren API Management -pa",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "C#, Azure"
+  },
+  "15b7c88e456f50f0fd31891447751b93681c93b1": {
+    "_ctx": "Otto Sassi · Kokemus datainsinöörin työstä Microsoft Azure tai ",
+    "domain_or_industry": "Asuminen ja kiinteistöt",
+    "technologies": "Azure"
+  },
+  "15dd2466584dc6fef8f5680271d621caf38710cf": {
+    "_ctx": "Minna Prusi · Henkilöllä on vähimmäisvaatimuksen nro C 1 ylittäv",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "15e2655506a56c018f360af8fdff6113561957bb": {
+    "_ctx": "Juho Mehtonen · Teknologiat/osaaminen: Javascript; React, Angular ",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "JavaScript, React, Angular, Vue"
+  },
+  "15ef5efc5b388f4095e17956e6794646d19fdc1b": {
+    "_ctx": "Kostiainen? Timo T? · Kokemus liiketoiminta- ja tietojärjestelmäarkkiteh",
+    "domain_or_industry": "Terveydenhuolto"
+  },
+  "16506700b41379b7e4d55d40465e202b2247af28": {
+    "_ctx": "Tiina Uutela · Projektipäälliköllä on kokemusta työmäärältään laa",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "1658b00e97df958071082d7bed9cbf62186dbaf0": {
+    "_ctx": "Juho Mehtonen · Suomen kielen taitoinen. Kuvaa tarkemmin sarakkees",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "16d44cf288b702fe5d2b0987b1471a0cfda1766f": {
+    "_ctx": "Taneli Kulo · Asiantuntijalla on vähimmäisvaatimuksen nro A10 ko",
+    "domain_or_industry": "Koulutus"
+  },
+  "174f18b7ac00f5f131122b675fea2a6072921c0c": {
+    "_ctx": "Sanna Pyykönen · Kokemus projektihallinnasta",
+    "domain_or_industry": "Terveydenhuolto"
+  },
+  "17730ce853b827dcf56bba667af7879a729eaf7f": {
+    "_ctx": "Aki Pehkonen · Asiantuntijalla on hyvä kirjallinen ja suullinen e",
+    "domain_or_industry": "Liikenne"
+  },
+  "17784e63fb1b68767791158fe7f69477ca22bd78": {
+    "_ctx": "Kimmo Lindman · Henkilöllä on vähimmäisvaatimuksen nro A 1 ylittäv",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "17aa8eca94fbfe905fd0685ed3ca3074d95957c1": {
+    "_ctx": "Reko Mätäsaho · Projektipäällikön kokemus teknisen monitoimittajap",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "18545dfef4b6d7555f21f37fc1ccfcbd6d163da7": {
+    "_ctx": "Henrik Hyyppä · Kokemus liiketoimintaprosessien kehittämisen proje",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "1876cc7565581266deabd3302d0cdd5b7446e66a": {
+    "_ctx": "Antti Leinonen · Asiantuntijalla on projektipäällikkönä työkokemust",
+    "domain_or_industry": "Koulutus"
+  },
+  "1885a17f93221968e4ce76ff6574517150efc164": {
+    "_ctx": "Reko Mätäsaho · Kokemus liiketoimintaprosessien kehittämisen proje",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "18915fe0c8d8023ab0cf6f52b382f8dea3c69826": {
+    "_ctx": "Stefan Rimaila · Henkilöillä on kokemusta C sharp (C#) käytöstä ohj",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Angular, C#"
+  },
+  "18d6a700d72b288c949066ec148a6d62df2a875a": {
+    "_ctx": "Karoliina Alho · Korkeakoulun opintohallinnon tietojärjestelmän (Pe",
+    "domain_or_industry": "Koulutus"
+  },
+  "193c5cf8170281865cf789e35db612c0600ac8db": {
+    "_ctx": "Laura Lemmetty · Henkilöllä on kokemusta julkishallinnon projekteis",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "19c19cbc9f12ab199536d60d459eed20c4b7f0e2": {
+    "_ctx": "Tuomas Fjällström · Asiantuntijalla on kokemusta päätoimisesta toiminn",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "1a57c51f182ef5a669cffa05064ad2d9f354b466": {
+    "_ctx": "Asko Kinnala · Kokemus liiketoimintaprosessien kehittämisen proje",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "1a7ebbad9b7a61ec8a4dab68f4f8dea54351ba85": {
+    "_ctx": "Ergin Tuganay · Asiantuntija on työskennellyt asiantuntijaroolissa",
+    "domain_or_industry": "Liikenne",
+    "technologies": "Azure"
+  },
+  "1aca1ec56be1d5d4ee19a5570f4c8bd6346d55bf": {
+    "_ctx": "Essi Suo-Heikki · Tarjottava henkilö on kokemusta tietojohtamisen ja",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "1b00d242537b2aea25d227856dfdf99cb2c0df5d": {
+    "_ctx": "Veli-Matti Heikkinen · Kokemus SQL:n hyödyntämisestä tietokanta-asiantunt",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "SQL"
+  },
+  "1bbe4c91cdc74458aa8cf6cf4f1cceadfb950d69": {
+    "_ctx": "Pertti Repo · Kokemus back-end tai full-stack ohjelmoijan roolis",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "1c41bd675944156c013ee37fdf2b71e9cceec00a": {
+    "_ctx": "David Dudzik · Henkilöllä on kokemusta WCAG 2.0 tai WCAG 2.1 -sta",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "1c614b8a95eab8fc065daee3f5ba29da022c0348": {
+    "_ctx": "Antti Leinonen · Asiantuntijalla on projektipäällikkönä kokemusta A",
+    "domain_or_industry": "Koulutus",
+    "technologies": "React, Angular"
+  },
+  "1cb76778ac107c2fefacf7a65981384a306bab1b": {
+    "_ctx": "Timo Kankaanpää · Henkilöllä on kokemusta Microsoft Dynamics 365 CRM",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "1d2d4e7717238fcbbee64ddfb45335620c2ef88a": {
+    "_ctx": "Hanna Leivo · Kokemus sähköisten asiointipalveluiden kehittämise",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "1d2f2da36dda848667a30123fc3b9a3c2da4be7d": {
+    "_ctx": "Taina Ylisirniö · Asiantuntijalla on vähimmäisvaatimuksen nro B9 kok",
+    "domain_or_industry": "Koulutus"
+  },
+  "1d453c9abfae9e1ca5be4ef4b6e525dbeb9b3737": {
+    "_ctx": "Stefan Rimaila · Henkilöllä on vähimmäisvaatimuksen nro B 3 ylittäv",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "1d5d7bddfe3a3455f912c411a925171054c2ce22": {
+    "_ctx": "Nortal Oy · Asiantuntijalla on vähimmäisvaatimuksen nro B9 kok",
+    "domain_or_industry": "Liikenne"
+  },
+  "1d6cab271c2924834e95fd4f573be59f54ef81f2": {
+    "_ctx": "Kati Norrena · Asiantuntijalla on kokemusta tiimin toimintaa ohja",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "1d739f280e08ba02bc272b33b84d5a0f6e5a4d8b": {
+    "_ctx": "David Dudzik · Henkilöllä on kokemusta erilaisiin kokoihin mukaut",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "1d8309e89f59b84eac3e566f2cd6b4b7ce5044eb": {
+    "_ctx": "Sasu Suominen · Kokemus Power Platform -arkkitehtina toimimisesta ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "1db6d89720ed0a5d9ae3732c93cfe51b57adc93c": {
+    "_ctx": "Otto Sassi · Asiantuntijalla on kokemusta tiedonsiirtoputken (E",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "1dfea1f3e0cc37f6b4852130b309cd9b08868151": {
+    "_ctx": "Otto Sassi · Suomen kielen taito: erinomainen (ammatillinen vie",
+    "domain_or_industry": "Asuminen ja kiinteistöt"
+  },
+  "1f1b55df1990a37fead655ac493f95520734de87": {
+    "_ctx": "Eemeli Vaheristo · Projektipäälliköllä on kokemusta työmäärältään laa",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "1f2d59681a242fdca71d956e75af89f13dad3367": {
+    "_ctx": "Tomi Sarpola · Asiantuntijalla on kokemusta roolinsa mukaisena ra",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "1f61ccea89705383480bab23ec337256917d7a1a": {
+    "_ctx": "Tuomas Fjällström · Kokemusta sovellusten kehittämisen projekteista. T",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "2011118511b8ed588e2dfa0c55b254ae572be4a4": {
+    "_ctx": "Joseph Deksnys · Henkilöllä on kokemusta käyttäjätestausten suunnit",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "20469da0c60a3e2baa46894baf7fd363acbdad0e": {
+    "_ctx": "Timo Kankaanpää · Henkilöllä on kokemusta Microsoft Dynamics 365 Pow",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "207ee9df83de284da82762d8ef7ae155368560dd": {
+    "_ctx": "Taneli Kulo · Asiantuntijalla on työkokemusta .NET-pohjaisen sov",
+    "domain_or_industry": "Koulutus",
+    "technologies": ".NET"
+  },
+  "207fdfd0c58e25f7e740a7fe63bf03277083467f": {
+    "_ctx": "Tiina Uutela · Projektipäälliköllä on kokemusta työmäärältään laa",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "213f5c74e83397ffdad10092cec0516a6f7865aa": {
+    "_ctx": "Reko Mätäsaho · Projektipäällikköllä on vähintään 2 vuoden kokemus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "2149e518fbf7241787dd9386c04181279bdb12ef": {
+    "_ctx": "Pertti Repo · Teknologiat/osaaminen: Java, Scala, Clojure ja/tai",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Java, Kotlin"
+  },
+  "2192f09cca13a599d7d672ac57c34a2b9be34564": {
+    "_ctx": "Ulf Nyström · Asiantuntijalla on G3 vaatimuksen mukaista kokemus",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "SQL"
+  },
+  "21bdf8b51cafedfe11cc4ed388ee9b09fa7c4345": {
+    "_ctx": "Taneli Kulo · Asiantuntijalla on työkokemusta .NET-pohjaisen sov",
+    "domain_or_industry": "Liikenne",
+    "technologies": ".NET"
+  },
+  "21d5b3da48b7b17e9df9b92c8022dcbe94ce6391": {
+    "_ctx": "Marko Manner-Raappana · Kokemusta sovellusten kehittämisen projekteista. T",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "21e6650af053299ec880b21ed03a72e6ac36860e": {
+    "_ctx": "Ergin Tuganay · Asiantuntijalla on hyvä kirjallinen ja suullinen e",
+    "domain_or_industry": "Liikenne"
+  },
+  "220eeeb37822597c126753ceb1103b34fd79adc3": {
+    "_ctx": "Heikki Huotari · Projektipäällikön kokemus toiminnan kehittämiseen ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "22118b84d3ba4ff478dc00f22468c0338375fbd7": {
+    "_ctx": "Juho Mehtonen · Kokemus ketterissä projekteissa toimisesta ja kett",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "22b2e4a365cb26b7de8e835d354c8c97aa2547e2": {
+    "_ctx": "Essi Suo-Heikki · Asiantuntijalla on kokemusta roolinsa mukaisena Po",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "23a1bce45ea83f18bab1374a011db97dee905d2a": {
+    "_ctx": "Ulf Nyström · Työkokemus vähintään kahdesta projektista, jonka t",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "SQL"
+  },
+  "23be051e523be29c3226436ce121e6b7632e5cc6": {
+    "_ctx": "Mikko Keiho · Henkilöllä on kokemusta Azure-alustalla toteutettu",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "24d899bda2f1653c68074be9a98e3fab6579f0f0": {
+    "_ctx": "Henrik Hyyppä · Projektipäällikön kokemus teknisen monitoimittajap",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "25471b7c2829c64bf354fe97fb06925c4273b3d2": {
+    "_ctx": "Heikki Tuohiniemi · Kokemusta Jiran käytöstä asiakasprojekteissa",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "258066f84fb8e7d2795173be35500ad17f75a756": {
+    "_ctx": "Tiina Uutela · Kokemus sähköisten asiointipalveluiden kehittämise",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "25f8f6e47bf9995a877f7b444b518b06909c464a": {
+    "_ctx": "Marko Määttä · Asiantuntijalla on A1 vaatimuksen mukaista kokemus",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "SQL, Azure"
+  },
+  "265ac14376d5d072756d87a7ac7f01ead16c53e9": {
+    "_ctx": "Anssi Pannula · Asiantuntijalla on vähimmäisvaatimuksen nro B 1 ko",
+    "domain_or_industry": "Asuminen ja kiinteistöt",
+    "technologies": "Azure"
+  },
+  "26bd3b54401fda501f7cbae05f0f68d68c5fc984": {
+    "_ctx": "Mikko Keiho · Henkilöllä on vähimmäisvaatimuksen nro B 1 ylittäv",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "26dfe336cec19c2109ca3b88faf5426ed42f98a1": {
+    "_ctx": "Sasu Suominen · Kokemus ohjelmistokehittämiseen liittyvien julkais",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "2705815293220500744bdf82a24c482f70bdf7ed": {
+    "_ctx": "Antti Leinonen · Kokemus Jiran hyödyntämisesta projektien johtamise",
+    "domain_or_industry": "Terveydenhuolto"
+  },
+  "270b453a33405acc4bd0212cc7a426ba49c9b6a9": {
+    "_ctx": "Timo Kankaanpää · Henkilöllä on kokemusta Microsoft Dynamics 365 CRM",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "27847fa517dfbcd533041ad2db1e46197bab72c7": {
+    "_ctx": "Aleksandar Saric · Kokemusta relaatiotietokannoista",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "27c8f84ca697163873bf57a357af779af12cdd0f": {
+    "_ctx": "Sasu Suominen · Asiantuntijalla on kokemusta Power Platform Power ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "27ff45b182a9be968ce912a9c650faf424599414": {
+    "_ctx": "Mikko E · Kokemus käyttötapausten ja toiminnallisten vaatimu",
+    "domain_or_industry": "Terveydenhuolto"
+  },
+  "28eae621754846337ec9080ec1aadc57604f44da": {
+    "_ctx": "Ulf Nyström · Asiantuntijalla on kokemusta datan latausten autom",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "28ef956edcdf86a9d18d5cab07877a81ba09f0df": {
+    "_ctx": "Mikael Tetenkin · Henkilöllä on kokemusta ohjelmistokehitysprojektei",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "2a56848fe8c476ec75159cd00d47cf184914b0f6": {
+    "_ctx": "Taneli Kulo · Asiantuntijalla on vähimmäisvaatimuksen nro A4 kok",
+    "domain_or_industry": "Koulutus"
+  },
+  "2a9a1ee65ec30b1f17b332e7ab2085578ee00028": {
+    "_ctx": "Arto Niemi · Henkilöllä on kokemusta Microsoft Dynamics 365 CRM",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "2acb99814c7afae86e7bae8569f68560df1d300a": {
+    "_ctx": "Joseph Deksnys · Henkilöllä on kokemusta vähintään mobiili-, tablet",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "2adb94625aee643fddda752704abfe04cd310bf0": {
+    "_ctx": "Laura Lemmetty, prelim · Asiantuntijalla on kokemusta Dynamics 365- tai Pow",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "2aec33e6b356c50ab55ad83f29e98a992928757c": {
+    "_ctx": "Henrik Mikkola · Kokemus XML-muunnoksista",
+    "technologies": "Java, PHP, XML"
+  },
+  "2af907ffe9f290091eacaf5776ccd6f7bec45af3": {
+    "_ctx": "Aake Andersson · Projektipäälliköllä on kokemusta työmäärältään laa",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "2b061599491064134406c1076fe4e7f6b9bb10c9": {
+    "_ctx": "Ulf Nyström · Työkokemusta vähintään yhdestä projektista, jossa ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "2b200b85d66bf425294d45876320bda88d3757f0": {
+    "_ctx": "Sasu Suominen · Asiantuntijalla on kokemusta Custom Connectorin su",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "2b75ce59118132205af67c2c87fa5ab037ccb1c8": {
+    "_ctx": "Jani Lusikka · Kokemusta React frameworkistä",
+    "domain_or_industry": "Rahapelit",
+    "technologies": "Java, JavaScript, TypeScript, React, C#, .NET, SQL, PostgreSQL"
+  },
+  "2b91afd3d3759577eca4e6d2ceacc3565dc695a8": {
+    "_ctx": "Essi Suo-Heikki · Tarjottavalla henkilöllä kokemusta Microsoft Power",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "2b9b6501415dd7d1fb699df2adc6536ffd9f3783": {
+    "_ctx": "Santeri Suuronen · Asiantuntijalla on testausasiantuntijan työkokemus",
+    "domain_or_industry": "Koulutus"
+  },
+  "2bbd0d449e6aac1b2a3c0b5c40142368215bf4a4": {
+    "_ctx": "Mika Purjesalo · Muu asiakkaan määrittelemä kokemus (esim. kielitai",
+    "domain_or_industry": "Rahapelit"
+  },
+  "2bde479080a6f37fac2b48e30b3887ade2b61c58": {
+    "_ctx": "Mika Kirveennummi · Projektipäällikön kokemus toiminnan kehittämiseen ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "2cb1150c5b286f35c6959fc30f70b908d2ca8bc9": {
+    "_ctx": "Vasilije Abazovic · HTML5 ja CSS3 kokemus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "2cd59b2bf9e77f86814210b81b47ab229c225145": {
+    "_ctx": "Tomi Sarpola · Asiantuntijalla on kokemusta Azure-teknologiaan po",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "2d5a5e435b7014de6f2290bc9f3b713384d94ccf": {
+    "_ctx": "Olli-Petteri Tuuttila · Asiantuntijalla on hyvä kirjallinen ja suullinen e",
+    "domain_or_industry": "Liikenne"
+  },
+  "2d79c22df3beb3424ad0cb0e9003f6315b3b71f2": {
+    "_ctx": "Matti Uusivuori · Kokemusta tietokannoista ja rajapintojen kanssa ty",
+    "domain_or_industry": "Rahapelit",
+    "technologies": ".NET, SQL, Azure, GCP"
+  },
+  "2debd4d164caf32e660af6441e2a714787a8f997": {
+    "_ctx": "Taneli Kulo · Asiantuntijalla on vähimmäisvaatimuksen nro A3 kok",
+    "domain_or_industry": "Koulutus"
+  },
+  "2dff5637d996a75a60548ebe1de173c9ec97d275": {
+    "_ctx": "Hanna Leivo · Kokemusta sovellusten kehittämisen projekteista. T",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "2e388c5dd04e5805db6b3a37f15b040e385477fb": {
+    "_ctx": "Sasu Suominen · Kokemus ja osaaminen Microsoft Dynamics 365 Custom",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "2ee2d4517497bcfabdec1701a431223132dc150e": {
+    "_ctx": "Hanna Leivo · Vähimmäisvaatimuksen ylittävä työkokemus teknisten",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "2f0503596d54a30e941e1f6ab9040efa88a08a30": {
+    "_ctx": "Asko Kinnala · Vähimmäisvaatimuksen ylittävä työkokemus teknisten",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "2f73930473d64c065fbd95c33a5847a674a70121": {
+    "_ctx": "Marko Manner-Raappana · Kokemus projektipäällikkönä Microsoft Dynamics 365",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "2fb9ee3100ed9a983b1c9d14ebaeb37eb84321b6": {
+    "_ctx": "Saara-Maija Pakarinen · Kielitaito",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "2fd5cbf062ced0b0da7a7b5e695b21f94a681285": {
+    "_ctx": "Tiina Uutela · Vähimmäisvaatimuksen ylittävä työkokemus toiminnan",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "3276e73d6ecf1609a3ec045bf15fed07a74d1a8c": {
+    "_ctx": "Aleksandar Saric · Java kokemusta",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Java"
+  },
+  "3282f520ad9ae1fe7112e1411d535da2297af600": {
+    "_ctx": "Johanna Kartila-Malmivaara · Nimetty asiantuntija on työskennellyt projektissa ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "32b32c5c58bb601ac9daa4be2c2f446cfc15b8a6": {
+    "_ctx": "Jovica Dimitrijevic · Kokemusta JavaScript, JSON/Rest",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "JavaScript"
+  },
+  "32cc10343d26fdede2572a596aec55df4886dfb4": {
+    "_ctx": "Mika Kirveennummi · Asiantuntijalla on kokemusta päätoimisesta toiminn",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "32cc78d5e5a1a264d19e86ba9b6770594c00667f": {
+    "_ctx": "Kacper Kozak · Henkilöllä on kokemusta roolinsa mukaisena sovellu",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "React"
+  },
+  "32faaf209882065a0fdc640e4d510ba5c9bfe26e": {
+    "_ctx": "Adolis Kliucevičius · Asiantuntijalla on hyvä kirjallinen ja suullinen e",
+    "domain_or_industry": "Liikenne"
+  },
+  "33a1a189f66d7408c1f59b6a206ef0ef6cd8025c": {
+    "_ctx": "David Dudzik · Henkilöllä on kokemusta roolinsa mukaisena sovellu",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "34798d78414b0f2ef67bdd8fe44cf467faeeacd3": {
+    "_ctx": "Johanna Kartila-Malmivaara · Nimetyllä asiantuntijalla on kokemusta  - projekti",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "3515650159ac4bd583ac1540e1fc0253ed99f967": {
+    "_ctx": "Mikko Keiho · Henkilöllä on kokemusta integraatioiden suunnittel",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "3518050cb27907b162464567bcb0a4a1a3c912e9": {
+    "_ctx": "Joseph Deksnys · Henkilöllä on kokemusta käyttöliittymän graafisten",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "3549b7685c6ae9fbb3a03570f865ffd02f978f03": {
+    "_ctx": "Ahti Rossi · Kokemus päätoimisesta projektipäällikkönä toimimis",
+    "domain_or_industry": "Asuminen ja kiinteistöt",
+    "technologies": "Azure"
+  },
+  "3550ae0b1ad34e21c1bdeaf93ac3da7d09eb3685": {
+    "_ctx": "Jovica Dimitrijevic · Konttiteknologiakokemusta",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "35a250e02d1965922154d722c540a39b622b761f": {
+    "_ctx": "Anssi Pannula · Azure Developer associate, Azure Adminstrator asso",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "35ae9d5cb0adb722d2d89fc8df3ffeab9b506b51": {
+    "_ctx": "Keijo Poutiainen · Henkilöllä on kokemusta mini-/microservice-palvelu",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "C#, Azure"
+  },
+  "35b71ce8f4fe465d97a4ae6f27c31a951da90cef": {
+    "_ctx": "Kacper Kozak · Henkilöllä on kokemusta erilaisiin kokoihin mukaut",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "React"
+  },
+  "360a877d2ee2656d9b12a95d287e422a2393706a": {
+    "_ctx": "Taneli Kulo · Asiantuntijalla on vähimmäisvaatimuksen nro A5 kok",
+    "domain_or_industry": "Liikenne"
+  },
+  "365af82317f9a17ccda58a2c872fb2d458289d77": {
+    "_ctx": "Niina Warro · Dokumentointi ja viestintä. Sujuva kommunikointi s",
+    "domain_or_industry": "Koulutus"
+  },
+  "36aa65af2719c77271d8fec13b481751480ad62e": {
+    "_ctx": "Karoliina Alho · Kokemusta raporttien suunnittelusta ja toteuttamis",
+    "domain_or_industry": "Koulutus"
+  },
+  "36c23f6467b9ae8f17a8dcfcefed0829594c000a": {
+    "_ctx": "Mikko Keiho · Henkilöllä on kokemusta Azure-alustalla toteutettu",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "36cdbd1a6516013fc3c9574d480c12a903cf4115": {
+    "_ctx": "Heikki Tuohiniemi · Asiantuntijalla on D1 vaatimuksen mukaista kokemus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "37467b3d550f6210e2a6f2dde5db5a0ba49ecf35": {
+    "_ctx": "Asko Kinnala · Kokemusta sovellusten kehittämisen projekteista. T",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "37a10955e9dd47b253766a054fe5a48882704473": {
+    "_ctx": "Anssi Pannula · Microsoft Fabric sertifikaatti DP-600 (tai uudempi",
+    "domain_or_industry": "Asuminen ja kiinteistöt"
+  },
+  "37a1aae19fbc4bfeb1e7db676527612558504fb0": {
+    "_ctx": "Eemeli Vaheristo · Vähimmäisvaatimuksen ylittävä työkokemus teknisten",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "SQL"
+  },
+  "37dc9be10e80d06cbbd5bf1e05d7007c394e01a3": {
+    "_ctx": "Jovica Dimitrijevic · Mikropalvelukokemusta",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "3869bafb3728d7d38c842b05de4e0172837b991d": {
+    "_ctx": "Heikki · Kokemusta Confluencen käytöstä asiakasprojekteissa",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "38f4a7d69c2dd29a99231a99e49c5fcc52986440": {
+    "_ctx": "Kimmo Lindman · Kokemusta 1.1.2014 jälkeen päätoimisena Scrum mast",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "39228aba050610ea453ed65ccd9cebaa4a8b9e13": {
+    "_ctx": "Eemeli Vaheristo · Voimassa olevat projektisertifikaatit (IPMA B = 5p",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "3940bd07ee12fa716f06057923dd65162c739d3e": {
+    "_ctx": "Arto Niemi · Henkilöllä on voimassa vähintään yksi MS Dynamics ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "396859c83cfdd94617c06fbd983d388ba4d5ee00": {
+    "_ctx": "Antti Leinonen · Kokemus ja osaaminen useammasta ketterän kehittämi",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "React"
+  },
+  "399f2018e9b02c60083d78bdaa88ecc546ad25f0": {
+    "_ctx": "Eemeli Vaheristo · Koulutus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "3aa16cb119e2ba814f6a850104d4747560eefcf6": {
+    "_ctx": "Miika Kuha · Kielitaito",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "3aa1cb86742c27658a14c00eb023a808818ffb3d": {
+    "_ctx": "Elizabeth Tran · Asiantuntijalla on kokemusta ylläpitäjänä toimimis",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "3ab4e59d714eec81d3c5f88436aae71e01ab3709": {
+    "_ctx": "Mikael Tetenkin · Henkilöllä on kokemusta Azuressa toimivan tietojär",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "3b1c0defd82acac15d672b3ab88ba494c0642b93": {
+    "_ctx": "Stefan Rimaila · Henkilöllä on kokemusta sovelluskehittäjänä Scrum-",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "3b99b5635064c484c0a9b23d3ad4b825e0a8e3dd": {
+    "_ctx": "Santeri Suuronen · Asiantuntijalla tulee olla työkokemusta testausaut",
+    "domain_or_industry": "Koulutus"
+  },
+  "3baee276292e08202ede18fe09a09b81c04819e1": {
+    "_ctx": "Marko Paavola · Kokemusta päätoimisena arkkitehtina (yritys, ratka",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "3bb82bc569aff9dc961c7c559d16750eb3c6b50a": {
+    "_ctx": "Sasu Suominen · Asiantuntijalla on vähimmäisvaatimuksen nro B 1 ko",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "3c25207c2435734d1b0b63a65ebc7bbdb27c1e90": {
+    "_ctx": "Tiina Uutela · Projektipäällikön kokemus Verolainsäädäntöä julkis",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "3c3435ebd0c564c372e14e7776df60f6c97076a0": {
+    "_ctx": "Otto Sassi · Kokemusta Jiran käytöstä asiakasprojekteissa",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "3c427c520457e7f3b0a2bef8b3ac02ba27918d2f": {
+    "_ctx": "Eemeli Vaheristo · Kokemus sähköisten asiointipalveluiden kehittämise",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "3ca349ed1d3f7fd29ea329080bc2487cd6f85b62": {
+    "_ctx": "Tuomas Fjällström · Projektipäällikön kokemus toiminnan kehittämiseen ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "3cb82d75d44a58d6627c1ead636e04e0f38e1387": {
+    "_ctx": "Marko Manner-Raappana · Kokemus julkishallinnon projekteissa työskentelyst",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "3d12a054de572615bf5f30347718c87a6e2b5bb2": {
+    "_ctx": "Teemu Ketonen, Otto Sassi, Semi Rantanen · Kokemus ja osaaminen Suomi.fi-palvelut mahdollista",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "3d2944958f39e2f8daf07aaf0d1a9f2a1401992f": {
+    "_ctx": "Keijo Poutiainen · Henkilöllä on kokemusta sovelluskehittäjänä Scrum-",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "C#, Azure"
+  },
+  "3d5cd2a0af0dd699b1c9239f2f23a96121f14aae": {
+    "_ctx": "Vasilije Abazovic · Mikropalvelu kokemusta",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Microservices"
+  },
+  "3d7f70b9be3a7c57f310d8ee1740d86a90254948": {
+    "_ctx": "Tiina Uutela · Kokemusta sovellusten kehittämisen projekteista. T",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "3d85cbb4cbbf2606ebb0c436215278b76da10cef": {
+    "_ctx": "Adolis Kliucevicius · Kokemus verkkopalvelun toteuttamisesta AWS-alustal",
+    "technologies": "AWS"
+  },
+  "3dc9f7956a6d78ec7b45913a9a897e6de4a91c9b": {
+    "_ctx": "Juho Mehtonen · Kokemus Javascript; React, Angular ja/ tai Vue tek",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "JavaScript, React, Angular, Vue"
+  },
+  "3dd5fd4604ca7906e3ce1cffb80fa0a9f898a3e3": {
+    "_ctx": "Asko Kinnala · Projektipäällikköllä on vähintään 2 vuoden kokemus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "3e23b239e3fc8129de788653bb28a5892593feaf": {
+    "_ctx": "Otto Sassi · Asiantuntijalla on vähimmäisvaatimuksen nro C 1 ko",
+    "domain_or_industry": "Asuminen ja kiinteistöt",
+    "technologies": "Azure"
+  },
+  "3e311428f313e1b000634166eeccd79d91af6dcb": {
+    "_ctx": "Veli-Matti Heikkinen · Suomen kielen taitoinen. Kuvaa tarkemmin sarakkees",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "3e8e85f303429719b21a8ce68dde3f086f8a635b": {
+    "_ctx": "Heikki · Asiantuntijalla on kokemusta semanttisten tietomal",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "3e914bf97ef99a6800af717b717344f648596904": {
+    "_ctx": "Taneli Kulo · Asiantuntijalla on vähimmäisvaatimuksen nro A7 kok",
+    "domain_or_industry": "Liikenne"
+  },
+  "3f396b4565dead5d6cf58e7b953d2f35a6c58a05": {
+    "_ctx": "Teemu Mäkinen · Kokemus sanomamuodoista",
+    "technologies": "JSON, XML"
+  },
+  "3f6598a3dfd7e90e26890950e1b5d8a4660db5bd": {
+    "_ctx": "Nortal Oy · Asiantuntijalla on työkokemusta integraatiotestauk",
+    "domain_or_industry": "Liikenne"
+  },
+  "3f7fc2db820226e8437189fb336c3ee5f83d353c": {
+    "_ctx": "Mika Kirveennummi · Projektipäällikköllä on vähintään 2 vuoden kokemus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "3f919a3435af6c021ae5f5eabb96f89c60674cec": {
+    "_ctx": "Elizabeth Tran · Asiantuntijalla on kokemusta tiedonsiirtoputken (E",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "3fe3a498ac3d3b00a82689f309830b72d86ec94f": {
+    "_ctx": "Veli-Matti Heikkinen · Kokemus sovellusarkkitehdin, front-end, back-end, ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "402559bbbec7985cd0a21fac7dce24bcb103cf70": {
+    "_ctx": "Otto Sassi · Asiantuntijalla on erinomainen kirjallinen ja suul",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "404a553e4d44e311aa86538771144794c9ad2b95": {
+    "_ctx": "Essi Suo-Heikki · Asiantuntijalla on erinomainen suomen kielen kirja",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "407f804e8dca3a30a1b35b5088e07985304a6a91": {
+    "_ctx": "Taneli Kulo · Asiantuntijalla on työkokemusta karttapohjaisen so",
+    "domain_or_industry": "Liikenne"
+  },
+  "40a27786166f11cfdc4472a896812ff826b43488": {
+    "_ctx": "Esa Määttä · Henkilöillä on kokemusta Azure DevOps-työkalujen k",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure, Linux, Microservices"
+  },
+  "40be73ae9c4a2fd0f34f7480574bd13d4591bab8": {
+    "_ctx": "Pannula? · Kokemus pilviarkkitehtuurista",
+    "domain_or_industry": "Terveydenhuolto"
+  },
+  "40d5d8c9a42d73fedc1fa317ba26abc90a6065df": {
+    "_ctx": "Olli-Petteri Tuuttila · Asiantuntija on työskennellyt asiantuntijaroolissa",
+    "domain_or_industry": "Liikenne",
+    "technologies": "AWS, CI/CD, Microservices"
+  },
+  "40e182ed1ce123bcfa83ef5c50b8e05360e66105": {
+    "_ctx": "Olli-Petteri Tuuttila · Asiantuntija on työskennellyt asiantuntijaroolissa",
+    "domain_or_industry": "Liikenne",
+    "technologies": "AWS, CI/CD, Microservices"
+  },
+  "40ec0c34a41fe9bd6a4e2c08706abd04d2d29359": {
+    "_ctx": "Aki Pehkonen · Asiantuntija on työskennellyt asiantuntijaroolissa",
+    "domain_or_industry": "Liikenne",
+    "technologies": "AWS, GCP"
+  },
+  "416ab900a100592d8c76a6b5430c45403a0b0ec1": {
+    "_ctx": "Taina Ylisirniö · Koulutus",
+    "domain_or_industry": "Koulutus"
+  },
+  "41961722d654106164e809a963da44773037eafd": {
+    "_ctx": "Aleksandar Saric · Toteutuskokemusta relaatiotietokannoista",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "41acb853ee37b7730758813545395cdf57d48afa": {
+    "_ctx": "Taneli Kulo · Asiantuntijalla on työkokemusta Figma-työkalun käy",
+    "domain_or_industry": "Liikenne"
+  },
+  "41c5491b5edc77ed72fe20cd289d736c5e68a378": {
+    "_ctx": "Heikki Huotari · Hyvä kirjallinen ja suullinen suomen ja englannin ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "41e992439c0a53464ec2d67378e7b7a8f9422daa": {
+    "_ctx": "Mikael Tetenkin · Henkilöllä on kokemusta Azuren lokitus-, monitoroi",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "427b8e5c17fcc1aa58ae4b39ca922301e3181a83": {
+    "_ctx": "Jani Lusikka · Muu asiakkaan määrittelemä kokemus (esim. kielitai",
+    "domain_or_industry": "Rahapelit"
+  },
+  "4293bc2c213de7b7b3123654d5b4d42429228958": {
+    "_ctx": "Marko Leiviskä · Testiautomaatiotyökalujen kuten Robot Framework ta",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Docker, Jenkins, Git, Linux"
+  },
+  "42b81a3734ce23498a6abd6ba90146f65e135663": {
+    "_ctx": "Elizabeth Tran · Asiantuntijalla on C2 vaatimuksen mukaista kokemus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "42f66ab6344ef15e6c717d394a9933986537d377": {
+    "_ctx": "Pertti Repo · Teknologiat/osaaminen: SQL. Kuvaa tarkemmin sarakk",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "430c117183264d8ec661cc102c3f8b2cf43b60d2": {
+    "_ctx": "Tuomas Fjällström · Vähimmäisvaatimuksen ylittävä työkokemus toiminnan",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "4318f12ce02657be0e348cd8a4625f0af8bc59d4": {
+    "_ctx": "Heikki Tuohiniemi · Asiantuntijalla on kokemusta käyttöoikeuksien / ra",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "4319241988040030d248cb0b04bcb9526c12cfcb": {
+    "_ctx": "Mika Purjesalo · Kokemus palvelumuotoilijana tai vastaavana toimimi",
+    "domain_or_industry": "Metsä ja luonnonvarat"
+  },
+  "4389d9238f37a5a3fe32a7a6ddabd80c9aa38d01": {
+    "_ctx": "Hannu Karttinen · Asiantuntijalla on kokemusta projektipäällikön tai",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "43cbb365c2bd8a3e7b95aced7940b1c19dec835c": {
+    "_ctx": "Anssi Pannula · Kokemus medallion-arkkitehtuurilla toteutetuista p",
+    "domain_or_industry": "Asuminen ja kiinteistöt",
+    "technologies": "Kubernetes, Azure"
+  },
+  "43f6c12030e1867bec5df69f6772dab82c66df79": {
+    "_ctx": "Ulf Nyström · Asiantuntijalla on erinomainen kirjallinen ja suul",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "441bd8e50b87f0a490da68072ec96394a040e317": {
+    "_ctx": "Eemeli Vaheristo · Vähimmäisvaatimuksen ylittävä työkokemus teknisten",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "4444bebfa348663ad81786d998bc8c128b8f6279": {
+    "_ctx": "Marko Heikkilä · Kokemus ketterissä projekteissa toimisesta ja kett",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "447579cf4fb6a6d35088b42c55486668a8b4ec90": {
+    "_ctx": "Adolis Kliucevičius · Asiantuntija on suorittanut AWS Associate tai Prof",
+    "domain_or_industry": "Liikenne",
+    "technologies": "AWS"
+  },
+  "44976fa45e31be5ca0def644ec6de1c7587ddc70": {
+    "_ctx": "Aleksandar Saric · Kokemusta integraatioiden toteuttamisesta standard",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "44a9430d9c127981f509edb239d1a4bcc4bfd4f1": {
+    "_ctx": "Pertti Repo · Kokemus Java, Scala, Clojure ja/tai Kotlin hyödynt",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Java, Kotlin"
+  },
+  "45708856c9c4718a9c73d4332a42b41c54417115": {
+    "_ctx": "Minna Prusi · Henkilöllä on kokemusta Microsoft Dynamics 365 CRM",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "457fa4f7743ea7d761bd28ebc44616b57fbd82d7": {
+    "_ctx": "Johanna Kartila-Malmivaara · Nimetty asiantuntija on toiminut projektipäällikkö",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "4583686502e9afea11d2e53919ba4b0bc31dcdf3": {
+    "_ctx": "Eemeli Vaheristo · Kokemusta sovellusten kehittämisen projekteista. T",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "45cda3364a444f88a069e8515a44116270bdc2ed": {
+    "_ctx": "Jovica Dimitrijevic · w",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "45d6afdc80f9140f64c41cb0dbbf0152c66e0e6f": {
+    "_ctx": "Taneli Kulo · Koulutus",
+    "domain_or_industry": "Koulutus"
+  },
+  "45fea7a12a95801d191be1ca0899c1069d22f7e7": {
+    "_ctx": "Mikko Keiho · Henkilöllä on vähimmäisvaatimuksen nro B 1 ylittäv",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "461231baa52facd6778f0e049643623443c788ee": {
+    "_ctx": "Taina Ylisirniö · Asiantuntijan testaukseen kohdistunut toteutunut t",
+    "domain_or_industry": "Koulutus"
+  },
+  "46b692a0b1b1945794e98616ce047d7ec4c848c0": {
+    "_ctx": "Nortal Oy · Asiantuntijalla on työkokemusta manuaalisesta hyvä",
+    "domain_or_industry": "Liikenne"
+  },
+  "47057f8f946b8fa8751a7dad1b2dbc8dfb748856": {
+    "_ctx": "Anssi Pannula · Suomen kielen taito: erinomainen (ammatillinen vie",
+    "domain_or_industry": "Asuminen ja kiinteistöt"
+  },
+  "4733fd5cf2a0397bc565a026c5e2579118596db9": {
+    "_ctx": "Minna Prusi · Henkilöllä on kokemusta Microsoft Dynamics 365 CRM",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "473c68591dc25bfd49d4b822e5f1ddcb8fcc02af": {
+    "_ctx": "Marko Manner-Raappana · Kokemus liiketoimintaprosessien kehittämisen proje",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "476261476b12ea8f452af359db4b2667e4f18253": {
+    "_ctx": "Semi Rantanen · Kokemus toimimisesta kahdessa (2) laajassa Microso",
+    "domain_or_industry": "Terveydenhuolto"
+  },
+  "476ab59ace043e33689c588334be3cf1baac005d": {
+    "_ctx": "Ulf Nyström · Asiantuntijalla on erinomainen suomen kielen kirja",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "477b7caf3f1a59979d0feeeb724a78f502d58312": {
+    "_ctx": "Johanna Kartila-Malmivaara · Nimetyllä asiantuntijalla on kokemusta Jiran ja Co",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "47a148158b117ae10bdd7ba24a8c4bca1cadb474": {
+    "_ctx": "Mikko Haveri · Asiantuntijalla on E1 vaatimuksen mukaista kokemus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "47ca9bdceae3e3cf82bf49ff3426e9d3ea60f498": {
+    "_ctx": "Taneli Kulo · Asiantuntijalla on työkokemusta selainpohjaisen kä",
+    "domain_or_industry": "Koulutus"
+  },
+  "4851c3c1eaf2d5704432c40826c0c299ee7c2fdc": {
+    "_ctx": "Keijo Poutiainen · Henkilöillä on kokemusta \"Infrastructure as Code\" ",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "C#, Azure"
+  },
+  "48c822ece809572b6b545cb8ecaa5036e74a6ba9": {
+    "_ctx": "Ahti Rossi · Asiantuntijalla on kokemusta monitoimittajaympäris",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "48de54ef5b37c52242d3b3e1fe5476b011f5ee79": {
+    "_ctx": "Ulf Nyström · Asiantuntijalla on kokemusta datan latausten autom",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "490053b123cb16545ddb1fa888d8f00cc9216909": {
+    "_ctx": "Aki Pehkonen · Asiantuntija on työskennellyt asiantuntijaroolissa",
+    "domain_or_industry": "Liikenne",
+    "technologies": "AWS"
+  },
+  "490a05ab48ee232dd4b70e40406637e644732a04": {
+    "_ctx": "Kati Norrena · Tarjottavalla henkilöllä on hyvä kirjallinen ja su",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "4957353abd25f5326d178103fa2b75a28ffdfb03": {
+    "_ctx": "Taneli Kulo · Asiantuntijalla on työkokemusta selainpohjaisen kä",
+    "domain_or_industry": "Liikenne"
+  },
+  "495ed473292b361454a854fc025dc352b70c2386": {
+    "_ctx": "Mikko E · Kokemus fasilitoinnista",
+    "domain_or_industry": "Terveydenhuolto"
+  },
+  "49a2997f2380be4f88c824a32fae44ab68ffc0c6": {
+    "_ctx": "Niina Warro · Tarjottava henkilö on toiminut ratkaisukehittäjän ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "49d2339ab7e9cdf6b8192d1a1fecfa19f3404245": {
+    "_ctx": "Hannu Karttinen · Asiantuntijalla on vähimmäisvaatimuksen nro A 6 yl",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "49ee3c1ccdf94ea2ebe88368c109933320d7733e": {
+    "_ctx": "Otto Sassi · Asiantuntijalla on kokemusta ylläpitäjänä toimimis",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "4a08f5665df400bd62596117ed5c99c08002142b": {
+    "_ctx": "Tuomas Fjällström · Kokemus liiketoimintaprosessien kehittämisen proje",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "4a0f039d415f5e331377efa861af288e91e27d71": {
+    "_ctx": "Eemeli Vaheristo · Projektipäälliköllä on kokemusta työmäärältään laa",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "4a89d0da6bd9d0cef4dcf3ef6786605954cf3377": {
+    "_ctx": "Mikko E · Kokemus prosessien digitalisoinnista",
+    "domain_or_industry": "Terveydenhuolto"
+  },
+  "4affb1677a51a1f9a1eeb7c9ad1b93d1dd2adf00": {
+    "_ctx": "Ulf Nyström · Asiantuntijalla on kokemusta API-ratkaisuun perust",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "SQL"
+  },
+  "4b2e93d9ff638e1ad25d347a9e731e82464481db": {
+    "_ctx": "Tiina Uutela · Projektipäällikön kokemus Verolainsäädäntöä julkis",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "4b4b895c00d2a824a69e606738182d365468fdf9": {
+    "_ctx": "Johanna Kartila-Malmivaara · Nimetty asiantuntija on toiminut päätoimisena asia",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "4b522e1796b6feb6c6d3123dc89bd3bf03a69d40": {
+    "_ctx": "Kacper Kozak · Henkilöllä on kokemusta Azure-alustalla toteutettu",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "React, Azure"
+  },
+  "4b581a4ec55be616f61c6b07d9caf1d3cc022530": {
+    "_ctx": "Johanna Kartila-Malmivaara · Kielitaito",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "4b855bd7eeea73679d4b4babc10471ab651ab467": {
+    "_ctx": "Ulf Nyström · Asiantuntijalla on kokemusta ETL toteutuksesta, su",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "SQL"
+  },
+  "4bfa1993aab45e7532c3cfa2a1a5eaabe59e1a21": {
+    "_ctx": "Juha Mild · Asiantuntijalla on kokemusta SQL-kielellä tehdystä",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "SQL, Azure"
+  },
+  "4c88d63568f4b70f06760ccc4585a7fa83e590ab": {
+    "_ctx": "Semi Rantanen · Työkokemus Microsoft Dynamics (CRM) ja Azure-ratka",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "JavaScript, Azure"
+  },
+  "4ce4d8a9376ca34afaaf838d9921bf9233dd4819": {
+    "_ctx": "Tiina Uutela · Asiantuntijalla on kokemusta päätoimisesta toiminn",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "4d7105794e62fe52d959d0828f1d8ba5f62e64ef": {
+    "_ctx": "Aake Andersson · Projektipäällikön kokemus Verolainsäädäntöä julkis",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "4db588073287091353caf87b200c2fb47c4227e2": {
+    "_ctx": "Mikko Keiho · Henkilöllä on vähimmäisvaatimuksen nro A 2 ylittäv",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "4dcef262b7003be7f59db3e63dd887cd48ec3f27": {
+    "_ctx": "Mika Purjesalo · Kokemus web-applikaatioiden suunnittelusta",
+    "domain_or_industry": "Rahapelit"
+  },
+  "4e31dfeadae563c7c037f1c9c273ae64d157d911": {
+    "_ctx": "Stefan Rimaila · Henkilöllä on kokemusta erilaisiin kokoihin mukaut",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Angular, Azure"
+  },
+  "4e435f703012473b5ff8d9ec97e779a26b62c454": {
+    "_ctx": "Pertti Repo · Kokemus seuraavista teknologioista ja/tai ohjelmis",
+    "technologies": "Java, JSON, XML, CI/CD"
+  },
+  "4e4ac7167d8bfc05a52dbc76da827317e17a50e5": {
+    "_ctx": "Arto Niemi · Henkilöllä on kokemusta Microsoft Dynamics 365 CRM",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "4ecfd9543d041327ea5f223ee49fbf0954cec14f": {
+    "_ctx": "Niina Warro · Kokemusta henkilötietojen (esim. opiskelijatietoje",
+    "domain_or_industry": "Koulutus"
+  },
+  "4ff36a160de99cc317d4cd7f965cda204b8cf1a5": {
+    "_ctx": "Hannu Karttinen · Asiantuntijalla on vähimmäisvaatimuksen nro A 3 yl",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "5052209fbf19fdd350657593c80dfc29cc0fafc6": {
+    "_ctx": "Antti Leinonen · Asiantuntijalla tulee olla projektipäällikön työko",
+    "domain_or_industry": "Koulutus",
+    "technologies": "React, Angular"
+  },
+  "50946400de56e513c5bf37a77727130e05fe0815": {
+    "_ctx": "Tiina Uutela · Asiantuntijalla on kokemusta päätoimisesta toiminn",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "50e642673f5298e79607178383c41ebba27f2158": {
+    "_ctx": "Marko Manner-Raappana · Asiantuntijalla on kokemusta päätoimisesta toiminn",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "51606910a1530163db70b36f3bbedb749ee59761": {
+    "_ctx": "Kimmo Lindman · Scrum master -sertifikaatti. Professional scrum ma",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "518012cae6bfbdf9a5f3a4cda3e09163363309b7": {
+    "_ctx": "Kärt Ehastu · Kokemus kohdassa 1 kuvatuista tehtävistä vähimmäis",
+    "domain_or_industry": "Metsä ja luonnonvarat"
+  },
+  "51920a83d2586c82e209b69d1af929f9ed7a09b6": {
+    "_ctx": "Kostiainen? Timo T? · Kokemus data-arkkitehtuurista",
+    "domain_or_industry": "Terveydenhuolto"
+  },
+  "51ef4476e92805a7d69a394e5a8680f93bf7dc6d": {
+    "_ctx": "Hannu Karttinen · Asiantuntijalla on vähimmäisvaatimuksen nro A 1 yl",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "5270b4a483bd28fc982edc56df2c7f1ea552353c": {
+    "_ctx": "Timo Kankaanpää · Henkilöllä on vähimmäisvaatimuksen nro D 1 ylittäv",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "529c319516ee912021f3546857467f09a4847534": {
+    "_ctx": "Ahti Rossi · Asiantuntijalla on kokemusta vähintään 100 htp:ä t",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "52b3acdc71b84652c14cb2cc17cf0aec05477696": {
+    "_ctx": "Juhis Jalopeura · Kokemus toimimisesta kahdessa (2) laajassa Microso",
+    "domain_or_industry": "Terveydenhuolto"
+  },
+  "52d9c6a0a0c387962369180ec61ab86182496007": {
+    "_ctx": "Anssi Pannula · Kokemus projekteista, joissa käsitellään henkilöti",
+    "domain_or_industry": "Asuminen ja kiinteistöt",
+    "technologies": "Azure"
+  },
+  "52dca1b8d5e182e88ab05fd830284935b7a024ec": {
+    "_ctx": "Ivan Jevtovic · Toteutuskokemusta relaatiotietokannoista",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "52f377a19c5fcbee4b6e8d7566060f4173b294e2": {
+    "_ctx": "Jovica Dimitrijevic · Kokemusta HTML, CSS -",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "537fc343c95942127c53c55220a7e7c870ae1ca8": {
+    "_ctx": "Niina Warro · Tarjottavalla henkilöllä on kokemusta tietovarasto",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "SQL, Azure"
+  },
+  "53c4fc78ece0d9f2957b48cefb4fee0867853150": {
+    "_ctx": "David Dudzik · Henkilöllä on vähimmäisvaatimuksen nro D 1 ylittäv",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "53e0c84782105e914b1341f6d70ea17498aac765": {
+    "_ctx": "Taina Ylisirniö · Asiantuntijan testaukseen kohdistunut toteutunut t",
+    "domain_or_industry": "Koulutus"
+  },
+  "540d69244b81fcd030a50d05915174141bae7a97": {
+    "_ctx": "Taneli Kulo · Asiantuntijalla on työkokemusta käyttöliittymä- ja",
+    "domain_or_industry": "Koulutus"
+  },
+  "54440f3cac0ecdd4bc601d3580ef2d7f74851887": {
+    "_ctx": "Veli-Matti Heikkinen · Kokemus ketterissä projekteissa toimisesta ja kett",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "545d0b6de8333e95f83b93eeb2a063c0cda8f525": {
+    "_ctx": "Nortal Oy · Koulutus",
+    "domain_or_industry": "Liikenne"
+  },
+  "545e9082d039f63077f392bda3e1f536b4dbe3d5": {
+    "_ctx": "Nortal Oy · Asiantuntijalla on vähimmäisvaatimuksen nro B3 kok",
+    "domain_or_industry": "Liikenne"
+  },
+  "548951b589c670c3214a47188213843f4f86e148": {
+    "_ctx": "Otto Sassi · Asiantuntijalla on kokemusta raporttikehityksen li",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "54f6d0839e666ec78a6bc262ca13edd19c1fd571": {
+    "_ctx": "Veli-Matti Heikkinen · Pystyy toimimaan (on kokemusta) tässä projektissa ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "55011a8c84efdc02b1381aa373eaf61319317c1d": {
+    "_ctx": "Eemeli Vaheristo · Kokemus päävastuullisena projektipäällikkönä järje",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "5575022d9311aeb3a46fb6938a710d8abf323966": {
+    "_ctx": "Johanna Kartila-Malmivaara · Nimetty asiantuntija on toiminut päätoimisena proj",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "5593ed6f8e6b5ede2ed48f50658f4bc852820ed4": {
+    "_ctx": "Mikko Haveri · Asiantuntijalla on kokemusta raporttikehityksen li",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "55c7380afa420d319bedeb22a2cc455ddc18b722": {
+    "_ctx": "Ulf Nyström · Asiantuntijalla on kokemusta MS SQL Server ympäris",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "SQL"
+  },
+  "55f6500fe17a961f3a0f5f32893cb0c2789266da": {
+    "_ctx": "Ivan Jevtovic · Kokemusta sovelluskehittäjänä projekteissa tai vas",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "5633b7bbaa7fefd825fe1e5484bc7525ddd29d72": {
+    "_ctx": "Marko Manner-Raappana · Projektipäällikön kokemus toiminnan kehittämiseen ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "5638b0e632684dfec1e007ec6af0d4089339940d": {
+    "_ctx": "Tiina Uutela · Kokemus liiketoimintaprosessien kehittämisen proje",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "5688895ba334542d81c9d22955a0599a450d20a3": {
+    "_ctx": "Juha Mild · Kokemusta tietovaraston arkkitehtuurisuunnittelust",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "572430039e7133a03a49632a8d19edcd2ea952e3": {
+    "_ctx": "Keijo Poutiainen · Henkilöillä on kokemusta Azure DevOps-työkalujen k",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "C#, Azure"
+  },
+  "577b58d911d78df76e63792521f14176eba2ae5a": {
+    "_ctx": "Sasu Suominen · Asiantuntijalla on kokemusta Canvas App -pohjaiste",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "579524dcdb3728267551995c9a70910729816b71": {
+    "_ctx": "Heikki Huotari · Vähimmäisvaatimuksen ylittävä työkokemus toiminnan",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "57ad0769f3c2cc2bbcf3afe13bbc6f150e86bf88": {
+    "_ctx": "Kati Norrena · Tarjottava henkilö on toiminut palvelupäällikön ro",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "57e4154fe88f022f31dc9b3cb4554aec8653dd9a": {
+    "_ctx": "Keijo Poutiainen · Henkilöllä on kokemusta roolinsa mukaisena sovellu",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "C#, Azure"
+  },
+  "57e7a195a8344541f8f7c16719bf415d29f2070c": {
+    "_ctx": "Mikael Tetenkin · Henkilöllä on kokemusta Azuressa toimivan tietojär",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "5802477c3769444615531da02be82f846ff398f1": {
+    "_ctx": "Asko Kinnala · Projektipäälliköllä on kokemusta työmäärältään laa",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "583d1dadd76366a8979f62d828fdad3e143c695d": {
+    "_ctx": "Ivan Jevtovic · Java kokemusta",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Java"
+  },
+  "5860858a2fed78fb0b28faebe11731892afd7cfa": {
+    "_ctx": "Sasu Suominen · Asiantuntijalla on vähimmäisvaatimuksen nro B 4 ko",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "59c1c475c00167f35b5dddcd3d5625fa9cd75666": {
+    "_ctx": "Essi Suo-Heikki · Asiantuntijalla on kokemusta Power BI:n sisältöjen",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "5a23ab4ecddc22e12026bf3dd2e74cf07726d13c": {
+    "_ctx": "Karoliina Alho · Kokemusta henkilötietojen (esim. opiskelijatietoje",
+    "domain_or_industry": "Koulutus"
+  },
+  "5a6e30ed4b55c13aa0b6b344ccb73a6b5cd3e22b": {
+    "_ctx": "Aake Andersson · Kokemus liiketoimintaprosessien kehittämisen proje",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "5a980b74c27d2a676e160b3f612de90a240ac361": {
+    "_ctx": "Esa Määttä · Henkilöllä on kokemusta mini-/microservice-palvelu",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure, Linux, Microservices"
+  },
+  "5ac5d72bde96092fb7d2ccf410491042e06fc3db": {
+    "_ctx": "Pertti Repo · Teknologiat/osaaminen: CI/CD, REST/JSON (koko osaa",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "REST, CI/CD"
+  },
+  "5ad2a9f578e76f0102b56a6bdc2b57e63fc1e9f7": {
+    "_ctx": "Antti Leinonen · Kokemus vähintään yhden scrum-tiimin (3-10 henkilö",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "React, Azure"
+  },
+  "5b1c2eea2f5a9026eb00ade6e9d50940ef507d04": {
+    "_ctx": "Keijo Poutiainen · Henkilöillä on kokemusta Azuren eri Storage-vaihto",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "C#, Azure"
+  },
+  "5c82c0e627309b56b607020eaffe0bf60623ad79": {
+    "_ctx": "Mikko Haveri · Kokemusta Confluencen käytöstä asiakasprojekteissa",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "5c9a35e38ead8150ff8afad684945717801a3614": {
+    "_ctx": "Mikko Haveri · Asiantuntijalla on kokemusta Power BI raportointir",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "5caf1be40fcdbf75161fab78c93383a6c9131c4d": {
+    "_ctx": "Heikki · Asiantuntijalla on A2 vaatimuksen mukaista kokemus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "5dc8bb97f217673b33cf6fc05ca3557a160cf89e": {
+    "_ctx": "Ergin Tuganay · Asiantuntija on työskennellyt asiantuntijaroolissa",
+    "domain_or_industry": "Liikenne",
+    "technologies": "Azure"
+  },
+  "5e8329133f90bb4455bd05acbb5ef0e3187ab1cf": {
+    "_ctx": "Heikki · Asiantuntijalla on D3 vaatimuksen mukaista kokemus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "5e91913dfb95d1a41dce803088c9822bab124972": {
+    "_ctx": "Eemeli Vaheristo · Kokemus liiketoimintaprosessien kehittämisen proje",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "5ef0cc60fdbd903d2cbaa72e93cd7cb942c33a52": {
+    "_ctx": "Joseph Deksnys · Henkilöllä on kokemusta käyttöliittymäkonseptien i",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "5f1aab51ba1f7b5bf106b71cb0d57948950ca97f": {
+    "_ctx": "Kacper Kozak · Henkilöllä on kokemusta sovelluskehittäjänä Scrum-",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "React"
+  },
+  "5f20ed5e4506a476ff058ed0ac345099089757fb": {
+    "_ctx": "Heikki Tuohiniemi · Asiantuntijalla on D3 vaatimuksen mukaista kokemus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "5f50f65d7e7c73ef940fb439c8aa223e8581ddd7": {
+    "_ctx": "Essi Suo-Heikki · Microsoft Power BI sertifikaatti PL-300 (tai uudem",
+    "domain_or_industry": "Asuminen ja kiinteistöt"
+  },
+  "5fe30639250681058443826ff358dc14cc0eda5c": {
+    "_ctx": "Minna Prusi · Henkilöllä on kokemusta Microsoft Dynamics 365 CRM",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "60473d091112d38f219d43761b280df3f3999c18": {
+    "_ctx": "Ulf Nyström · Työkokemus data vault -mallinnettujen tietovaranto",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "6078ef761a69311ee80e6ebd1fcba8e890f536a2": {
+    "_ctx": "Kimmo Lindman · Kokemus Scrum master -roolissa toimimisesta tietoj",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "60d7a16c9d3d75e69fc3006e93f0fcf46540d893": {
+    "_ctx": "Adolis Kliucevičius · Asiantuntija on työskennellyt asiantuntijaroolissa",
+    "domain_or_industry": "Liikenne",
+    "technologies": "AWS"
+  },
+  "60fa864091308d2e301c6b3003b87b6f6f06e657": {
+    "_ctx": "Ulf Nyström · Asiantuntijalla on kokemusta SQL Server -pohjaiste",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "SQL, Azure"
+  },
+  "6118775f6c0fc396703717f1c4c1832a87b6df74": {
+    "_ctx": "Stefan Rimaila · Henkilöllä on kokemusta CSS:n syntaksista ja LESS,",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Angular, C#, Azure"
+  },
+  "61c6eb058af3d6d0643f61847fbdbfffdc8cc896": {
+    "_ctx": "Johanna Kartila-Malmivaara · Nimetty asiantuntija on toiminut päätoimisena asia",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "61f14b358a126cb5e0901932b05900c797e7f5bc": {
+    "_ctx": "Marko Määttä · Asiantuntijalla on A2 vaatimuksen mukaista kokemus",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "SQL, Azure"
+  },
+  "626f69bd77137c563485bc9b717fb9b916661822": {
+    "_ctx": "Heikki Huotari · Asiantuntijalla on kokemusta päätoimisesta toiminn",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "628c1bf4074a8e28c2464904c106c301ba345307": {
+    "_ctx": "Essi Suo-Heikki · Suomen kielen taito: erinomainen (ammatillinen vie",
+    "domain_or_industry": "Asuminen ja kiinteistöt"
+  },
+  "628da43d2be8c0a08c519d18943662f4216845aa": {
+    "_ctx": "Tuomo Hokkanen · Asiantuntijalla on kokemusta Azure-ympäristön suor",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Kubernetes, Azure"
+  },
+  "637b1da33f28b68ad1a998818c63231ef933033c": {
+    "_ctx": "Mika Purjesalo · Kokemus UX/UI suunnittelusta",
+    "domain_or_industry": "Rahapelit"
+  },
+  "63df03d13ba2cf20075c7041f6413a767526772a": {
+    "_ctx": "Marko Manner-Raappana · Projektipäällikön kokemus Verolainsäädäntöä julkis",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "64071adbb45ca9d8b882280a6f903b5370109ae0": {
+    "_ctx": "Mikael Tetenkin · Henkilöllä on kokemusta ohjelmistokehitysprojektei",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "6420ef4bcd7cd82fb42cab14112d98fe9dbd3686": {
+    "_ctx": "Ahti Rossi · Asiantuntijalla on kokemusta Confluencen hallinnas",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "643b46117b4a090a1fecb7f8d33b41c8f508f778": {
+    "_ctx": "Keijo Poutiainen · Henkilöillä on kokemusta REST API -rajapintojen av",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "C#, Azure, REST"
+  },
+  "6446dda2ac25d701c00cc2d56dabc44cf23a1d6f": {
+    "_ctx": "Taneli Kulo · Asiantuntijalla on vähimmäisvaatimuksen nro A7 kok",
+    "domain_or_industry": "Koulutus"
+  },
+  "6497b2e60048579abc6857b66d96968bedfe370f": {
+    "_ctx": "Ergin Tuganay · Asiantuntijalla on  IaC- kokemusta Terraformista",
+    "domain_or_industry": "Liikenne",
+    "technologies": "Terraform"
+  },
+  "64b144189b3e7e0423407cec69d3ea72ecc7e38d": {
+    "_ctx": "Stefan Rimaila · Henkilöillä on kokemusta REST API -rajapintojen av",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "REST"
+  },
+  "650efce2319b1afdd68d9bc5621204465ac0815b": {
+    "_ctx": "Ulf Nyström · Asiantuntijalla on kokemusta Jiran käytöstä asiaka",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "SQL"
+  },
+  "659cf1a6ce9587b416fa097383b5f8ba60d7bebb": {
+    "_ctx": "Jovica Dimitrijevic · Kokemus sovelluskehittäjänä tms. vastaavassa rooli",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "65a3b0118de3f6e7dc280cce07289ba2d7a4f8a0": {
+    "_ctx": "Mikko Haveri · Asiantuntijalla on C2 vaatimuksen mukaista kokemus",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "65ea46a283a96a699e424713681df0f3503ad2cd": {
+    "_ctx": "Santeri Suuronen · Asiantuntijan kielitaito",
+    "domain_or_industry": "Koulutus"
+  },
+  "65f52ff8f8d0f8376e2a335827d094a92e760a1a": {
+    "_ctx": "Ergin Tuganay · Asiantuntijalla on AzureAD operointi- ja konfiguro",
+    "domain_or_industry": "Liikenne",
+    "technologies": "Azure"
+  },
+  "660293b4a2e23aa6d88b8dbcced986a99ff8b2f6": {
+    "_ctx": "Johanna Kartila-Malmivaara · Nimetty asiantuntija on toiminut projektipäällikön",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "666988e95fb0ca186196ab436d01219f32456331": {
+    "_ctx": "Vasilije Abazovic · JavaScript, JSON/Rest kokemus",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "JavaScript"
+  },
+  "66cf75f193e89925e03189283c183e566c2146fa": {
+    "_ctx": "Santeri Suuronen · Asiantuntijalla on vähimmäisvaatimuksen nro B 1 yl",
+    "domain_or_industry": "Koulutus"
+  },
+  "66d2339a29c8cf0e5be68f82809d973cf1693d70": {
+    "_ctx": "Santeri Suuronen · Asiantuntijalla tulee olla testausasiantuntijan ty",
+    "domain_or_industry": "Koulutus"
+  },
+  "66dfa79297450f1200882a81ff95ec0769b44745": {
+    "_ctx": "Esa Määttä · Henkilöllä on kokemusta Azure-alustalla toteutettu",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "66f8f647d6a6b069b5757c578731232e6a8c9abb": {
+    "_ctx": "Joseph Deksnys · Henkilöllä on kokemusta roolinsa mukaisena UX-/CX-",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "67242a7934ab563ec010e3afb815bad3631d62c1": {
+    "_ctx": "Aki Pehkonen · Asiantuntija on työskennellyt asiantuntijaroolissa",
+    "domain_or_industry": "Liikenne",
+    "technologies": "AWS"
+  },
+  "6767c53f38ff2175d250d933629678758b351064": {
+    "_ctx": "Ergin Tuganay · Asiantuntija on suorittanut MS Fundamentals-tason ",
+    "domain_or_industry": "Liikenne",
+    "technologies": "Azure"
+  },
+  "67c3fae2fa1af931d43b82f0555d78ad5c9570d8": {
+    "_ctx": "Timo Kankaanpää · Henkilöllä on kokemusta Microsoft Dynamics 365 CRM",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "68a9f3d043aefcff48ae0d4fb0ba5183c425bba6": {
+    "_ctx": "Marko Paavola · Projektitoteutuksia, joissa on sovellettu JHS 179 ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "68c28d195743b35762207555626f781607c37a71": {
+    "_ctx": "Hanna Leivo · Projektipäällikön kokemus teknisen monitoimittajap",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "68d19e8e86f960a9092013f87727ac6166df320a": {
+    "_ctx": "Niina Warro · Tarjottavalla henkilöllä on kokemusta tietovarasto",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "SQL, Azure"
+  },
+  "69a24011944d346d99bbab08395fef2561c2e9cc": {
+    "_ctx": "Arto Niemi · Henkilöllä on kokemusta Microsoft Dynamics 365 CRM",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "69f3ee403f562aa564eca214f348c74e6973f286": {
+    "_ctx": "Kimmo Lindman · Henkilöllä on kokemusta roolinsa mukaisena scrumma",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "6a0195c248a0e807f9c9386c75c155337f3b0419": {
+    "_ctx": "Aleksandar Saric · Kokemusta prosessimoottorien (esim. Activiti, Camu",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "6a0bc7f879d27d3000595b01111c2a4bd2c2d5f1": {
+    "_ctx": "Stefan Rimaila · Henkilöllä on kokemusta Azure-alustalla toteutettu",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "6acec49fb0fc05fe59e58c1a384956418a90e0c3": {
+    "_ctx": "Stefan Rimaila · Henkilöllä on kokemusta sähköisten asiointipalvelu",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "6af907347704c222a1b0b987658234b5b139c972": {
+    "_ctx": "Essi Suo-Heikki · Microsoft Fabric sertifikaatti DP-600 (tai uudempi",
+    "domain_or_industry": "Asuminen ja kiinteistöt"
+  },
+  "6b0dad24f6dfcd308887d517233886be1e8896f2": {
+    "_ctx": "Nortal Oy · Asiantuntijalla on vähimmäisvaatimuksen nro B7 kok",
+    "domain_or_industry": "Liikenne"
+  },
+  "6b4291b102815fabb5116a9d870da7e76ba91ac4": {
+    "_ctx": "Antti Leinonen · Kielitaito",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "6bee8ae7b8afb2d96dd7eaf5bf4a89d4f5b13136": {
+    "_ctx": "Heikki Tuohiniemi · Asiantuntijalla on erinomainen kirjallinen ja suul",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "6c12fcfd4cfc84fb078ef68d97230f92cf3b63b6": {
+    "_ctx": "Kacper Kozak · Henkilöllä on kokemusta sähköisten asiointipalvelu",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "React"
+  },
+  "6c599ff66e95e1233b58d36dd980b6c09cc7cee4": {
+    "_ctx": "Joseph Deksnys · Henkilöllä on kokemusta WCAG 2.0 tai WCAG 2.1 -sta",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "6d0da96d5366d1fd3d20c265d0c90c992b5fbfb6": {
+    "_ctx": "Sasu Suominen · Kokemus ja osaaminen erilaisten liiketoiminnallist",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "6d239d5a7bccb16737d4dbc7f25e774b5c45b5bf": {
+    "_ctx": "Essi Suo-Heikki · Asiantuntijalla on kokemusta perehdyttämisestä Pow",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "6d6e069be682f9b81ac677a9e6652db2298554cb": {
+    "_ctx": "Juho Valkonen · Henkilöllä on voimassa oleva Microsoft Power Platf",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "6e097cf8fb1c67b070fc5bdfec2f2cfb9a31b235": {
+    "_ctx": "Ulf Nyström · Asiantuntijalla on kokemusta tietovarastotyyppiste",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "SQL"
+  },
+  "6e69ea4dad5c9768111fbb3d05d69a80782582fd": {
+    "_ctx": "Taina Ylisirniö · Asiantuntija on toiminut päävastuullisena testaaja",
+    "domain_or_industry": "Koulutus"
+  },
+  "6f2a3b0752851bd9a0d8b8e940cf3e816b49edd4": {
+    "_ctx": "Juha Mild · Asiantuntijalla on erinomainen kirjallinen ja suul",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "6f9477b6fabbe643ace2cfa62e5836c0e5c8a60c": {
+    "_ctx": "Tuomo Hokkanen · Asiantuntijalla on erinomainen suomen kielen kirja",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "6fd562607e5f629c577db284a45ee6c8edd35bb6": {
+    "_ctx": "Ulf Nyström · Työkokemusta vähintään kahdesta projektista, jossa",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "6fd8f5b611e4fef04300cefdf85ee9ef91a8d573": {
+    "_ctx": "Aleksandar Saric · Open Shift Container -alusta kokemusta",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "6ffa81dbc878fcaf7ae8404ad4d3651e23d672d8": {
+    "_ctx": "Eemeli Vaheristo · Kokemus sovellusalustojen kehittämisen projekteist",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "7049e10b4485195eb32c33c568a091548f155aaa": {
+    "_ctx": "Ulf Nyström · Asiantuntijalla on G4 vaatimuksen mukaista kokemus",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "SQL"
+  },
+  "712abbd21d051dc1ec3e30118f7369c044602e3d": {
+    "_ctx": "Keijo Poutiainen · Henkilöillä on kokemusta Azure Function Appien suu",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "C#, Azure"
+  },
+  "713954ab713f81ac96cce703026fadf24b848c71": {
+    "_ctx": "Veli-Matti Heikkinen · Tietokantaosaaminen (SQL). Luettele sarakkeeseen H",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "SQL, PostgreSQL, Oracle"
+  },
+  "71792ab1f7926fe6ab4135bee15df105d19df7bf": {
+    "_ctx": "Henrik Hyyppä · Projektipäällikköllä on vähintään 2 vuoden kokemus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "72110923d6444a2706a024b6551df4c826f7223e": {
+    "_ctx": "Mika Purjesalo · Projektipäällikön kokemus vastaavista tehtävistä j",
+    "domain_or_industry": "Metsä ja luonnonvarat"
+  },
+  "72b55a40de74844868ded631e361e1fc5812135b": {
+    "_ctx": "Aake Andersson · Projektipäällikköllä on vähintään 2 vuoden kokemus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "72b73c10f8b6466183e6f00d5c911a9e8710502e": {
+    "_ctx": "Tomi Sarpola · Asiantuntijalla on erinomainen suomen kielen kirja",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "72d284b9ae9d62f0415241e8f2f89c31eb576b50": {
+    "_ctx": "Mikko Keiho · Henkilöllä on kokemusta julkishallinnon projekteis",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "737db8637fbcce41108046f068e2cadbfcc56418": {
+    "_ctx": "Miika Kuha · Lean sertifikaatti",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "73a433522c5f99328730825171e959e26c349beb": {
+    "_ctx": "Teemu Ketonen, Otto Sassi, Semi Rantanen · Kokemus ja osaaminen integraatioiden suunnittelust",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": ".NET, Azure, REST"
+  },
+  "73b92154372f2fddafd8f9cff6df60a70955a547": {
+    "_ctx": "Juho Mehtonen · Kokemus käyttöliittymäsuunnittelijan roolissa toim",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "73f28c6fbc10ad52298a897fd29cfed6e9899016": {
+    "_ctx": "Heikki Huotari · Kokemus liiketoimintaprosessien kehittämisen proje",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "74783a12ec6a441ac11d458fbb1085f26d91c8b2": {
+    "_ctx": "Reko Mätäsaho · Asiantuntijalla on kokemusta päätoimisesta teknist",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "74a3d7cc9a2a057918ef9c019c8f88b708679b3c": {
+    "_ctx": "Minna Prusi · Henkilöllä on voimassa vähintään yksi (1) MS Dynam",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "74d4cbaa916ef823a42ea6b3a08e401b4e0a9913": {
+    "_ctx": "Johanna Kartila-Malmivaara · Nimettyn asiantuntija tuntee ketterän kehittämisen",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "75be86073d7d91165bf6934fd552425ab7c04b43": {
+    "_ctx": "Vasilije Abazovic · HTML, CSS -kokemus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "75ee42d1bc542c53d8b94f9f992279b73f09405f": {
+    "_ctx": "Ahti Rossi · Asiantuntijalla on vähimmäisvaatimuksen nro A 1 ko",
+    "domain_or_industry": "Asuminen ja kiinteistöt",
+    "technologies": "Azure"
+  },
+  "76141dbd2c070e02011d3c1707753a82d31290e8": {
+    "_ctx": "Aake Andersson · Vähimmäisvaatimuksen ylittävä työkokemus toiminnan",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "764077b42b21e2db9533a5921fd0f3acd6a5489a": {
+    "_ctx": "Marko Manner-Raappana · Hyvä kirjallinen ja suullinen suomen ja englannin ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "765e9fbdb9883547be83537929143baa00e41fa1": {
+    "_ctx": "Heikki Tuohiniemi · Asiantuntijalla on kokemusta semanttisten tietomal",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "766f60a4fcde233ee57e3f478c3e76b9164e483d": {
+    "_ctx": "Matti Uusivuori · Muu asiakkaan määrittelemä kokemus (esim. kielitai",
+    "domain_or_industry": "Rahapelit"
+  },
+  "76e7d86bfc1599ac27fa367e7ed016077c7e0280": {
+    "_ctx": "Sasu Suominen · Asiantuntijalla on vähimmäisvaatimuksen nro B 7 ko",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "77896400e63b41005ab636ec1c83ae8a27340b71": {
+    "_ctx": "Sasu Suominen · Henkilöllä on kokemusta julkishallinnon projekteis",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "77d72ca11cca84d886674f645934484c09e2f08c": {
+    "_ctx": "Aleksandar Saric · Kokemusta räätälöityjen käsittelyjärjestelmien (ba",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "787677d26c3a819bddddb72bbe9870d073b9436e": {
+    "_ctx": "Essi Suo-Heikki · Tarjottavalla henkilöllä on hyvä kirjallinen ja su",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "7924af3c314695ce7d9223203aa7de028fb425b8": {
+    "_ctx": "Laura Lemmetty · Työkokemus Microsoft Dynamics 365 -ratkaisun ja/ta",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "793772f2795ba26325e92501b7d1c43cf24e7197": {
+    "_ctx": "Ulf Nyström · Asiantuntijalla on kokemusta SQL Server -pohjaiste",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "SQL, Azure"
+  },
+  "79df544b7eb802f91f8f4b7808dc55da208281ac": {
+    "_ctx": "Laura Lemmetty, prelim · Asiantuntijalla on kokemusta Dynamics 365 - tai Po",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "7a43dddc0e6257d03ab1906fc96e0a0510ec81c4": {
+    "_ctx": "Tiina Uutela · Kokemusta sovellusten kehittämisen projekteista. T",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "7a907375abc68d93de2cbd1b20cb4541bfbd9d4b": {
+    "_ctx": "Ulf Nyström · Työkokemus tietojärjestelmän suunnittelusta tilast",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "7aa443b3ddf069ed724bf1981a2e553f990cb0be": {
+    "_ctx": "Sasu Suominen · Asiantuntijalla on jokin voimassa oleva PowerPlatf",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "7adc41193ccd22bf606512ceff5d197de7314f76": {
+    "_ctx": "Aleksandar Saric · Kokemusta sovelluskehittäjänä projekteissa tai vas",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "7b2bd5992f8d09f1a461cb72fb069e1264c58062": {
+    "_ctx": "Mikko Keiho · Henkilöllä on kokemusta Power automate -toteutukse",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "7b2c500eedff1cf22a6f184cff0bf71f818c0a47": {
+    "_ctx": "Johanna Kartila-Malmivaara · Nimetyllä asiantuntijalla on kokemusta  - asiakast",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "7bf07f562eee70ccef8ce6fecb68056b8ef9c211": {
+    "_ctx": "Mikael Tetenkin · Henkilöllä on kokemusta Azuressa toimivan tietojär",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "7caf3d1e53cafbc6d73b90dca811f5417a4d6d47": {
+    "_ctx": "Mikael Tetenkin · Henkilöllä on kokemusta Azure DevOps CI/CD:n yhtey",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure, CI/CD"
+  },
+  "7d2a85030c8601617d758c6a0f3adf2f4cd3f81c": {
+    "_ctx": "Kostiainen? Timo T? · Kokemus teknologia- ja integraatioratkaisuiden vai",
+    "domain_or_industry": "Terveydenhuolto"
+  },
+  "7d338290fa814260c99d7d0591c4d4b675d3fcd1": {
+    "_ctx": "Mikko Keiho · Henkilöllä on kokemusta Microsoft Dynamics 365-ymp",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "7d50307238cfcdcbc6ee641039c032b36bf0c5d1": {
+    "_ctx": "Adolis Kliucevičius · Asiantuntija on työskennellyt asiantuntijaroolissa",
+    "domain_or_industry": "Liikenne",
+    "technologies": "AWS"
+  },
+  "7d6b913ccf8188212718bb24bbd80f2ea3b22ced": {
+    "_ctx": "Teemu Mäkinen · Kokemus sanomamuodoista",
+    "technologies": "JSON, XML"
+  },
+  "7dadd4b092d20800241fb014c68d450c4020121e": {
+    "_ctx": "Sanna/Reko/Annastiina/Antti · Kokemus projektihallinnasta",
+    "domain_or_industry": "Terveydenhuolto"
+  },
+  "7ea6347783047d75e817a23fd67719071bf425ba": {
+    "_ctx": "Essi Suo-Heikki · Asiantuntijalla on erinomainen suomen kielen kirja",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "7ecaedd8ccc6fff4b395dad18e0e2657bad91a69": {
+    "_ctx": "Pertti Repo · Kokemus sanomamuodoista",
+    "technologies": "JSON, XML"
+  },
+  "7eda9d6bcd1e3643673f2ca26aefbd02466cdffa": {
+    "_ctx": "Teemu Mäkinen · Kokemus XML-muunnoksista",
+    "technologies": "Java, C#, XML"
+  },
+  "7f1cb6e2cb628e1b10bf6d173f2eefa117321255": {
+    "_ctx": "Jovica Dimitrijevic · Kokemusta sovelluskehittäjänä projekteissa tai vas",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "7f4306b77ffdb61616aba95df7ddb7a2ad0a7cee": {
+    "_ctx": "Semi Rantanen · Henkilöllä on vähimmäisvaatimuksen nro D 1 ylittäv",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "7f64b12fcae77ee581292270fa78a15b6013e9ac": {
+    "_ctx": "Marko Määttä · Asiantuntijalla on kokemusta  PowerBIn käytöstä an",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "SQL, Azure"
+  },
+  "7f7b4ad813f899ce6f03b7ed52e0f62c44e11ad0": {
+    "_ctx": "Marko Leiviskä · Kokemus testiautomaatiotyökalujen kuten Robot Fram",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Docker, Jenkins, Git"
+  },
+  "7fc3aead7055bce5e524785239777dc3a016f52f": {
+    "_ctx": "Mikko Haveri · Kokemusta Jiran käytöstä asiakasprojekteissa",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "7fe7773146c7c382ec05dd385a0bbcd68b81dd49": {
+    "_ctx": "Reko Mätäsaho · Kokemus sähköisten asiointipalveluiden kehittämise",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "80806e2bfa67e8d24b82b6bcd03bebaa8481dd8f": {
+    "_ctx": "Asko Kinnala · Asiantuntijalla on kokemusta päätoimisesta teknist",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "8094a6541c6cc23ee79c4d99d6a90e8b21e25dd7": {
+    "_ctx": "Minna Prusi · Henkilöllä on kokemusta Microsoft Dynamics 365 CRM",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "81a3edc6064fd98bd3502689398becfbaa5ed2d5": {
+    "_ctx": "Johanna Kartila-Malmivaara · Nimetty asiantuntija on toiminut projektipäällikön",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "81bd85f2ff3bf32faed0e213a1533e4018021860": {
+    "_ctx": "Miika Kuha · Kokemusta toiminta-arkkitehtuuristen elementtien j",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "81eaeb3567c01bf6f6ceb0377f6e701533abd1b9": {
+    "_ctx": "Veli-Matti Heikkinen · Kokemus Scrum Master roolissa toimisesta. Kuvaa ta",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "81f8f54a6c90edbf3a96431639bdbe7555bc92fd": {
+    "_ctx": "Mikko Keiho · Työkokemus Microsoft Dynamics 365- ja Microsoft Po",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "81fb05702dd517b7e6966c35d341ea249aeb7b1c": {
+    "_ctx": "Minna Prusi · Henkilöllä on kokemusta Microsoft Dynamics 365 CRM",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "8216c8455f90ac73b7cebf98ee90011a2db12173": {
+    "_ctx": "Adolis Kliucevičius · Asiantuntija on työskennellyt asiantuntijaroolissa",
+    "domain_or_industry": "Liikenne",
+    "technologies": "AWS"
+  },
+  "8268f4d58fbcc29f69dccc85d69418c3b4421dc5": {
+    "_ctx": "Sasu Suominen · Asiantuntijalla on kokemusta Power Platform hallit",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "8293a83370814bbf22ecaa9c0b2d2c951cc6b1cc": {
+    "_ctx": "Heikki Tuohiniemi · Asiantuntijalla on kokemusta raporttien  suunnitte",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "829dff161b6da2510543c397f29062b4c2256e3f": {
+    "_ctx": "Hannu Karttinen · Asiantuntijalla on kokemusta Power Platform applik",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "830e4000cfc3e42f2922a2b41ad96f3a7f0c8856": {
+    "_ctx": "Juuso Liljavirta · Työkokemus Microsoft Dynamics (CRM) -ratkaisun ja ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "8317d833108796ba97e8275a228bece6f75539ca": {
+    "_ctx": "Juha Mild · Asiantuntijalla on kokemusta MS SQL Serverin pääll",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "SQL, Azure"
+  },
+  "833a7ea4d7cdeb9fe32b86386bb663639de1cbe8": {
+    "_ctx": "Taneli Kulo · Asiantuntijalla on vähimmäisvaatimuksen nro A4 kok",
+    "domain_or_industry": "Liikenne"
+  },
+  "83788efbd29d5dffef511f35c15bbcedb3c5e00f": {
+    "_ctx": "Tomi Sarpola · Asiantuntijalla on kokemusta tietoturva- ja tietos",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "83df0bafb572de69ef5f7f6e9352431f36b493aa": {
+    "_ctx": "Taneli Kulo · Koulutus",
+    "domain_or_industry": "Liikenne"
+  },
+  "83ee5237c79ce5584a8dcd351883e9ea25847852": {
+    "_ctx": "Hannu Karttinen · Asiantuntijalla on kokemusta JIRA:n tai vastaavan ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "8415512e88dabff344ad2f8766b0756b7be72aae": {
+    "_ctx": "Minna Prusi · Henkilöllä on voimassa vähintään yksi (1) MS Dynam",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "84223272d1a0ebd8f360d8ff30acd9ea84236183": {
+    "_ctx": "Taneli Kulo · Asiantuntijalla on vähimmäisvaatimuksen nro A6 kok",
+    "domain_or_industry": "Liikenne"
+  },
+  "8423a645fe5e895699eb25473bbc1fddcb503b2c": {
+    "_ctx": "Marko Manner-Raappana · Projektipäällikköllä on vähintään 2 vuoden kokemus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "8437ded9387436a684fa359abb2164f334587436": {
+    "_ctx": "Essi Suo-Heikki · Kokemus Power BI -raporttien toteuttaminen, joissa",
+    "domain_or_industry": "Asuminen ja kiinteistöt"
+  },
+  "8439c7c9271609318db912203becb46ed363ee51": {
+    "_ctx": "Tiina Uutela · Projektipäällikköllä on vähintään 2 vuoden kokemus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "84420d254ed66e3e19d9e7aef8accfe0e77d2db8": {
+    "_ctx": "Ergin Tuganay · Asiantuntija on työskennellyt asiantuntijaroolissa",
+    "domain_or_industry": "Liikenne"
+  },
+  "844c74d753d94425e421c05dfe6482e9c5759db5": {
+    "_ctx": "Aleksandar Saric · Kokemus sovelluskehittäjänä tms. vastaavassa rooli",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "84646fd3c992d198d5166960e596f49b51e36ab5": {
+    "_ctx": "Minna Prusi · Henkilöllä on kokemusta roolinsa mukaisena sovellu",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "849dc5bd3547358a5c2af22924be754f273518d8": {
+    "_ctx": "Ahti Rossi · Asiantuntijalla on kokemusta projektipäällikkönä t",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "84b10e8bdd2d4b51f7100e70f83510511f249f7c": {
+    "_ctx": "Tiina Uutela · Projektipäällikön kokemus toiminnan kehittämiseen ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "8757c8456415300ce1f5fff634e9b0c3c95c6432": {
+    "_ctx": "Kimmo Lindman · Kokemus ITIL:n mukaisista tuen ja ylläpidon proses",
+    "domain_or_industry": "Asuminen ja kiinteistöt"
+  },
+  "877cae73b3bc798a80d1d4c3c1df01ed73d6b8b5": {
+    "_ctx": "Ergin Tuganay · Asiantuntija on työskennellyt asiantuntijaroolissa",
+    "domain_or_industry": "Liikenne",
+    "technologies": "SQL, Azure"
+  },
+  "87bec204de56c47b0902f9ce83eb6bf12aa4f0d2": {
+    "_ctx": "Juha Mild · Asiantuntijalla on kokemusta tietovarastointiratka",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "SQL, Azure"
+  },
+  "8829745ca89c5e0919d6706a925873c0f7ddc1a2": {
+    "_ctx": "Teemu Mäkinen · Kokemus seuraavista teknologioista ja/tai ohjelmis",
+    "technologies": "Java, Oracle, JSON, XML, CI/CD"
+  },
+  "88569bb4c26f35a54f7834c0f5489e6d8934a485": {
+    "_ctx": "Juho Mehtonen · Työnäyte/ portfolio (nettisivun linkki tai liite) ",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "JavaScript, Angular"
+  },
+  "8903ee85734a8065381cd424b996a9f11bc5ac29": {
+    "_ctx": "Keijo Poutiainen · Henkilöllä on vähimmäisvaatimuksen nro F 3 ylittäv",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "C#, Azure"
+  },
+  "891b2487bc96da59c770b9127245b81268ba6fed": {
+    "_ctx": "Taneli Kulo · Asiantuntija on toiminut käyttöliittymäsuunnitteli",
+    "domain_or_industry": "Liikenne"
+  },
+  "89388ba925a3dbe46834b072fba6b4bc32897b2e": {
+    "_ctx": "Anssi Pannula · Tarjottavalla henkilöllä on kokemusta projektiluon",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "896c5a28977cf56a6818f7394ae65975530cec9e": {
+    "_ctx": "Matti Uusivuori · Ohjelmointikokemus",
+    "domain_or_industry": "Rahapelit",
+    "technologies": "Java, C#, .NET, Azure"
+  },
+  "8992c163b87805144c080064328ba111d9d22300": {
+    "_ctx": "Ahti Rossi · Asiantuntijalla on vähimmäisvaatimuksen nro A 4 ko",
+    "domain_or_industry": "Asuminen ja kiinteistöt"
+  },
+  "89ccb60b15b6d021dbd77d6b12c755b80da90cb3": {
+    "_ctx": "Veli-Matti Heikkinen · Scrum Master sertifikaatti. Kuvaa tarkemmin sarakk",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "8ad05c30e3a01ca131cc1857c82405e1aed5ceb3": {
+    "_ctx": "Joseph Deksnys · Henkilöllä on vähimmäisvaatimuksen nro G 1 ylittäv",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "8b520e25d95e17de92c5675a5c336e708847605b": {
+    "_ctx": "Mikko Keiho · Työkokemus palvelunhallintaratkaisujen (tiketöinti",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "8bb804eaa1a2b2ec48a6594b2bf7ea276d935efa": {
+    "_ctx": "JP · Kokemus Lean/Agile-johtamisen valmentamisesta joht",
+    "domain_or_industry": "Terveydenhuolto"
+  },
+  "8c7d9fe6b2aeea72791b7ba638710b2f9840fb46": {
+    "_ctx": "Teemu Mäkinen · Vähimmäisvaatimuksen ylittävä kokemus ESB-alustast",
+    "technologies": "Oracle"
+  },
+  "8cc72bc9210a68c38b17b153e43e6e43b80a2fbe": {
+    "_ctx": "Marko Paavola · Kielitaito",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "8d4a69b56da17c2150936d8c403f77f3bebb4f22": {
+    "_ctx": "Veli-Matti Heikkinen · Suomen kielen taitoinen. Kuvaa tarkemmin sarakkees",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "8d682de9b161ab0a605aa9012fce562bb7ab7d68": {
+    "_ctx": "Tuomas Fjällström · Projektipäällikköllä on vähintään 2 vuoden kokemus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "8dcf4fe09a70eddeee852f5893ba5e247dffc27e": {
+    "_ctx": "Saara-Maija Pakarinen · Koulutus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "8ea446d6cabe3ef49577b6737e60823ace725b79": {
+    "_ctx": "Esa Määttä · Henkilöllä on kokemusta roolinsa mukaisena sovellu",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure, Linux, Microservices"
+  },
+  "8ea505bd74cc95c9a2692365c43dbe9f95c43cc4": {
+    "_ctx": "Taina Ylisirniö · Asiantuntijalla on työkokemusta integraatiotestauk",
+    "domain_or_industry": "Koulutus"
+  },
+  "8f3a79cffab0e227e81f742ebce2528fe0beca15": {
+    "_ctx": "Tuomo Hokkanen · Asiantuntijalla on kokemusta Azure-ympäristön turv",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Kubernetes, Azure"
+  },
+  "8f7b8d7a2807e505c2893e533fae5b71b2ef61e1": {
+    "_ctx": "Stefan Rimaila · Henkilöllä on kokemusta WCAG 2.0 tai WCAG 2.1 -sta",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Angular, C#, Azure"
+  },
+  "8fbb2f922dbdf8bc4f22dfef9987b529b449dbbb": {
+    "_ctx": "Otto Sassi · Asiantuntijalla on kokemusta Power BI raportointir",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "8feab4ad173c9301c60111e2e51265ae4f64476d": {
+    "_ctx": "Kimmo Lindman · Kielitaito",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "908528677bb2a9b167ecfefc38d9bf9ff25d0493": {
+    "_ctx": "Mikael Tetenkin · Henkilöllä on vähimmäisvaatimuksen nro H 1 ylittäv",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "90ff3d6393d9e041e25d51559f4eed96445f5fd1": {
+    "_ctx": "Henrik Hyyppä · Kokemusta sovellusten kehittämisen projekteista. T",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "92a50e7af93e32df46a609978096aa36e46ab309": {
+    "_ctx": "Asko Kinnala · Kokemus sähköisten asiointipalveluiden kehittämise",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "938ad0661f95aaca1bc0e779647855794d1bf990": {
+    "_ctx": "Timo Kankaanpää · Henkilöllä on kokemusta  Microsoft Dynamics 365 CR",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "93a62ecc7023b5f08ba2f1a42f5314ccac2a8d6b": {
+    "_ctx": "Nortal Oy · Asiantuntijan testaukseen kohdistunut toteutunut t",
+    "domain_or_industry": "Liikenne"
+  },
+  "93aa84e3bc9ef778438738bdd44b98855148abef": {
+    "_ctx": "Mikko Keiho · Henkilöllä on voimassa oleva Microsoft Power Platf",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "945ad12f84c918096900b67268b752a42934fc0d": {
+    "_ctx": "Johanna Kartila-Malmivaara · Nimetty asiantuntija on toiminut projektipäällikön",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "948a5374fad4953ba87f3d8d687de6e45a5332a2": {
+    "_ctx": "Anssi Pannula · Tarjottavalla henkilöllä on hyvä kirjallinen ja su",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "9490b8bea137ba81f45eac8232f30146656f4323": {
+    "_ctx": "Mikko Haveri · Asiantuntijalla on kokemusta tiedonsiirtoputken (E",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "94c32bc8dd5408448cd4114a1fc088ca92063c0d": {
+    "_ctx": "Miika Kuha · Kokemus päätoimisena liiketoiminta-analyytikkona t",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "9588ebca544de5c138110020f6463288bb39af8d": {
+    "_ctx": "Olli-Petteri Tuuttila · Asiantuntija on suorittanut AWS-Cloud Practitioner",
+    "domain_or_industry": "Liikenne",
+    "technologies": "AWS"
+  },
+  "959e5c197519e9a19fcce7559b19e55f90c79657": {
+    "_ctx": "Essi Suo-Heikki · Kokemus projekteista, joissa käsitellään henkilöti",
+    "domain_or_industry": "Asuminen ja kiinteistöt"
+  },
+  "95b13adf2c95dbee1bbf5f80ceee94a96869171a": {
+    "_ctx": "Esa Määttä · Henkilöillä on kokemusta REST API -rajapintojen av",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "AWS, Azure, REST, CI/CD, Linux, Microservices"
+  },
+  "960e40b7ac8e3c1cdb861fdc9590e8144e1c5d75": {
+    "_ctx": "Henrik Mikkola · Kokemus seuraavista teknologioista ja/tai ohjelmis",
+    "technologies": "Java, JSON, XML, CI/CD"
+  },
+  "96d397366cc3a8dc72c9d1a4807f0a0d565d1ca8": {
+    "_ctx": "Anssi Pannula · Kokemus arkkitehtuurimenetelmistä",
+    "domain_or_industry": "Terveydenhuolto"
+  },
+  "96f89f542d717c75526e37eeaf296afc38b03938": {
+    "_ctx": "Ulf Nyström · Asiantuntijalla on kokemusta tietoturva- ja tietos",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "97082c8340755fe28256261544e16dc739bd3737": {
+    "_ctx": "Laura Lemmetty · Henkilöllä on vähimmäisvaatimuksen nro B 1 ylittäv",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "971e55c5ba9957dbe6812f1cba97c651d16ea2c8": {
+    "_ctx": "Mikko Keiho · Työkokemus arkkitehdin tai vastuukonsultin rooliss",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "972b319378054dd40e99075ea563283039a39eba": {
+    "_ctx": "Tiina Uutela · Projektipäällikön kokemus toiminnan kehittämiseen ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "9761d901dafb327ddf6608f60a859d534b23126b": {
+    "_ctx": "Heikki · Asiantuntijalla on D2 vaatimuksen mukaista kokemus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "97c21b443e8a3bea43a1fff83847049ffa65ca1b": {
+    "_ctx": "David Dudzik · Henkilöllä on kokemusta sovelluskehittäjänä Scrum-",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "97e0f13932c29c49fdba06ea51d4556ac85a8ad3": {
+    "_ctx": "Stefan Rimaila · Henkilöillä on kokemusta JSON-objekteista (käyttöl",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Angular, C#, Azure, JSON"
+  },
+  "9814d83bf395cd7bf70b3e79ba8262d68cc58490": {
+    "_ctx": "Marko Paavola · Kokemusta mikropalveluarkkitehtuurin suunnittelust",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "982b2a16c9eb6c23a05a1b87158c9ee10c79a2ec": {
+    "_ctx": "Antti Leinonen · Asiantuntijalla tulee olla suoritettuna koulutus j",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "9892ddd10c7e20ead804122896be01663d3f0e31": {
+    "_ctx": "Tomi Sarpola · Asiantuntijalla on kokemusta tietoturva- ja tietos",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "996939c0ca7aaf4ba1a960edd42b1cc68d9bdb45": {
+    "_ctx": "Laura Lemmetty, prelim · Asiantuntija on toiminut päävastuullisen asiantunt",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "99c01b89c3c48bd28b7d6d7350d0f8a204ce148d": {
+    "_ctx": "Mikko Keiho · Henkilöllä on voimassa jokin Dynamics 365 -tuotese",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "99ce4e2017986128487369570f09b9bba36071fb": {
+    "_ctx": "Marko Määttä · Asiantuntijalla on kokemusta vähintään 100 htp:tä ",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "SQL, Azure"
+  },
+  "9a486aedbe77a0d1562e8c273e988b118a8ddc4b": {
+    "_ctx": "Minna Prusi · Henkilöllä on kokemusta  Microsoft Dynamics 365 CR",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "9aa12a49c380af6b8f41b4447aeff8e441c24bd2": {
+    "_ctx": "JP · Kokemus strategisten vaihtoehtojen rakentamisesta",
+    "domain_or_industry": "Terveydenhuolto"
+  },
+  "9b853d47eb381da9f79c188c054a7c565fad44fd": {
+    "_ctx": "Kati Norrena · Tarjottava henkilö on toiminut palvelupäällikön ro",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "9b8d4520e4bde13eae367d67c19fdc35a7dd4158": {
+    "_ctx": "Aki Pehkonen · Asiantuntija on työskennellyt asiantuntijaroolissa",
+    "domain_or_industry": "Liikenne",
+    "technologies": "AWS"
+  },
+  "9b8f61b5bb199f7f14c9650d82153b611da8da79": {
+    "_ctx": "Marko Leiviskä · Työnäyte/ portfolio (nettisivun linkki tai liite) ",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Docker, Jenkins, Git"
+  },
+  "9c1e02a8e2ba62d8636f3742e3cf6c920d706e53": {
+    "_ctx": "Timo Kankaanpää · Henkilöllä on kokemusta roolinsa mukaisena sovellu",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "9c22f72e86b95438b2ce82f5e90fbf0949933be4": {
+    "_ctx": "Jovica Dimitrijevic · kokemusta HTML5 ja CSS3",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "9c2a218c0b223a36c66800299bdf27561cea17a4": {
+    "_ctx": "Henrik Mikkola · Kokemus XML-muunnoksista",
+    "technologies": "Java, PHP, XML"
+  },
+  "9c92224c07f944cfe516be0f9d2f0c438c965bad": {
+    "_ctx": "Marko Heikkilä · Pystyy toimimaan tässä projektissa sovellusarkkite",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "9c9e38eef5e81f7789da5c2c40b6c20e0192fc85": {
+    "_ctx": "Tiina Uutela · Vähimmäisvaatimuksen ylittävä työkokemus toiminnan",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "9d08e1ac3bd1ac51188e2600689b0e03a39aa8da": {
+    "_ctx": "Nortal Oy · Asiantuntijalla on vähimmäisvaatimuksen nro B6 kok",
+    "domain_or_industry": "Liikenne"
+  },
+  "9d764b68a09c8171bb43186b0f1302a5cb8e20a8": {
+    "_ctx": "Marko Paavola · Kokemusta tietojärjestelmien mallintamisesta stand",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "9da7700df64167e832e8693786bc56a255b5e431": {
+    "_ctx": "Mikko E · Kokemus digitaalisista yhteistyö- ja projektinhall",
+    "domain_or_industry": "Terveydenhuolto"
+  },
+  "9e1f0df4ae287df5a87eadac46b85eb9f96b3592": {
+    "_ctx": "Marko Leiviskä · Skriptauskokemus testiautomaatiotyökaluille (esime",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Python, Docker, Jenkins, Git"
+  },
+  "9e583a65f1355d03863385cd7d5e11cb06e0e00e": {
+    "_ctx": "Taneli Kulo · Asiantuntijalla on työkokemusta visuaalisesta suun",
+    "domain_or_industry": "Koulutus"
+  },
+  "9e67a1383a4fce33680007c81919b7c648a45293": {
+    "_ctx": "Ulf Nyström · Asiantuntijalla on kokemusta SSIS työkalusta kehit",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "SQL"
+  },
+  "9e75a3ac7ac5e7ca015bc9a5a4e5e3e86e62c24d": {
+    "_ctx": "Tuomas Fjällström · Projektipäällikön kokemus Verolainsäädäntöä julkis",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "9e93b9f616634a13f6f6bf81461d7eafcd4eea9f": {
+    "_ctx": "Teemu Mäkinen · Kokemus XML-muunnoksista",
+    "technologies": "Java, C#, XML"
+  },
+  "9ed1af913716acc957e38c3b665399cf83b21699": {
+    "_ctx": "Olli-Petteri Tuuttila · Asiantuntija on työskennellyt asiantuntijaroolissa",
+    "domain_or_industry": "Liikenne",
+    "technologies": "AWS"
+  },
+  "9f1f9920a4538ce1490b09db46ed1d0a536d696a": {
+    "_ctx": "Vasilije Abazovic · Kokemusta sovelluskehittäjänä projekteissa tai vas",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "9f2320896cea354141261345c7d5ae78ed747cb9": {
+    "_ctx": "Juuso Liljavirta · Työkokemus Microsoft Dynamics (CRM) -ratkaisun ja ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "9f32fa81cda5d31e85f2517b3f63c85419d81904": {
+    "_ctx": "Asko Kinnala · Hyvä kirjallinen ja suullinen suomen ja englannin ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "a00663437576d17af5b6fb64454e186361195f00": {
+    "_ctx": "Kimmo Lindman · Koulutus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "a024a3d7fb7788267c4b54ac1d284c5b0ab0ce0f": {
+    "_ctx": "Juho Valkonen · Henkilöillä on kokemusta MS Dynamics 365 -tuotteen",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "a047bb81d5ec4050f775873c6d48cddd9a70cee3": {
+    "_ctx": "Antti Leinonen · Kokemus ja osaaminen Azure DevOps työkalun käytöst",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "a0dffb15c3a5cc7e728d9f93e129d9e378e155a1": {
+    "_ctx": "Essi Suo-Heikki · Asiantuntijalla on vähimmäisvaatimuksen nro D 1 ko",
+    "domain_or_industry": "Asuminen ja kiinteistöt"
+  },
+  "a0e6b3b0fbd5e53802423dbfbf8091355a48bfca": {
+    "_ctx": "Joseph Deksnys · Henkilöllä on kokemusta sähköisen asioinnin palvel",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "a1155e8f981e5efe32f7f33126e483697650373e": {
+    "_ctx": "Ahti Rossi · Asiantuntijalla on erinomainen kirjallinen ja suul",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "a190bddfe4e9a76f38c0c09bf4ec01e9ce7f1c9d": {
+    "_ctx": "Asko Kinnala · Kokemus sovellusalustojen kehittämisen projekteist",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "a1b057c43ba4234190bcd9eebf39005674ccc83e": {
+    "_ctx": "Johanna Kartila-Malmivaara · Nimetty asiantuntija on vastannut   - hanke-/proje",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "a2d3d12008b19939621ea18a676b7ec1401fe318": {
+    "_ctx": "Ulf Nyström · Asiantuntijalla on kokemusta roolinsa mukaisena Ti",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "a2e102fbbfee75955095dc40f5dce3c198b39194": {
+    "_ctx": "Henrik Hyyppä · Kokemus sovellusalustojen kehittämisen projekteist",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Java"
+  },
+  "a32ae5da07efebe6381db2eb73bd4e365e30d213": {
+    "_ctx": "Niina Warro · Tarjottavalla henkilöllä on kokemusta Data Vault 2",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "a32c8b4f94d1f8213a68d582c0f85bc0d0708dd0": {
+    "_ctx": "Esa Määttä · Henkilöillä on kokemusta Azuren eri Storage-vaihto",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure, Linux, Microservices"
+  },
+  "a3464858f9d600a98869f70804030ffd7f93a1e7": {
+    "_ctx": "Timo Kankaanpää · Henkilöllä on voimassa vähintään yksi MS Dynamics ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "a4ab02f41eaab72aa18b8188f2b40b169ded47ac": {
+    "_ctx": "Panu Puurtinen · Kokemus palvelupäällikkönä toimimisesta  tietojärj",
+    "domain_or_industry": "Terveydenhuolto"
+  },
+  "a4b9c04f4b1d48d7ea43d854420088d7289bf864": {
+    "_ctx": "Hanna Leivo · Kokemus sovellusalustojen kehittämisen projekteist",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "a515d8bd0bf9d49052cb15e233c5e8adff4728a7": {
+    "_ctx": "Essi Suo-Heikki · Tarjottavalla henkilöllä on kokemusta tietojohtami",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "a5a89cfadeaf116ae0828b212bd1ca074d15a67b": {
+    "_ctx": "Teemu Ketonen, Otto Sassi, Semi Rantanen · Kokemus ja osaaminen Microsoft Power Pages -teknol",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "a5d57085bba9ea7adf6c36057bc6bc1bbf6cce1d": {
+    "_ctx": "Taneli Kulo · Asiantuntijalla on työkokemusta Figma-työkalun käy",
+    "domain_or_industry": "Koulutus"
+  },
+  "a64662baf996fb6fbba84b9cf44eff90e4887591": {
+    "_ctx": "Vasilije Abazovic · Kokemusta sovelluskehittäjänä projekteissa tai vas",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "a668d5b4a9faf82a945385abd407643c4166a6c6": {
+    "_ctx": "Kacper Kozak · Henkilöllä on vähimmäisvaatimuksen nro C 1 ylittäv",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "React"
+  },
+  "a6c43584ae512aa873292e080ededbc85e904788": {
+    "_ctx": "Taina Ylisirniö · Asiantuntijalla on vähimmäisvaatimuksen nro B3 kok",
+    "domain_or_industry": "Koulutus"
+  },
+  "a715e5a35cb367c25b0e3db8930b845d5b2d5c4d": {
+    "_ctx": "Tiina Uutela · Hyvä kirjallinen ja suullinen suomen ja englannin ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "a74636b1c1b52d76ef06ea429c7635103ec4417d": {
+    "_ctx": "Heikki Huotari · Projektipäällikköllä on vähintään 2 vuoden kokemus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "a8505fa1b0f86bef3c6f495f1c2a3c958489a732": {
+    "_ctx": "Reko Mätäsaho · Kokemusta sovellusten kehittämisen projekteista. T",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "a87fa38540507778229a0ab037423107775b1995": {
+    "_ctx": "Taina Ylisirniö · Asiantuntijalla on vähimmäisvaatimuksen nro B7 kok",
+    "domain_or_industry": "Koulutus"
+  },
+  "a89afcae2b82d45a71eadab61dcc8d8515447c87": {
+    "_ctx": "Taneli Kulo · Asiantuntijalla on vähimmäisvaatimuksen nro A5 kok",
+    "domain_or_industry": "Koulutus"
+  },
+  "a8b4ac895ea6ec5babaaa8d9ba2a3bb194f96b2a": {
+    "_ctx": "Niina Warro · Korkeakoulun toiminnan tuntemus. Kokemus korkeakou",
+    "domain_or_industry": "Koulutus"
+  },
+  "a8c6ffd27abf67693c6f2db5c4017fcaf773db4d": {
+    "_ctx": "Ivan Jevtovic · Käsittelyjärjestelmien toteutuskokemus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "a96ae882d6a59198031b66dd3eafe8e104aeeb2d": {
+    "_ctx": "Esa Määttä · Henkilöllä on vähimmäisvaatimuksen nro E 1 ylittäv",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "AWS, Azure, CI/CD, Linux, Microservices"
+  },
+  "a984b2f2f2e27fcca7f570cece1b5460270fb4ff": {
+    "_ctx": "Tuomas Fjällström · Projektipäälliköllä on kokemusta työmäärältään laa",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "aa099c211d13e8a1199962fff9caaf52c2883103": {
+    "_ctx": "Kostiainen? Timo T? · Kokemus tietosuojaa ja tieturvaa koskevien periaat",
+    "domain_or_industry": "Terveydenhuolto"
+  },
+  "aa358309f388617a18c9179e3f50f7d958083ae4": {
+    "_ctx": "Marko Manner-Raappana · Vähimmäisvaatimuksen ylittävä työkokemus toiminnan",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "aa67ccf1ea22dd3729869174d63b8bcf7835f2b4": {
+    "_ctx": "Hannu Karttinen · Asiantutijalla on kokemus Scrum Masterina toimimis",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "ab6685fd8224e912bb5805dbbaafa52d9ecb6617": {
+    "_ctx": "Anssi Pannula · Tarjottavalla henkilöllä on referenssein osoitetta",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "SQL, Azure"
+  },
+  "ab85c9e43facad785cf9f55a8a487a1683377675": {
+    "_ctx": "Niina Warro · Tarjottava henkilö on toiminut ratkaisukehittäjän ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "ab9b34c4bee1186cb22bd09e0c3611f289d37d19": {
+    "_ctx": "Joseph Deksnys · Henkilöllä on kokemusta palvelukonseptin toteuttam",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "ab9ddc8b343bbc657ffcf5015637b2e8c14f5c81": {
+    "_ctx": "Raisa · Projektipäällikön kokemus Verolainsäädäntöä julkis",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "abde0e05ffbb1af5c4a6516a9941f221bafab5bc": {
+    "_ctx": "Johanna Kartila-Malmivaara · Nimetty asiantuntija on toiminut päätoimisena asia",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "abf3ea4d656a90f08344e12247fdfdb87b501a98": {
+    "_ctx": "Esa Määttä · Henkilöllä on vähimmäisvaatimuksen nro E 3 ylittäv",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure, Linux, Microservices"
+  },
+  "ac288328a8df3a221696cf9ace73d2b3179eb0d2": {
+    "_ctx": "Arto Niemi · Henkilöllä on kokemusta roolinsa mukaisena sovellu",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "ac8b7f235b09758871e968bac89f6d464c64d654": {
+    "_ctx": "Kati Norrena · Tarjottavalla henkilöllä on kokemusta sovelluskehi",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "accf17ceaa9e4276127edea4e017a0172a076d05": {
+    "_ctx": "Taneli Kulo · Asiantuntijalla on työkokemusta ketterällä menetel",
+    "domain_or_industry": "Liikenne"
+  },
+  "acdd5edf830d7884a68c75e3200915a17ca7d434": {
+    "_ctx": "David Dudzik · Henkilöillä on kokemusta Angular-alustalla toteute",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Angular"
+  },
+  "ace2c0e579d86c83162c3f43f5872772ecae9a64": {
+    "_ctx": "Mikael Tetenkin · Henkilöllä on kokemusta Azure DevOps CI/CD:n suunn",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure, CI/CD"
+  },
+  "ad16cfc2e880f1e8888d2a71767eb9078613f008": {
+    "_ctx": "Veli-Matti Heikkinen · Kokemus ketterissä projekteissa toimisesta ja kett",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "ad21a854e1c254aacf77c02309ca09b6fa23dedf": {
+    "_ctx": "Pannula? · Kokemus integraatioiden rakentamisesta",
+    "domain_or_industry": "Terveydenhuolto"
+  },
+  "ad21ea2ed05bd4a12067cb85e399164439a8b7dc": {
+    "_ctx": "Marko Heikkilä · Kokemus sovellusarkkitehdin roolissa toimisesta yh",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "ad2e8f1909b6dd9d6899a2fe66d02a8c8d68793d": {
+    "_ctx": "Heikki · Asiantuntijalla on kokemusta raporttien  suunnitte",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "ad659ae4215ca923b5eb52faeee97aebaff355b6": {
+    "_ctx": "Marko Paavola · Projektitoteutuksia, joissa on soveltanut Archimat",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "ad69dae002daaf4fa029f0afe93243015dadb818": {
+    "_ctx": "Olli Myöhänen · Henkilöllä on kokemusta roolinsa mukaisena projekt",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "adf5ac70fac0aa97ee2ee06d73b92f51a26ba1fb": {
+    "_ctx": "Taneli Kulo · Asiantuntijalla on vähimmäisvaatimuksen nro A10 ko",
+    "domain_or_industry": "Liikenne"
+  },
+  "adfa8d74eaef034fc8fcef74dab7f882d0ec8695": {
+    "_ctx": "Anssi Pannula · Kokemus pilviarkkitehtuurista",
+    "domain_or_industry": "Terveydenhuolto"
+  },
+  "ae4a5ea6ef6db2a811c9382f8b0cfc8beeadeb00": {
+    "_ctx": "JP · Kokemus organisaation strategisen osaamisen tunnis",
+    "domain_or_industry": "Terveydenhuolto"
+  },
+  "ae5cd3c814e69b5a829d09ea8094375a1f35b0ad": {
+    "_ctx": "Juho Valkonen · Henkilöllä on kokemusta Azure-alustalla toteutetus",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "ae718686db7200d3df28271c4c4fff2e1be00046": {
+    "_ctx": "Veli-Matti Heikkinen · Englannin kielen taito (jos ei äidinkieli kuvaukse",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "aecf0f25b043ff529ef7d16e2947009d6cfb0ba4": {
+    "_ctx": "Sasu Suominen · Kokemus toimeksiannoista julkishallinnon organisaa",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "aeef7f70c0e16e78169afa6c77f9843cb3baacdb": {
+    "_ctx": "Miika Kuha · Projektitoteutuksia, joissa on sovellettu JHS 179 ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "af23809c6421dcd99cf2d77d9233e05481a29ca0": {
+    "_ctx": "Keijo Poutiainen · Henkilöillä on kokemusta C sharp (C#) käytöstä ohj",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "C#, .NET, Azure"
+  },
+  "af99af8b2860c2c54f469a92d0e1fe557e961a77": {
+    "_ctx": "Nortal Oy · Asiantuntijalla on työkokemusta käyttöliittymätest",
+    "domain_or_industry": "Liikenne"
+  },
+  "b0028041208304d510af57c7485c523d105dad72": {
+    "_ctx": "Jovica Dimitrijevic · Sähköisten käyttöliittymien toteutuskokemusta",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "b08494cb415548b6e567ae0526462b5c86ad40d0": {
+    "_ctx": "Ulf Nyström · Asiantuntijalla on G5 vaatimuksen mukaista kokemus",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "SQL"
+  },
+  "b094bf72ec44f9c62e242daec91939157f1c7065": {
+    "_ctx": "David Dudzik · Henkilöllä on kokemusta sähköisten asiointipalvelu",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "b10badd7333ae5392ff66d6d9ec64cd944dbcb01": {
+    "_ctx": "Ahti Rossi · Suomen kielen taito: erinomainen (ammatillinen vie",
+    "domain_or_industry": "Asuminen ja kiinteistöt"
+  },
+  "b16b41c6c1c1bc699fec16b42fa492007543657e": {
+    "_ctx": "Heikki · Asiantuntijalla on D1 vaatimuksen mukaista kokemus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "b1e81e3be23c16d039b7d959eba9157ca1b3c576": {
+    "_ctx": "Heikki · Asiantuntijalla on kokemusta  PowerBIn käytöstä an",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "b2447313e782cf23f7c5210c4253b13ec0d37da3": {
+    "_ctx": "Mikko Keiho · Henkilöllä on kokemusta roolinsa mukaisena CRM-keh",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "b25fda6ea9dfe51fb511e4e48094fa7198d94309": {
+    "_ctx": "Ahti Rossi · Asiantuntijalla on B3 vaatimuksen mukaista kokemus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "b2a72a3e69ddf3aa0d4c1cfa2dd16d32a9723227": {
+    "_ctx": "Pannula? · Kokemus data-arkkitehtuurista",
+    "domain_or_industry": "Terveydenhuolto"
+  },
+  "b2e5dba02eba5092f8a3bdd401435e998eb66452": {
+    "_ctx": "Juha Mild · Asiantuntijalla on kokemusta tietovirtojen ja tiet",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "b33b2dcf599fe12fc6d92bf831b927c378ba6a8a": {
+    "_ctx": "Tuomo Hokkanen · Asiantuntijalla on kokemusta automaatiotyökalujen ",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Python, Kubernetes, Azure"
+  },
+  "b363f66cd3a7f1439d69857fd2fec4eecde30ef6": {
+    "_ctx": "Essi Suo-Heikki · Tarjottavalla henkilöllä on Power BI Data Analyst ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "b3803bb4f87b7117a3d87deddcd85616590bb8f1": {
+    "_ctx": "Sasu Suominen · Henkilöllä on vähimmäisvaatimuksen nro C 1 ylittäv",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "b3b16171e0d7aeb684610c9c298e00bd42667e8e": {
+    "_ctx": "Henrik Hyyppä · Asiantuntijalla on kokemusta päätoimisesta teknist",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "b3d654cea8cbc54f4171221b4980f593f79fb4f2": {
+    "_ctx": "Marko Heikkilä · Kokemus full-stack, front-end tai back-end ohjelmo",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "b4199c25f9370c25c5a722b86d01d890a0ff60d5": {
+    "_ctx": "Teemu Ketonen, Otto Sassi, Semi Rantanen · Kokemus ja osaaminen Microsoft Dynamics 365 ja Pow",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": ".NET"
+  },
+  "b4954f20f4613849a9e2e74a2c682749e89d7089": {
+    "_ctx": "Eemeli Vaheristo · Kielitaito",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "b6c080cf44b937af30e74ec91c5f51bd4d0aae72": {
+    "_ctx": "Johanna Kartila-Malmivaara · Nimetyllä asiantuntijalla on kokemusta projektipää",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "b6c54cfc864a3b86997f4b4547bae6059cf6c7a8": {
+    "_ctx": "Esa Määttä · Henkilöillä on kokemusta JSON-objekteista (käyttöl",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "AWS, Azure, JSON, CI/CD, Linux, Microservices"
+  },
+  "b6d52e35f3993192a86bea202b6df1ad124bd9cd": {
+    "_ctx": "Adolis Kliucevičius · Asiantuntija on työskennellyt asiantuntijaroolissa",
+    "domain_or_industry": "Liikenne",
+    "technologies": "AWS"
+  },
+  "b6d84cfc192b79c793c63d0a015a0c3c8a300bca": {
+    "_ctx": "Ahti Rossi · Asiantuntijalla on kokemusta vähintään 100 htp kok",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "b7090e955857f5a2638f791019cc5d1fcc442505": {
+    "_ctx": "Heikki · Asiantuntijalla on kokemusta raporttien toteuttami",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "b794c599f518ebfbb15ec1f46c0afeee80a4de2e": {
+    "_ctx": "Pertti Repo · Kokemus sanomamuodoista",
+    "technologies": "JSON, XML"
+  },
+  "b79fe48bf1794e44cb53577e7bc05ac8d5395a18": {
+    "_ctx": "Keijo Poutiainen · Henkilöillä on kokemusta JSON-objekteista (käyttöl",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "C#, Azure, JSON"
+  },
+  "b80e2169d2532185e45ab9fa8bbaf98a80e93bda": {
+    "_ctx": "Nortal Oy · Asiantuntija on toiminut päävastuullisena testaaja",
+    "domain_or_industry": "Liikenne"
+  },
+  "b87d2b7da78e560480d1203f4bf6fec009d664aa": {
+    "_ctx": "Ulf Nyström · Asiantuntijalla on G2 vaatimuksen mukaista kokemus",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "SQL"
+  },
+  "b8821e45ce8cf7b36517adbe2a3347786ead72e1": {
+    "_ctx": "Tiina Uutela · Kokemus sähköisten asiointipalveluiden kehittämise",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "b9456bb74c2d2f7a2aca32592289c891bae4d842": {
+    "_ctx": "Ulf Nyström · Työkokemus projektipäällikkönä toimimisesta",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "b9460a50c921fe62265eba60d129ed105eb8727e": {
+    "_ctx": "Niina Warro · Tarjottavalla henkilöllä on kokemusta projektiluon",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "b95920652ee6c4ff4b8e8044ee3780b6212d0840": {
+    "_ctx": "Pannula? · Kokemus arkkitehtuurimenetelmistä",
+    "domain_or_industry": "Terveydenhuolto"
+  },
+  "b972f2042a11715b833f765b9595941f284009b0": {
+    "_ctx": "Tiina Uutela · Projektipäällikköllä on vähintään 2 vuoden kokemus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "b98dcad02f918ed9aea214fc0bbb18be731d1dee": {
+    "_ctx": "Hannu Karttinen · Asiantuntijalla on vähimmäisvaatimuksen nro A 2 yl",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "b9b7445c282e535617d59da7affa57fc4ca9e373": {
+    "_ctx": "Heikki Tuohiniemi · Asiantuntijalla on kokemusta raporttien toteuttami",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "bac6f8bdfebec39d8f0c7093a39516e4deab9333": {
+    "_ctx": "Marko Leiviskä · Suomen kielen taitoinen. Kuvaa tarkemmin sarakkees",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "baef2a3ddb39bde4e3a0f08970286445e108415f": {
+    "_ctx": "Hannu Karttinen · Asiantuntijalla on jokin seuraavista sertifikaatei",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "baffce8ba6e5c776cdeb3348d8d92ec0a4003c17": {
+    "_ctx": "Ulf Nyström · Asiantuntijalla on kokemusta ei-toiminnallisten va",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "SQL"
+  },
+  "bb4959ed65689bd80526e6f4b3e625c1b96541f9": {
+    "_ctx": "Kärt Ehastu · Kokemus visuaalisena suunnittelijana tai vastaavan",
+    "domain_or_industry": "Metsä ja luonnonvarat"
+  },
+  "bb50c7daddf36cbb069e3680bc727fe194239160": {
+    "_ctx": "David Dudzik · Henkilöillä on kokemusta React-alustalla toteutett",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "React"
+  },
+  "bb622ed7530ddd6ce8d2be41468366a3a601257c": {
+    "_ctx": "Antti/Ahti? · Kokemus IT-infrastruktuurin määrittelyprojekteista",
+    "domain_or_industry": "Terveydenhuolto"
+  },
+  "bb811e121781c881edc9a0c98534020553f6b52e": {
+    "_ctx": "David Dudzik · Henkilöllä on kokemusta Azure-alustalla toteutettu",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "bbd66096d76b27d1d3190d279d363898507428c9": {
+    "_ctx": "Ulf Nyström · Asiantuntijalla on kokemusta roolinsa mukaisena Ti",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "bc5b8b7f2ddf8b4a607a7edf927027756c5281c4": {
+    "_ctx": "Sasu Suominen · Asiantuntijalla on kokemusta Power Plaformin CoE S",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "bc8705d0161dc132e64818f357193b08ac1814d9": {
+    "_ctx": "Mikko Keiho · Henkilöllä on kokemusta sovelluskehittäjänä toimim",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "bd5c94338d549d612c5088ea5a7e80ac2147d719": {
+    "_ctx": "Otto Sassi · Kokemusta Jiran käytöstä asiakasprojekteissa",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "bda399c959c045ab7bda695201fc274ca370c47c": {
+    "_ctx": "Ahti Rossi · Kokemus projektimallien soveltamisesta (toteutukse",
+    "domain_or_industry": "Asuminen ja kiinteistöt"
+  },
+  "bdf74504e567026c988eb98431538e8dd7e925a3": {
+    "_ctx": "Kimmo Lindman · Henkilöllä on Scrummaster- tai Product Owner -sert",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "be29370e1c62c08809141dd2241bf9e165510467": {
+    "_ctx": "Antti Leinonen · Asiantuntijalla on työkokemusta valtiohallinnon pr",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "be3be3c70249d7f7c88d34e34ac721defd4e5f93": {
+    "_ctx": "Aki Pehkonen · Asiantuntijalla on  IaC- kokemusta Terraformista",
+    "domain_or_industry": "Liikenne"
+  },
+  "be541cb0d62c9474996fc4afc445c22eef15edf2": {
+    "_ctx": "Marko Heikkilä · Englannin kielen taito (jos ei äidinkieli kuvaukse",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "be5719745e4106b56c647fa5e01cec2b5490ff3d": {
+    "_ctx": "Antti Leinonen · Asiantuntijalla tulee olla projektipäällikön työko",
+    "domain_or_industry": "Koulutus",
+    "technologies": "React, Angular, GCP"
+  },
+  "be7ffe1f7f317d13269c44751781f763a71ebc7b": {
+    "_ctx": "Pertti Repo · Työnäyte/ portfolio (nettisivun linkki tai liite) ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "be821dafcbc2355de398fc9b16734be1ba7c94b4": {
+    "_ctx": "Aake Andersson · Asiantuntijalla on kokemusta päätoimisesta toiminn",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "be88ec633b93a0638f3d16183534accfed0ba185": {
+    "_ctx": "Tuomas Fjällström · Kokemus sähköisten asiointipalveluiden kehittämise",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "beb8abc01f91c291db54bd798216b6ffc5b34c38": {
+    "_ctx": "David Dudzik · Henkilöillä on kokemusta REST API -rajapintojen av",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "REST"
+  },
+  "bf44139b158108f2b098b151c10b2feef57cb7c1": {
+    "_ctx": "Stefan Rimaila · Henkilöillä on kokemusta React-alustalla toteutett",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "React"
+  },
+  "bf8f1227223a939fd72bdc4179ecc96ff75eedc8": {
+    "_ctx": "Marko Heikkilä · Suomen kielen taitoinen. Kuvaa tarkemmin sarakkees",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "bfe3bdc61523567b44bf705e271f4bf0cf191f6f": {
+    "_ctx": "Sasu Suominen · Asiantuntijalla on vähimmäisvaatimuksen nro B 2 ko",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "bff3fbf0226125b2ad78c4718141228c007ab7e1": {
+    "_ctx": "Aake Andersson · Kokemus sähköisten asiointipalveluiden kehittämise",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "c07d6febdfaf1ce5dbac12e129ef37c6d0764eed": {
+    "_ctx": "Taneli Kulo · Asiantuntijalla on vähimmäisvaatimuksen nro A8 kok",
+    "domain_or_industry": "Koulutus"
+  },
+  "c0870013596a772d1445692aca93f873a24353f5": {
+    "_ctx": "Marko Heikkilä · Kokemus sovellusarkkitehdin roolissa toimimisesta.",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "c0d941e35e66556f0e18cf4678b80ad612241a67": {
+    "_ctx": "Marko Määttä · Asiantuntijalla on asiakasprojektissa kokemusta  P",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Python"
+  },
+  "c169813f294f34d5dca6d20eaabf24bcec43db3b": {
+    "_ctx": "Marko Manner-Raappana · Projektipäällikön kokemus toiminnan kehittämiseen ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "c1c59bb097770e1a747754f0e489c9ae0218bd3b": {
+    "_ctx": "Heikki · Asiantuntijalla on erinomainen kirjallinen ja suul",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "c2723ef76f22332a67570e18b4b30d278a3d4161": {
+    "_ctx": "Eemeli Vaheristo · Kokemusta sovellusten kehittämisen projekteista. T",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "c2fcac4a4df1c0787d9e82627d27f54433ccf383": {
+    "_ctx": "Pertti Repo · Suomenkielen taitoinen. Kuvaa tarkemmin sarakkeess",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "c313589ab737ed61b5e4e3c6f5e8f82b8a6a3254": {
+    "_ctx": "Keijo Poutiainen · Henkilöillä on kokemusta sovelluskehittäjänä tai i",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "C#, Azure"
+  },
+  "c3fb0e9fbf739d753f952e0803593f0148c612d7": {
+    "_ctx": "Olli-Petteri Tuuttila · Asiantuntija on suorittanut AWS Associate tai Prof",
+    "domain_or_industry": "Liikenne",
+    "technologies": "AWS"
+  },
+  "c47b8be320224025fc105c970787b2233466da19": {
+    "_ctx": "Marko Leiviskä · Kokemus ketterissä projekteissa toimisesta ja kett",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "c48dabf1b3a2c6962d8e65096977ae6165fdf1ab": {
+    "_ctx": "Marko Manner-Raappana · Projektipäälliköllä on kokemusta työmäärältään laa",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "c4bca33c16aebf97aa52796c815836bd6c3225e0": {
+    "_ctx": "Reko Mätäsaho · Vähimmäisvaatimuksen ylittävä työkokemus teknisten",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "c4e1be272d2c1291d1cf05eb50393447c1b44a6d": {
+    "_ctx": "Hannu Karttinen · Asiantuntijalla on kokemusta monitoimittajatiimiss",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "c569b9ddeddddd8353b8503d16ddc03553bc0925": {
+    "_ctx": "Mikko Keiho · Henkilöllä on kokemusta julkishallinnolle toteutet",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "c5f64de566dc78f77aaa6c36137bb32236eb35ac": {
+    "_ctx": "Heikki · Asiantuntijalla on kokemusta käyttöoikeuksien / ra",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "c6075652c0417b26be6db3aa832d1fe3df06d738": {
+    "_ctx": "Aki Pehkonen · Asiantuntija on suorittanut AWS-Cloud Practitioner",
+    "domain_or_industry": "Liikenne",
+    "technologies": "AWS"
+  },
+  "c6bed107cf3a5cb7f84d88567b8445187f0cd701": {
+    "_ctx": "Mika Kirveennummi · Hyvä kirjallinen ja suullinen suomen ja englannin ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "c8e7dd4069aedf2aa63cd76802a0e0a1c6791267": {
+    "_ctx": "Eemeli Vaheristo · Kokemus sähköisten asiointipalveluiden kehittämise",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "SQL"
+  },
+  "c8f32b0cb046b537ab06cae6e9ee409498953076": {
+    "_ctx": "Veli-Matti Heikkinen · Osaamista klusteroitujen tietokantojen käytöstä. K",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "c98a0bd012c155a9dba386b070290b643d8a6902": {
+    "_ctx": "Kostiainen? Timo T? · Kokemus kokonaisarkkitehtuurin viitekehysten halli",
+    "domain_or_industry": "Terveydenhuolto"
+  },
+  "c9ccb65e3e41e8d3e4abc74a430c3be74aa41a8c": {
+    "_ctx": "Taneli Kulo · Asiantuntijalla on vähimmäisvaatimuksen nro A8 kok",
+    "domain_or_industry": "Liikenne"
+  },
+  "c9ea43230301b6e94fe6f4dc73bba2ae34984dda": {
+    "_ctx": "Marko Leiviskä · Testiautomaationtyön koordinointi ja/tai testiauto",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Docker, Jenkins, Git"
+  },
+  "c9fd24017878c0ac6c718ef3dea8a4d2351ef4a0": {
+    "_ctx": "Antti Leinonen · Asiantuntijan kielitaito",
+    "domain_or_industry": "Koulutus"
+  },
+  "ca19ac5a201e05aabbc4ad26850ce6430f096b01": {
+    "_ctx": "Esa Määttä · Henkilöillä on kokemusta Azuren API Management -pa",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "ca6848b71beeb92492a3b0e8a711490ccbdd14a5": {
+    "_ctx": "Veli-Matti Heikkinen · Kokemus Scrum Masterin roolissa toimisesta yhteens",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "ca6936e9ceb56948abf006a7c69a4493b2e544e7": {
+    "_ctx": "Mikael Tetenkin · Henkilöllä on kokemusta Azure DevOps-työkalujen kä",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "ca9cfeb67bae5efa41007cd4f712c770cf5504cc": {
+    "_ctx": "Niina Warro · Kokemusta raporttien suunnittelusta ja toteuttamis",
+    "domain_or_industry": "Koulutus"
+  },
+  "caa6efeb2a423c913aa6a03f2afbae5e4779cf08": {
+    "_ctx": "Jovica Dimitrijevic · Open Shift Container -alustakokemusta",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "caab8b3f096167de9f0f71e0cab6a86ba64a6b6d": {
+    "_ctx": "Heikki Huotari · Kokemus sähköisten asiointipalveluiden kehittämise",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "cb0f2cd7bf860a74ca10ee0456e05da6e661e8e2": {
+    "_ctx": "Heikki Tuohiniemi · Asiantuntijalla on kokemusta käyttöoikeuksien / ra",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "cc0d65e288969ee54353918993d33dabd3a1c06e": {
+    "_ctx": "Heikki Huotari · Kokemusta sovellusten kehittämisen projekteista. T",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "cc0ea032106e4ae092382a519c69b6d2d6aea08c": {
+    "_ctx": "Ulf Nyström · Asiantuntijalla on kokemusta tietoturva- ja tietos",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "cc3b10f2a13aa4d2d2e6c7f60d4c77297e1c1df0": {
+    "_ctx": "Juha Mild · Asiantuntijalla on kokemusta tietomallinnuksesta v",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "cc7c293555fe69d64e7165ddaa806b59ee919fea": {
+    "_ctx": "Asko Kinnala · Projektipäällikön kokemus teknisen monitoimittajap",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "ccdcca176cb2d18619eed35d0a99365d1e7cbba1": {
+    "_ctx": "Taina Ylisirniö · Asiantuntijalla on työkokemusta manuaalisesta hyvä",
+    "domain_or_industry": "Koulutus"
+  },
+  "ce29111439cfd901be9e3ac0770c44e24e497b43": {
+    "_ctx": "Tomi Sarpola · Asiantuntijalla on kokemusta Microsoft Fabric -ymp",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "ce2d8dfc911c687ee2da067e3bbdbced278f6853": {
+    "_ctx": "Eemeli Vaheristo · Asiantuntijalla on kokemusta päätoimisesta teknist",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "ce4bcd02524b0870e98e9302ba1f141196955aa1": {
+    "_ctx": "Eemeli Vaheristo · Hyvä kirjallinen ja suullinen suomen ja englannin ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "ce9bc6f91cc28680eb16e9b8003edfb2f0d680d6": {
+    "_ctx": "Sasu Suominen · Asiantuntijalla on vähimmäisvaatimuksen nro B 6 ko",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "cea59a5c3cbf1530a953f2ac264ce25cf2bc75ec": {
+    "_ctx": "David Dudzik · Henkilöillä on kokemusta JSON-objekteista (käyttöl",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "JSON"
+  },
+  "cee5d40e5e7cac8c73a868e758d9ac85b79cc323": {
+    "_ctx": "Stefan Rimaila · Henkilöllä on vähimmäisvaatimuksen nro B 1 ylittäv",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Angular, C#, Azure"
+  },
+  "cf272af657436ed1225b6688898e1322acc68e37": {
+    "_ctx": "Teemu Mäkinen · Kokemus seuraavista teknologioista ja/tai ohjelmis",
+    "technologies": "Java, Oracle, JSON, XML, CI/CD"
+  },
+  "cf658d966d95ce8c13330bbd85d298fc0c1359d8": {
+    "_ctx": "Mika Purjesalo · Kokemus projektipäällikkönä tai vastaavana toimimi",
+    "domain_or_industry": "Metsä ja luonnonvarat"
+  },
+  "cfd6b694c7cc09f9f25bdacd972fab154cde7b06": {
+    "_ctx": "Veli-Matti Heikkinen · Tietokantasuunnittelu jotain mallinnustyökalua käy",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "d01874a277e33b1dca4bc906a4111e097b47ef54": {
+    "_ctx": "Antti Leinonen · Asiantuntijalla on työkokemusta Scrum Masterina to",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "React"
+  },
+  "d064a0dfce50f4ed2bcb851958f69751a4484692": {
+    "_ctx": "Pertti Repo · Kokemus ketterissä projekteissa toimisesta ja kett",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "d1162f6443ea9fb15b45893ed37d02f4eca5522b": {
+    "_ctx": "Ulf Nyström · Asiantuntijalla on kokemusta Azure-teknologiaan po",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "d1813fffd75ce879a55c247c9eafdd7a680cf9cc": {
+    "_ctx": "Otto Sassi · Kokemus projekteista, joissa käsitellään henkilöti",
+    "domain_or_industry": "Asuminen ja kiinteistöt",
+    "technologies": "Azure"
+  },
+  "d24edaf2f7d0378190fe738257a835eb6890b900": {
+    "_ctx": "Esa Määttä · Henkilöillä on kokemusta Azuren \"Infrastructure as",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "d25805bc2f2777e4a8239e76176fb4b0a4d8771e": {
+    "_ctx": "Hanna Leivo · Kokemus liiketoimintaprosessien kehittämisen proje",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "d2659a114a187c06cd579fd4a4eae190ddd0f5de": {
+    "_ctx": "Olli-Petteri Tuuttila · Asiantuntija on työskennellyt asiantuntijaroolissa",
+    "domain_or_industry": "Liikenne",
+    "technologies": "AWS, CI/CD, Microservices"
+  },
+  "d2db7f6f25fa321c747c2031e00ec6f4dc19c9d4": {
+    "_ctx": "Esa Määttä · Henkilöillä on kokemusta Azure Function Appien suu",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure, Linux, Microservices"
+  },
+  "d325d1116f89f8ae42e217cefe5e66f35c528fcd": {
+    "_ctx": "Karoliina Alho · Korkeakoulun toiminnan tuntemus. Kokemus korkeakou",
+    "domain_or_industry": "Koulutus"
+  },
+  "d36b0e04ab13f5396abe022f2da2dbedb5c4fc1b": {
+    "_ctx": "Ulf Nyström · Työkokemusta vähintään kolmesta projektista, joiss",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "d44153e4b00265f275784710778a1e4f5fb5028f": {
+    "_ctx": "Mikko Keiho · Henkilöllä on voimassa oleva Microsoft Power Platf",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "d4b62651a44f9780dc15ca262f468dd54cc16cbd": {
+    "_ctx": "Anssi Pannula · Kokemus data-arkkitehtuurista",
+    "domain_or_industry": "Terveydenhuolto"
+  },
+  "d4cdb7718ae62a84e134211017714639e2596ea7": {
+    "_ctx": "Esa Määttä · Henkilöillä on kokemusta Azure Front Door tai Azur",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "d509d5b3821d8d43038dc5de9329184b66953dbf": {
+    "_ctx": "Kati Norrena · Asiantuntijalla on kokemusta ketterällä menetelmäl",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "d54276d63b3a26321d4dc4a4c5ae172af6a3734f": {
+    "_ctx": "Marko Paavola · Koulutus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "d7522d299abe74284b6f9c6a17ad418a4e398f7b": {
+    "_ctx": "Johanna Kartila-Malmivaara · Nimetyllä asiantuntijalla on kokemusta projektihal",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "d77ccc7e6a7f5510899d67bf2d13dd7bc3f774e9": {
+    "_ctx": "Marko Heikkilä · Työnäyte tai portfolio tehdystä web-sovellusratkai",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "React, Node.js, .NET, SQL"
+  },
+  "d7b8f987c8055773ffdeb5bd04e041e1c13013cc": {
+    "_ctx": "Stefan Rimaila · Henkilöllä on kokemusta roolinsa mukaisena sovellu",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "d84a82c4eb20eb41c81cbfe6c0307b24680cf990": {
+    "_ctx": "Henrik Hyyppä · Projektipäälliköllä on kokemusta työmäärältään laa",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "d8648333841406e99e04502291ca566dd65f5389": {
+    "_ctx": "Eemeli Vaheristo · Projektipäällikön kokemus teknisen monitoimittajap",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "d884829e983e8eed88f8d1087090aaf7d0720fd1": {
+    "_ctx": "Ergin Tuganay · Asiantuntija on työskennellyt asiantuntijaroolissa",
+    "domain_or_industry": "Liikenne",
+    "technologies": "Azure"
+  },
+  "d8b3fd28683e91f5a0df117b399708d81fc86ccc": {
+    "_ctx": "Sasu Suominen · Asiantuntijalla on kokemusta Power Platform -alust",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "d8c6f3eb8699699f5f83bef50885d23103eb39cc": {
+    "_ctx": "Eemeli Vaheristo · Kokemus sovellusalustojen kehittämisen projekteist",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "d8f51cf822d623563d0743edc21a64817c0e3a1d": {
+    "_ctx": "Ulf Nyström · Asiantuntijalla on kokemusta tietokannan suunnitte",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "SQL"
+  },
+  "d94d1046f9da7bcf0528bb917d42e8d1fd134d7a": {
+    "_ctx": "Eemeli Vaheristo · Projektipäällikköllä on vähintään 2 vuoden kokemus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "da688477977ddc0ebcd4bc930d6843357c328678": {
+    "_ctx": "Antti/Ahti? · Kokemus Jiran hyödyntämisesta projektien johtamise",
+    "domain_or_industry": "Terveydenhuolto"
+  },
+  "da79b9dcf4b41e9200597e5c1e3fd6e8609ab2de": {
+    "_ctx": "Kimmo Lindman · Kokemus tuen  ja ylläpidon prosesseista, joissa kä",
+    "domain_or_industry": "Asuminen ja kiinteistöt"
+  },
+  "da7c161ed26eb2e73a13cf1f4cce980d10796b5e": {
+    "_ctx": "Matti Uusivuori · Kokemusta cloud ympäristöstä",
+    "domain_or_industry": "Rahapelit",
+    "technologies": "Azure, GCP"
+  },
+  "db9ff67b4884ad9637428ccc77b6bedeeb6e3e88": {
+    "_ctx": "Sasu Suominen · Erinomainen suomen kielen suullinen ja kirjallinen",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "dbf924e9420b5c06393e0d79edbe517f08f0a820": {
+    "_ctx": "Kati Norrena · Asiantuntija on toiminut palvelupäällikkön tai pal",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "PostgreSQL, AWS, Azure"
+  },
+  "dd9eb1e990aa8ce970029d16669a5a1deaacfe53": {
+    "_ctx": "Mikael Tetenkin · Henkilöllä on kokemusta Azuressa toimivan tietojär",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "ddbb7ac58cf217f5b7a9104a4095f39040a9ec48": {
+    "_ctx": "Taneli Kulo · Asiantuntijalla on työkokemusta käyttöliittymä- ja",
+    "domain_or_industry": "Liikenne"
+  },
+  "de32d72a05e6cc1bfabec12aa8d0913ddde0d54c": {
+    "_ctx": "Aleksandar Saric · Konttiteknologia kokemusta",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "de53d6033040be23930228f25812187c76a916fb": {
+    "_ctx": "Aake Andersson · Projektipäällikön kokemus toiminnan kehittämiseen ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "de7ff7e053f275b0e7a9dae192f0698dfb999b16": {
+    "_ctx": "Tuomas Fjällström · Hyvä kirjallinen ja suullinen suomen ja englannin ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "de81f42ff2e982c783b816c61e0a053bd677307b": {
+    "_ctx": "Hannu Karttinen · Asiantuntijalla on vähimmäisvaatimuksen nro A 5 yl",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "de9dda983cfce499adee9793763e2f0d09fcf0ea": {
+    "_ctx": "Anssi Pannula · Tarjottavalla henkilöllä on kokemusta Microsoft Bi",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Kubernetes, Azure"
+  },
+  "dfe4485ad420ff16b63ef887484ae75ff6f7b08b": {
+    "_ctx": "Reko Mätäsaho · Hyvä kirjallinen ja suullinen suomen ja englannin ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "e03aa5f4c26bb88812dd80dfc9b44d213ceafa56": {
+    "_ctx": "Anssi Pannula · Kokemus integraatioiden rakentamisesta",
+    "domain_or_industry": "Terveydenhuolto"
+  },
+  "e088b2377ca4479423f6d410416119bc1b6376cb": {
+    "_ctx": "Ulf Nyström · Voimassa oleva Microsoft Azure Solutions Architect",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "e0aa52ae87769d41dbc29777533c0896a237df06": {
+    "_ctx": "Joseph Deksnys · Henkilöllä on kokemusta käyttäjätarpeiden kartoitt",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "e0f10db56ab969dc1a6774b7cc7a421bda8791e8": {
+    "_ctx": "Juho Valkonen · Henkilöllä on kokemusta roolinsa mukaisena IT-arkk",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "e1314bfbbb0b3464f5e638444130d65b3030defd": {
+    "_ctx": "Johanna Kartila-Malmivaara · Nimetty asiantuntija on toiminut päätoimisena asia",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "e15f814b54ce7978d7d29ca05c2538bd9454c7cb": {
+    "_ctx": "Johanna Kartila-Malmivaara · Nimetyllä asiantuntijalla on kokemusta projektihal",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "e23d8ada2d31b734c18dd152ab8dba051b3d2173": {
+    "_ctx": "Otto Sassi · Asiantuntijalla on erinomainen kirjallinen ja suul",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "e29a8cbac04b6a69fd43a83018e06ffde285300e": {
+    "_ctx": "Anssi Pannula · Tarjottavalla henkilöllä on kokemusta Data Vault 2",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "e2e97d3ef4cdd3e2a810bf546df05d4a310e1eb3": {
+    "_ctx": "Sanna Pyykönen · Kokemus Jiran hyödyntämisesta projektien johtamise",
+    "domain_or_industry": "Terveydenhuolto"
+  },
+  "e2ef25dfeec645cd2e62e70bde767d553d14b7f3": {
+    "_ctx": "Hanna Leivo · Projektipäälliköllä on kokemusta työmäärältään laa",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "e2fe35256132de96537301df2eeb348cbe2de8a4": {
+    "_ctx": "Reko Mätäsaho · Projektipäälliköllä on kokemusta työmäärältään laa",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "e36085a4b59b8ab24e035afff91f29d5ba00e0d0": {
+    "_ctx": "Ulf Nyström · Työkokemusta julkisen sektorin (valtio/kunta) toim",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "e365b7da84aef103a2043ec300f4b304d349fe9c": {
+    "_ctx": "Olli-Petteri Tuuttila · Asiantuntija on työskennellyt asiantuntijaroolissa",
+    "domain_or_industry": "Liikenne",
+    "technologies": "AWS"
+  },
+  "e38ca2b916f1ab0edbea4516e8392fc10ad2c25d": {
+    "_ctx": "Hanna Leivo · Projektipäällikköllä on vähintään 2 vuoden kokemus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "e3f4464b190063ca7a632b3ada2affa1fa6eb640": {
+    "_ctx": "Tomi Sarpola · Asiantuntijalla on kokemusta Microsoft Fabric -ymp",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "e437ed4a1c2d07730f472a232816458973c134ee": {
+    "_ctx": "Juha Mild · Asiantuntijalla on kokemusta tietovarastojen suunn",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "e49fab91de4ab31e23b65ccd34877607dc05063e": {
+    "_ctx": "Sasu Suominen · Kokemus ja osaaminen Microsoft Dynamics Power Page",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "e4d8e3cf547a0c0dae88033c467235098e494806": {
+    "_ctx": "Essi Suo-Heikki · Tarjottava henkilö on toiminut sovelluskehittäjän ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "e508f1551c8b18492369a2ec3566e09cd065d92c": {
+    "_ctx": "Kimmo Lindman · ITIL Foundation -sertifikaatti",
+    "domain_or_industry": "Asuminen ja kiinteistöt"
+  },
+  "e5598757cdd3119f8395084304b14897ed4cd90b": {
+    "_ctx": "Otto Sassi · Kokemusta Confluencen käytöstä asiakasprojekteissa",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "e6a49722dba29fef2febc1e83d7ba9089bc53ffc": {
+    "_ctx": "Jani Lusikka · Ohjelmointikokemus",
+    "domain_or_industry": "Rahapelit",
+    "technologies": "Java, JavaScript, TypeScript, React, C#, .NET, SQL, PostgreSQL"
+  },
+  "e6b946db5f49528db6dfc8da871b35eac6820b43": {
+    "_ctx": "Juuso Liljavirta · Henkilöllä on vähimmäisvaatimuksen nro E 1 ylittäv",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "e6d0032b5d7787d0114efbf0b7b5236cbf00ae4c": {
+    "_ctx": "Ulf Nyström · Asiantuntijalla on tietokannan toteutuskokemusta t",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "SQL"
+  },
+  "e70754046fe448e6db19c760a2a5f1e8e13828ad": {
+    "_ctx": "Eemeli Vaheristo · Asiantuntijalla on kokemusta päätoimisesta teknist",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "e7397ef1e886706bdd39af52b758bab152ae5bf2": {
+    "_ctx": "Taneli Kulo · Asiantuntijalla on vähimmäisvaatimuksen nro A3 kok",
+    "domain_or_industry": "Liikenne"
+  },
+  "e76f35d2912c6be22d6026e4ded97b42ffa7359d": {
+    "_ctx": "Heikki · Asiantuntijalla on asiakasprojektissa kokemusta  P",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "e79231432066a150be1f5103ff43266af4619613": {
+    "_ctx": "Hanna Leivo · Hyvä kirjallinen ja suullinen suomen ja englannin ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "e7d1e38455465b6b6a1de707d3125db9f893edb1": {
+    "_ctx": "Tomi Sarpola · Asiantuntijalla on kokemusta roolinsa mukaisena ra",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "e83b2d59a25c8d2cbb2df53c180368c409d5705a": {
+    "_ctx": "Aleksandar Saric · Koulutus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "e8443a45ae51dcb97c8b1ccf7df24e75b38d8da9": {
+    "_ctx": "Adolis Kliucevičius · Asiantuntija on suorittanut AWS-Cloud Practitioner",
+    "domain_or_industry": "Liikenne",
+    "technologies": "AWS"
+  },
+  "e9bd2168bdb34d0b8f511e644d500df8369570fd": {
+    "_ctx": "Joseph Deksnys · Henkilöllä on kokemusta  käyttöliittymän visuaalis",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "e9d032c9053e7370dc7588b51242513dfa71b335": {
+    "_ctx": "Anssi Pannula · Kokemus tietovarastojen ja integraatioiden arkkite",
+    "domain_or_industry": "Asuminen ja kiinteistöt",
+    "technologies": "Azure"
+  },
+  "e9f1f7009f5bf7793f903b9e0fc03b674c3c1f1e": {
+    "_ctx": "Ahti Rossi · Asiantuntijalla on kokemusta DevOpsin hallinnasta ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "ea9f8b264719b8c1baf01d87d060ed0fbb80c6e7": {
+    "_ctx": "Mikko E · Kokemus prosessien kartoittamisesta ja kuvaamisest",
+    "domain_or_industry": "Terveydenhuolto"
+  },
+  "eaf3e81b4efa0aab04ce7aa51e87fce6276e1192": {
+    "_ctx": "Juho Mehtonen · Teknologiat/osaaminen: HTML5/CSS ja kuvankäsittely",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "eb568a31a8ce8658a43914d562f713e5e0b4566b": {
+    "_ctx": "Ulf Nyström · Asiantuntijalla on tietokannan suunnittelukokemust",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "SQL"
+  },
+  "eb659ed8b4326f506acd2ba80aaeb7c27a74d61c": {
+    "_ctx": "Kacper Kozak · Henkilöllä on kokemusta CSS:n syntaksista ja LESS,",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "React"
+  },
+  "ebfaef9f7cb9714a285e9bce71d8149135a857b2": {
+    "_ctx": "Henrik Hyyppä · Hyvä kirjallinen ja suullinen suomen ja englannin ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "ec41d4fc6147b7b8dd8bc99fb1d8ca931f1a60d5": {
+    "_ctx": "Arto Niemi · Henkilöllä on kokemusta Microsoft Dynamics 365 Pow",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "ec723110f054f142130ab2aafcf3c7d6bce1ad40": {
+    "_ctx": "Henrik Hyyppä · Vähimmäisvaatimuksen ylittävä työkokemus teknisten",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "ec9c3751366a0ea64e36c9a12d01b27bf1ee6120": {
+    "_ctx": "Saara-Maija Pakarinen · Kokemusta MySQL-tietokannoista 1.1.2012 jälkeen",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "MySQL, Oracle"
+  },
+  "ed22ba998f1967b569d18d1157a00501c37900c7": {
+    "_ctx": "Nortal Oy · Asiantuntijan testaukseen kohdistunut toteutunut t",
+    "domain_or_industry": "Liikenne"
+  },
+  "ed65bf286188a71de96c270122f0162151a33291": {
+    "_ctx": "Kati Norrena · Tarjottavalla henkilöllä on kokemusta projektiluon",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Python, XML"
+  },
+  "edad9173f34b88d013fc8eade6f3616beaa9888e": {
+    "_ctx": "Ulf Nyström · Asiantuntijalla on kokemusta Azure-teknologiaan po",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "ee111ce9f6d1d72b20316896a1b55496017098ed": {
+    "_ctx": "Taneli Kulo · Asiantuntijalla on työkokemusta karttapohjaisen so",
+    "domain_or_industry": "Koulutus"
+  },
+  "ee94945016725274f96c2743b49f42d40eb6a53f": {
+    "_ctx": "Heikki · Asiantuntijalla on A1 vaatimuksen mukaista kokemus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "eed0d6f0935d4c2dbaa8eeb8837de61782a040b6": {
+    "_ctx": "Niina Warro · Tarjottavalla henkilöllä on hyvä kirjallinen ja su",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "eefe620923adad93802cf6aa2e7fc69254057c82": {
+    "_ctx": "Mika Purjesalo · Kokemus kohdassa 1 kuvatuista tehtävistä vähimmäis",
+    "domain_or_industry": "Metsä ja luonnonvarat"
+  },
+  "ef7c8b359812a1156cc2d6640062ea73c0bbaece": {
+    "_ctx": "Marko Manner-Raappana · Kokemus sähköisten asiointipalveluiden kehittämise",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "efc4920ef59f9e40e3bec2016466afa57333814b": {
+    "_ctx": "Mika Purjesalo · Projektipäälliköllä on kokemusta palvelumuotoilupr",
+    "domain_or_industry": "Metsä ja luonnonvarat"
+  },
+  "efc70346215e1a7d6c693ef320a1446f781366e9": {
+    "_ctx": "Anssi Pannula · Tarjottavalla henkilöllä on kokemusta Azure ympäri",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Kubernetes, Azure"
+  },
+  "f00e8e14b3c76299d6067d3a1b88e74c131e6c54": {
+    "_ctx": "Sasu Suominen · Kokemus Microsoft Dynamics 365 ja Power Platform -",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "f072d49d182e1a44bd882190b65a643ca9c357fb": {
+    "_ctx": "Tuomo Hokkanen · Asiantuntijalla on vähimmäisvaatimuksen nro A 1 ko",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "f0b7e38a851e0368f1336b553671d8db44cf5ba4": {
+    "_ctx": "Adolis Kliucevičius · Asiantuntija on työskennellyt asiantuntijaroolissa",
+    "domain_or_industry": "Liikenne",
+    "technologies": "AWS"
+  },
+  "f0e28060fb48bfd2a36070d4ce3e92dd9a98a6c4": {
+    "_ctx": "Heikki Tuohiniemi · Asiantuntijalla on D2 vaatimuksen mukaista kokemus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "f1c6c46bfa2a556463750e15bdb0665cde1d0718": {
+    "_ctx": "Annastiina Norppa · Kokemus projektipäällikkönä toimimisesta laajoissa",
+    "domain_or_industry": "Terveydenhuolto"
+  },
+  "f1f790e6a005343d83d0a013570ed767a4b2bf95": {
+    "_ctx": "Heikki · Asiantuntijalla on kokemusta data-analyytikkona to",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "f205cd7c4b3dd885f9f37b740a16daa84d2778c8": {
+    "_ctx": "Kacper Kozak · Henkilöillä on kokemusta JSON-objekteista (käyttöl",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "React, JSON"
+  },
+  "f333db7b987820ce07ec245f8855c12eaae7f496": {
+    "_ctx": "Arto Niemi · Henkilöllä on vähimmäisvaatimuksen nro D 1 ylittäv",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "f3e305253c09963fa13b3134a8084392b1ddd43c": {
+    "_ctx": "Minna Prusi · Henkilöllä on kokemusta Microsoft Dynamics 365 Pow",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "f44f39d7b27b8fa931521ab82b1d8a91fa62281d": {
+    "_ctx": "Taneli Kulo · Asiantuntijalla on työkokemusta ketterällä menetel",
+    "domain_or_industry": "Koulutus"
+  },
+  "f48795f6485873f3d4155bd31055a34e825e51c8": {
+    "_ctx": "Ulf Nyström · Työkokemusta tiedonhallintalakiin liittyvistä tiet",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "f4afed3f5cb3c297da31922b4c919e1d65383d8b": {
+    "_ctx": "Heikki · Kokemusta Jiran käytöstä asiakasprojekteissa",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "f50c55b677bbfc563e71c9fabeeefcf365ed5fc6": {
+    "_ctx": "Saara-Maija Pakarinen · Kokemusta MySQL-tietokannoista",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "MySQL, Oracle"
+  },
+  "f51934ad89e2eb5d545a6292076d8750ec018e37": {
+    "_ctx": "Arto Niemi · Henkilöllä on kokemusta  Microsoft Dynamics 365 CR",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "f5317ef72d8d8787cabcecc1689bfe72bc16f6dc": {
+    "_ctx": "Marko Määttä · Asiantuntijalla on kokemusta data-analyytikkona to",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "SQL, Azure"
+  },
+  "f5d8a244862ea406b06aff19aefc5ffb6c5b18e2": {
+    "_ctx": "Keijo Poutiainen · Henkilöllä on kokemusta Azure-alustalla toteutettu",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "C#, Azure"
+  },
+  "f5de283ceed7f00fb2332bf7c46969f763e0e758": {
+    "_ctx": "Johanna Kartila-Malmivaara · Nimetyllä asiantuntijalla on kokemusta pilviympäri",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "f5fb22edf4b058fd3a8d90ba5e30e0129d0135ec": {
+    "_ctx": "Mikael Tetenkin · Henkilöllä on kokemusta työskentelystä DevSecOps-a",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "f63a7ca37d8b028ef47a2fc70f4275a18b3e4110": {
+    "_ctx": "Sasu Suominen · Asiantuntijalla on jokin voimassa oleva PowerPlatf",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "f6719daa88c18a1d3f4e666e372924a41ba76f62": {
+    "_ctx": "Aki Pehkonen · Asiantuntija on työskennellyt asiantuntijaroolissa",
+    "domain_or_industry": "Liikenne",
+    "technologies": "AWS, Azure, GCP"
+  },
+  "f692f5eea53f9f7c2d1f97b54819647d97b1557f": {
+    "_ctx": "Esa Määttä · Henkilöllä on kokemusta sovelluskehittäjänä Scrum-",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "f6be755a77fae20edea75c5eec222721dc4c390d": {
+    "_ctx": "Hannu Karttinen · Asiantuntijalla on kokemusta DevOps -toimintatavoi",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "f6c0e88fe081ad4150f20aeb4614fd3b396301a7": {
+    "_ctx": "Aake Andersson · Hyvä kirjallinen ja suullinen suomen ja englannin ",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "f73462bd0b908bf66dd122237362d7ac770404f6": {
+    "_ctx": "Niina Warro · DSharp Studio Professional- ja DSharp Studio Exper",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "f7624d6473f9bf792a75fa006f4c458341a85a21": {
+    "_ctx": "Heikki Huotari · Projektipäällikön kokemus Verolainsäädäntöä julkis",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "f7b0b54c1aa5a0af4fe4ef17caa81d62a80de926": {
+    "_ctx": "Mikko Keiho · Henkilöllä on vähimmäisvaatimuksen nro A 1 ylittäv",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "f7cf23b46ff0a7a784618303cde29f99995e4222": {
+    "_ctx": "Ivan Jevtovic · Kokemusta prosessimoottorien (esim. Activiti, Camu",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "f80f62d08ba6a7a37a89e24814c17bad272ac560": {
+    "_ctx": "Anssi Pannula · Tarjottavalla henkilöllä on kokemusta Azure Synaps",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "SQL, Azure"
+  },
+  "f863b607c9c5dfa60d962deb696979e0b1603661": {
+    "_ctx": "Elizabeth Tran · Asiantuntijalla on erinomainen kirjallinen ja suul",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "f86ed5bd7b08d85a26479c3f5854cbbf0862e764": {
+    "_ctx": "Heikki Huotari · Projektipäälliköllä on kokemusta työmäärältään laa",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "f8b0da7541afbde52c81091797ac488717e059cf": {
+    "_ctx": "Niina Warro · Korkeakoulun opintohallinnon tietojärjestelmän (Pe",
+    "domain_or_industry": "Koulutus"
+  },
+  "f8f669ec93ab09e209470506bd67a26ec54c1671": {
+    "_ctx": "Ulf Nyström · Työkokemusta yleiseen tietosuoja-asetukseen liitty",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "f90e3462029a2fe7abf3ee1b229149a3a0349838": {
+    "_ctx": "Saara-Maija Pakarinen · Kokemusta päätoimisena suunnittelijana relaatiotie",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "PostgreSQL, MySQL, Oracle"
+  },
+  "f91468c54eff8cbcd38a5fb1be60434fe072b238": {
+    "_ctx": "Taneli Kulo · Asiantuntijalla on vähimmäisvaatimuksen nro A6 kok",
+    "domain_or_industry": "Koulutus",
+    "technologies": ".NET"
+  },
+  "f961701c3a2dd975a0faf7de87d4d1710da1d6c1": {
+    "_ctx": "Sasu Suominen · Työkokemus Microsoft Dynamics 365 -ratkaisun ja/ta",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "f967c7d353aa62eafe387c1311b387b73698c9a3": {
+    "_ctx": "Johanna Kartila-Malmivaara · Nimetty asiantuntija on toiminut projektipäällikön",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "fa0c9aecc7b9287218e9127ce41a23eaeef11a43": {
+    "_ctx": "Aake Andersson · Kokemusta sovellusten kehittämisen projekteista. T",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "fa5843ff52f2d1f58ec26b49e17bed08b879c5b0": {
+    "_ctx": "Esa Määttä · Henkilöillä on kokemusta käyttövarmaksi ja vikasie",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure, Linux, Microservices"
+  },
+  "fa6d17f84014cc737b3e12e9017451cc741a6390": {
+    "_ctx": "Reko Mätäsaho · Kokemus sovellusalustojen kehittämisen projekteist",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "fb20460cde9d2ca96d266f73bedcb2c9e861f961": {
+    "_ctx": "Sasu Suominen · Kokemus toimimisesta kahdessa (2) laajassa Microso",
+    "domain_or_industry": "Terveydenhuolto"
+  },
+  "fb9df35ce064e6049fcbf789ef07f61c5323af0b": {
+    "_ctx": "Hanna Leivo · Asiantuntijalla on kokemusta päätoimisesta teknist",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "fc5014db6ad4b307f620ca3a643ca500175c28a2": {
+    "_ctx": "Teemu Mäkinen · Vähimmäisvaatimuksen ylittävä kokemus ESB-alustast",
+    "technologies": "Oracle"
+  },
+  "fc6af2d3b385d454d8455217ea731a6fc336be67": {
+    "_ctx": "Timo Kankaanpää · Henkilöllä on kokemusta Microsoft Dynamics 365 CRM",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "fd65787d60910ac21a7c3db8275854f8f304f4eb": {
+    "_ctx": "Tomi Sarpola · Asiantuntijalla on kokemusta Azure-teknologiaan po",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "Azure"
+  },
+  "fd77c8c660a7a22e1891088839bbf12cce220b24": {
+    "_ctx": "Karoliina Alho · Dokumentointi ja viestintä. Sujuva kommunikointi s",
+    "domain_or_industry": "Koulutus"
+  },
+  "fd7c4c43751141f420f4d1f3448f166f3c003c56": {
+    "_ctx": "JP · Kokemus johtamisen paradigman muutoksen valmentami",
+    "domain_or_industry": "Terveydenhuolto"
+  },
+  "fe8b345fb9fa32be0abdfe57ea6cf726cae11be7": {
+    "_ctx": "Otto Sassi · Microsoft Fabric sertifikaatti DP-600 (tai uudempi",
+    "domain_or_industry": "Asuminen ja kiinteistöt"
+  },
+  "fed72a89d6a056dd9f3567cddc352465e0f0d87c": {
+    "_ctx": "Esa Määttä · Henkilöillä on kokemusta C sharp (C#) käytöstä ohj",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "C#, Azure, Linux, Microservices"
+  },
+  "ff2d84f0df9a35d93d8991d2589165eb0a0811e0": {
+    "_ctx": "Mikko Keiho · Henkilöllä on kokemusta tietoturvan suunnittelusta",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "ff2f0a455610a50544d60d4f5fca1587a8c32056": {
+    "_ctx": "Kacper Kozak · Henkilöillä on kokemusta React-alustalla toteutett",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "React"
+  },
+  "ff9270b1379d85851da9e88f89e7e4529d5a710e": {
+    "_ctx": "Eemeli Vaheristo · Projektipäällikön kokemus teknisen monitoimittajap",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "ffa6a9c9cde9d3d28c887a7dacfabb626012b096": {
+    "_ctx": "Juuso Liljavirta · Henkilöllä on vähimmäisvaatimuksen nro E 2 ylittäv",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "ffae79649ee8631b2aff0d04147c2990343b3803": {
+    "_ctx": "Miika Kuha · Koulutus",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "ffd5d23d702d970140151d8caad24dc55b238301": {
+    "_ctx": "David Dudzik · Henkilöllä on kokemusta CSS:n syntaksista ja LESS,",
+    "domain_or_industry": "Julkishallinto"
+  },
+  "ffe1ded29de5da620439f0a324e23643ec5ba356": {
+    "_ctx": "Kacper Kozak · Henkilöillä on kokemusta REST API -rajapintojen av",
+    "domain_or_industry": "Julkishallinto",
+    "technologies": "React, REST"
+  }
+}

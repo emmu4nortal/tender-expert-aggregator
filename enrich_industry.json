@@ -1,0 +1,21 @@
+{
+  "_comment": "Top-level client folder (source_relative_path.split('/')[0]) -> domain_or_industry tag (Finnish, to match the master's 'Toimiala' column). Extend as new client folders appear; enrich.py status lists unmapped folders. The ambiguous 'IT-konsultointi 2018-2022 (DPS)' framework folder is intentionally left unmapped.",
+  "Oikeusrekisterikeskus": "Julkishallinto",
+  "Valtiokonttori": "Julkishallinto",
+  "Verohallinto": "Julkishallinto",
+  "PRH": "Julkishallinto",
+  "Valtioneuvoston kanslia": "Julkishallinto",
+  "Tilastokeskus": "Julkishallinto",
+  "Järvenpää kaupunki": "Julkishallinto",
+  "Porvoon kaupunki": "Julkishallinto",
+  "Hansel": "Julkishallinto",
+  "Fintraffic": "Liikenne",
+  "VR": "Liikenne",
+  "HUS": "Terveydenhuolto",
+  "Istekki Oy": "Terveydenhuolto",
+  "Metropolia": "Koulutus",
+  "Haaga-Helia ammattikorkeakoulu Oy": "Koulutus",
+  "Veikkaus": "Rahapelit",
+  "Helsingin kaupungin asunnot Oy": "Asuminen ja kiinteistöt",
+  "Metsähallitus": "Metsä ja luonnonvarat"
+}
