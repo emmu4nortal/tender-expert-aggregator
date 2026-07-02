@@ -83,6 +83,30 @@ def _group_by_path(records: list[dict]) -> dict:
     return groups
 
 
+def _reconcile_batch(batch_groups: dict, processed: dict, live_keys: set,
+                     prune: bool = True) -> tuple[list[dict], list[str]]:
+    """Reconcile the batch (grouped by path) against a sync run. Returns (merged_records,
+    pruned_keys).
+
+    - Each successfully-processed file's records replace that file's batch entry (a file that
+      now yields 0 records gets an empty entry, dropping its old rows).
+    - When `prune` is set, batch entries whose path is no longer a live candidate (files deleted
+      from disk, renamed, or superseded by a newer duplicate) are removed. This is the deletion
+      case that previously only a full `--all` reconcile handled (R2 gap). Processed files are
+      applied first and are always live candidates, so they are never pruned.
+
+    Pure and side-effect-free apart from mutating the passed-in `batch_groups`, so the reconcile
+    can be unit-tested without touching disk or the sync root.
+    """
+    for key, recs in processed.items():
+        batch_groups[key] = recs
+    pruned = [k for k in list(batch_groups) if k and k not in live_keys] if prune else []
+    for key in pruned:
+        del batch_groups[key]
+    merged = [r for recs in batch_groups.values() for r in recs]
+    return merged, pruned
+
+
 def _rebuild_master(records: list[dict]) -> None:
     """Master = dedup(records). The batch is authoritative; the master is a generated artifact,
     so it is rebuilt in full from the current record set rather than patched in place."""
@@ -106,6 +130,8 @@ def cmd_sync() -> None:
     candidates, dropped = deduplicate(enumerate_candidates())
     print(f"Candidates: {len(candidates)}  ({len(dropped)} dropped by file-level dedupe)")
 
+    live_keys = {file_key(p) for p in candidates}
+
     new_files, changed_files, unchanged_files = [], [], []
     for path in candidates:
         key = file_key(path)
@@ -125,51 +151,70 @@ def cmd_sync() -> None:
     print(f"  Changed:   {len(changed_files)}")
     print(f"  Unchanged: {len(unchanged_files)}")
 
+    # Files whose records are in the batch but which are no longer live candidates (deleted from
+    # disk, renamed, or superseded by a newer duplicate) must have their rows pruned.
+    batch_groups = _group_by_path(_load_batch())
+    deletions = [k for k in batch_groups if k and k not in live_keys]
+
+    # Guard: an empty enumeration almost always means the sync root is unavailable (OneDrive not
+    # mounted) rather than every file having been deleted. Never prune in that case — otherwise a
+    # transient mount failure would wipe the whole batch and master.
+    prune = bool(candidates)
+    if deletions and not prune:
+        print(f"\nWARNING: 0 candidates enumerated but the batch holds {len(deletions)} file(s); "
+              "skipping deletion-prune (sync root may be unavailable).")
+
+    print(f"  Deleted:   {len(deletions) if prune else 0}")
+
     to_process = new_files + changed_files
-    if not to_process:
+    if not to_process and not (deletions and prune):
         print("\nNothing to sync — all files unchanged since last run.")
         state["last_run"] = datetime.now().isoformat()
         save_state(state)
         return
 
-    print(f"\nExtracting {len(to_process)} file(s)...")
     failed: list[Path] = []
     processed: dict[str, list[dict]] = {}   # file_key -> fresh records (may be empty)
-    for i, path in enumerate(to_process, 1):
-        label = file_key(path)
-        print(f"  [{i}/{len(to_process)}] {label} ...", end="", flush=True)
-        try:
-            recs = extract_file(path)
-        except Exception as e:
-            print(f" ERROR: {e}")
-            failed.append(path)
-            continue
-        print(f" {len(recs)} records")
-        processed[label] = recs
+    if to_process:
+        print(f"\nExtracting {len(to_process)} file(s)...")
+        for i, path in enumerate(to_process, 1):
+            label = file_key(path)
+            print(f"  [{i}/{len(to_process)}] {label} ...", end="", flush=True)
+            try:
+                recs = extract_file(path)
+            except Exception as e:
+                print(f" ERROR: {e}")
+                failed.append(path)
+                continue
+            print(f" {len(recs)} records")
+            processed[label] = recs
 
-    total_new = sum(len(r) for r in processed.values())
-    print(f"\nExtracted {total_new} record(s) from {len(processed)} file(s).")
-    if failed:
-        print(f"WARNING: {len(failed)} file(s) failed and will not be marked as synced:")
-        for p in failed:
-            print(f"  {file_key(p)}")
+        total_new = sum(len(r) for r in processed.values())
+        print(f"\nExtracted {total_new} record(s) from {len(processed)} file(s).")
+        if failed:
+            print(f"WARNING: {len(failed)} file(s) failed and will not be marked as synced:")
+            for p in failed:
+                print(f"  {file_key(p)}")
 
-    # Update the batch (source of truth): replace each successfully-processed file's records.
-    # A file that now yields 0 records gets an empty entry, so its old rows are dropped (fixes
-    # orphaned/stale rows). Failed files are left untouched so they retry next run. Then rebuild
-    # the master from the full batch, so dedupe always runs over the current record set.
-    batch_groups = _group_by_path(_load_batch())
-    for key, recs in processed.items():
-        batch_groups[key] = recs
-    merged = [r for recs in batch_groups.values() for r in recs]
+    # Reconcile the batch (source of truth): replace each successfully-processed file's records
+    # (0 records drops that file's old rows; failed files are left untouched to retry) and prune
+    # deleted files, then rebuild the master from the full batch so dedupe runs over the current
+    # record set.
+    merged, pruned = _reconcile_batch(batch_groups, processed, live_keys, prune=prune)
+    if pruned:
+        print(f"\nPruned {len(pruned)} deleted/removed file(s) from the batch:")
+        for k in pruned:
+            print(f"  {k}")
     _write_batch(merged)
     _rebuild_master(merged)
 
-    # Update state only for files that were successfully processed
+    # Update state: add successfully-processed files, drop pruned (deleted) files.
     successful = [p for p in to_process if p not in failed]
     for path in successful:
         key = file_key(path)
         tracked[key] = {"mtime": path.stat().st_mtime, "size": path.stat().st_size}
+    for key in pruned:
+        tracked.pop(key, None)
 
     state["files"] = tracked
     state["last_run"] = datetime.now().isoformat()

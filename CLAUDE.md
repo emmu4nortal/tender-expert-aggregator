@@ -87,8 +87,12 @@ table for several listed experts) are not handled by this and remain a known gap
 `extraction_batch.json` is the full, pre-dedup record set and the single source of truth. The
 master Excel is a generated artifact: **`master = dedup(extraction_batch.json)`**, rebuilt in
 full each time rather than patched in place. `sync` updates the batch per source file (replacing
-a re-extracted file's records — 0 records removes its rows, fixing orphans) and `write` merges a
-json into the batch by source path; both then rebuild the master. Nothing reads the master back.
+a re-extracted file's records — 0 records removes its rows, fixing orphans) and also prunes
+batch groups for files no longer present as candidates (deleted/renamed/superseded), so the
+master tracks disk without a full `--all`; pruning is skipped when enumeration yields 0
+candidates (sync root unavailable) to avoid wiping the batch. `write` merges a json into the
+batch by source path (no deletion prune — it has no enumeration to compare against); both then
+rebuild the master. Nothing reads the master back.
 (Future Milestone 6 enrichment must therefore live in the batch or a content-keyed side table
 joined at rebuild time — never only on the regenerated master.)
 

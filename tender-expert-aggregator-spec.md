@@ -317,21 +317,28 @@ shared across files is never lost when one of them changes.
 
 1. **Enumerate** candidates via `enumerate_candidates()` + file-level dedupe (`dedupe.py`).
 2. **Classify** each candidate: new (not in state), changed (mtime differs), unchanged.
+   Also detect **deletions**: batch file-groups whose source path is no longer a live candidate.
 3. **Extract** only new and changed files using `extract_file()` from `extract_requirements.py`.
-4. **Update the batch and rebuild the master:**
+4. **Reconcile the batch and rebuild the master** (`_reconcile_batch`):
    - Load `extraction_batch.json`, group records by source path.
    - Replace each successfully-processed file's records (0 records ⇒ empty ⇒ rows dropped).
      Failed files (open errors) are left untouched so they retry next run.
+   - **Prune** batch groups for files that are no longer candidates (deleted from disk, renamed,
+     or superseded by a newer duplicate). Guarded: if enumeration returns **0** candidates (sync
+     root unavailable, e.g. OneDrive unmounted), pruning is skipped so a transient mount failure
+     never wipes the batch.
    - Write `extraction_batch.json`, then rebuild `master = dedup(batch)`.
-5. **Update** `state.json`: record new mtime/size for successfully processed files; update `last_run`.
-   Failed files are reported but not marked as synced — they will be retried next run.
+5. **Update** `state.json`: record new mtime/size for successfully processed files, drop pruned
+   (deleted) files; update `last_run`. Failed files are reported but not marked as synced — they
+   will be retried next run.
 
-`python run.py write <json>` follows the same model: it merges the json's records into the batch
-by source path (a partial json patches only its files; a full `--all` batch replaces everything)
-and rebuilds the master. **Not handled:** records for files deleted from disk are not pruned
-(a known deletion gap; a full `--all` reconciles it).
+`python run.py write <json>` merges the json's records into the batch by source path (a partial
+json patches only its files; a full `--all` batch replaces everything) and rebuilds the master.
+`write` does **not** prune deletions (it has no enumeration to compare against) — `sync` and a
+full `--all` are the paths that reconcile deleted files.
 
-If no files have changed since last run: print a summary and exit without writing.
+If no files have changed and nothing needs pruning since last run: print a summary and exit
+without writing.
 
 ### `python run.py status`
 
