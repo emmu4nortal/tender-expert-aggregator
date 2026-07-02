@@ -113,8 +113,8 @@ The old model was wrong because:
 ```
 developer_name        — expert's full name
 role                  — role declared in the tender file
-requirement_text      — verbatim column C text (never transformed)
-evidence              — source experience text; verbatim cell for Formats 1/3, verbatim column values under labels for Formats 2/4 (see §7)
+requirement_text      — verbatim column C text (end-whitespace trimmed; never transformed)
+evidence              — source experience text; verbatim cell for Formats 1/3, verbatim column values under labels for Formats 2/4 (see §7). End-whitespace trimmed; internal text untouched.
 technologies          — comma-separated tech tags (enrichment step; may be empty)
 domain_or_industry    — industry tags (enrichment step; may be empty)
 source_file_name      — basename of source file
@@ -142,7 +142,10 @@ extracted_date        — date extraction was run (YYYY-MM-DD)
 
 `requirement_text` is always the verbatim column-C value. `evidence` is the verbatim source
 cell for Formats 1/3; for the column/table Formats 2/4 it is the source column values stored
-verbatim under labels (never zipped or paraphrased) — see §7.
+verbatim under labels (never zipped or paraphrased) — see §7. "Verbatim" here means
+leading/trailing whitespace is trimmed (via `_s`); internal text is preserved exactly. Trimming
+is deliberate: evidence is part of the content-only dedup key, so stray end-whitespace must not
+split otherwise-identical rows.
 
 Row height: 60 pt (evidence cells are multi-line). Freeze pane at B2. Auto-filter on row 1.
 
@@ -152,6 +155,12 @@ Row height: 60 pt (evidence cells are multi-line). Freeze pane at B2. Auto-filte
 
 Source files use one of four formats. `extract_requirements.py` detects the format
 per sheet and handles each accordingly.
+
+A sheet that resolves a real expert name but has **no requirement rows** and is not a Format-4
+table is classified as unknown (format `0`): it is skipped with a stderr warning
+(`WARNING: unclassified sheet skipped ...`) rather than run through the Format-3 fallback for 0
+rows. This is output-neutral (such sheets never produced rows) but surfaces expert layouts the
+extractor does not yet handle (e.g. `CV-lomake`, `Osaaminen ja kokemus`, `Asiakasprojektit`).
 
 ### Format 1 — Narrative
 

@@ -1,7 +1,9 @@
 """extract_requirements.py — v2 deterministic requirement-row extractor.
 
 Reads source Excel files directly. Emits one JSON record per requirement row
-per expert. requirement_text and evidence are verbatim source cell values.
+per expert. requirement_text and evidence are verbatim source cell values with
+leading/trailing whitespace trimmed (via _s) — internal text is untouched;
+trimming keeps the content-only dedup key from splitting on stray end-whitespace.
 
 Usage:
     python extract_requirements.py <file1> [<file2> ...]
@@ -25,12 +27,18 @@ OUTPUT_FILE = Path(__file__).parent / "extraction_batch.json"
 
 # ── sheet filtering ───────────────────────────────────────────────────────────
 
-_HELPER_EXACT = {"pisteet yhteensä", "data", "pisteet", "ohjeet"}
-_HELPER_PREFIXES = ("data-", "data -")
+# Helper (non-expert) sheets. "ohje"/"ohjeet"/"pisteet" instruction & score sheets are matched
+# followed by whitespace or end-of-name, so numbered/suffixed variants are caught ("Ohjeet 2",
+# "Pisteet yhteensä") WITHOUT swallowing real role sheets that merely start with those letters
+# (e.g. "Ohjelmoija" — a programmer). "data" is matched exact or with an explicit separator so
+# content sheets like "Datakonversio" are not skipped.
+_HELPER_RE = re.compile(r'(ohje(et)?|pisteet)(\s|$)', re.IGNORECASE)
 
 def _is_helper_sheet(name: str) -> bool:
     n = name.lower().strip()
-    return n in _HELPER_EXACT or any(n.startswith(p) for p in _HELPER_PREFIXES)
+    if n == "data" or n.startswith(("data-", "data ", "data_")):
+        return True
+    return bool(_HELPER_RE.match(n))
 
 
 # ── requirement row detection ─────────────────────────────────────────────────
@@ -61,6 +69,7 @@ def _is_scoring(d) -> bool:
 
 def _detect_format(ws) -> int:
     """
+    0 = unknown — no requirement rows and not a Format-4 table (nothing to extract; skipped)
     1 = narrative (G starts with date like "08/2015")
     2 = parallel columns (G and H are both numbered lists in separate columns)
     3 = consolidated prose (fallback — G contains plain prose, not a date or numbered list)
@@ -71,6 +80,7 @@ def _detect_format(ws) -> int:
     # Single pass over the sheet. Re-iterating an openpyxl read-only worksheet can
     # mis-read cells, so Format-4 detection is folded into this same loop rather than
     # done in a separate pass.
+    saw_req_row = False
     for row in ws.iter_rows(min_row=2, values_only=True):
         b = row[1] if len(row) > 1 else None
         c = row[2] if len(row) > 2 else None
@@ -85,7 +95,10 @@ def _detect_format(ws) -> int:
         if str(b or "").strip() == "Nro" and sum(1 for i in range(6, 14) if _s(row, i)) >= _FMT4_MIN_HEADED:
             return 4
 
-        if not _is_req_row(b) or not c or not g:
+        if not _is_req_row(b):
+            continue
+        saw_req_row = True
+        if not c or not g:
             continue
         if _is_scoring(d):
             continue  # skip scoring rows for format detection
@@ -97,7 +110,11 @@ def _detect_format(ws) -> int:
         # keep scanning — a plain-text row (e.g. "Koulutus") must not
         # short-circuit detection before the parallel-column rows are seen
 
-    return 3
+    # A sheet with requirement rows but no positive 1/2/4 signal is consolidated prose
+    # (Format 3). A sheet with no requirement rows at all is not an extractable expert sheet
+    # (cover page, summary, unrecognised layout) — mark it unknown so the caller skips it
+    # explicitly rather than running the Format-3 path over it for 0 rows.
+    return 3 if saw_req_row else 0
 
 
 # ── name / role finder ────────────────────────────────────────────────────────
@@ -326,6 +343,13 @@ def _extract_sheet(ws, rel_path: str, file_name: str,
     if _is_fake_name(developer_name):
         return []
     fmt = _detect_format(ws)
+    if fmt == 0:
+        # A real expert name resolved but the sheet has no requirement rows to extract from.
+        # Skip explicitly and warn (file+sheet only, no name) so a genuine miss is visible
+        # instead of silently producing 0 rows via the Format-3 fallback.
+        print(f"WARNING: unclassified sheet skipped (no requirement rows): "
+              f"{rel_path} :: {ws.title}", file=sys.stderr)
+        return []
     if fmt == 4:
         return _extract_sheet_fmt4(ws, developer_name, role,
                                    rel_path, file_name, mtime, today)

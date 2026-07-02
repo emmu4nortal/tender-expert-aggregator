@@ -70,6 +70,11 @@ Three formats — all use the same extraction principle (one req row → one rec
 
 Format detection is per-sheet in `_detect_format()`. Scans all mandatory requirement
 rows before deciding — does not short-circuit on plain-text rows (e.g. "Koulutus").
+A sheet with a resolved expert name but no requirement rows (and not a Format-4 table) is
+classified unknown (format 0) and skipped with a stderr warning, instead of silently yielding
+0 rows via the Format-3 fallback — surfaces unhandled expert layouts (CV-lomake, etc.).
+Helper (non-expert) sheets are skipped by `_is_helper_sheet()`: `data` (exact/prefixed) and
+`ohje`/`ohjeet`/`pisteet` when followed by space or end-of-name (so `Ohjelmoija` is not skipped).
 
 Name/role is resolved per-sheet by `_find_name_role()`, trying three conventions: an explicit
 `Asiantuntijan rooli:` marker (name in D); an `Asiantuntijan nimi:` label (name in the adjacent
