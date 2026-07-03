@@ -322,9 +322,15 @@ Full re-extraction of all files on every run is not acceptable.
       "size": 50218
     }
   },
-  "last_run": "2026-06-26T10:00:00"
+  "last_run": "2026-06-26T10:00:00",
+  "last_rebuild": "2026-06-26T10:00:00"
 }
 ```
+
+`last_run` is the last **disk scan** (set by `sync` only). `last_rebuild` is the last time the
+**master was rebuilt** — set by both `sync` and `write`, so a `write` (a full `--all` or an
+enrichment refresh) that regenerates the master without scanning disk still shows a current
+date in `status` instead of a stale "last run".
 
 ### Source of truth: `extraction_batch.json`
 
@@ -364,8 +370,8 @@ without writing.
 
 ### `python run.py status`
 
-Print: tracked file count, last run timestamp, master row count, count of new/changed
-files pending extraction.
+Print: tracked file count, last sync-scan timestamp (`last_run`), last master-rebuild
+timestamp (`last_rebuild`), and the master row count.
 
 ---
 

@@ -128,5 +128,6 @@ at rebuild time — never only on the regenerated master (see the M6 note above)
   Reuses `load_records`/`dedupe`/`content_hash` from `write_master`.
 - `enrich_tech.json` / `enrich_industry.json` — curated dictionaries for the `auto` pass.
 - `enrichment.json` — content-keyed enrichment side table (`content_hash` → tags); joined at rebuild.
-- `state.json` — mtime+size per tracked file; updated by `run.py sync`
+- `state.json` — mtime+size per tracked file plus `last_run` (last disk scan, `sync` only) and
+  `last_rebuild` (last master rebuild, set by both `sync` and `write`)
 - `extraction_batch.json` — last full extraction output (1133 records → 872 unique master rows)

@@ -123,6 +123,18 @@ def _load_enrichment() -> dict:
         return {}
 
 
+def _stamp_rebuild() -> None:
+    """Record when the master was last rebuilt (distinct from last_run, the last disk scan).
+    `write` and `sync` both rebuild the master, but only `sync` scans disk — so a `write`
+    (e.g. after enrichment or a full --all) refreshes the master without a sync, and status
+    would otherwise show a stale date. Used by cmd_write, which does no other state write;
+    cmd_sync sets last_rebuild inline in its own final save instead (loaded state would
+    otherwise clobber this)."""
+    state = load_state()
+    state["last_rebuild"] = datetime.now().isoformat()
+    save_state(state)
+
+
 def _rebuild_master(records: list[dict]) -> None:
     """Master = dedup(records), with the enrichment side table joined in. The batch is
     authoritative; the master is a generated artifact, rebuilt in full rather than patched.
@@ -237,7 +249,9 @@ def cmd_sync() -> None:
         tracked.pop(key, None)
 
     state["files"] = tracked
-    state["last_run"] = datetime.now().isoformat()
+    now = datetime.now().isoformat()
+    state["last_run"] = now          # disk scan
+    state["last_rebuild"] = now      # master was rebuilt just above
     save_state(state)
     print(f"State updated. {len(tracked)} file(s) now tracked.")
 
@@ -262,6 +276,7 @@ def cmd_write(extraction_json: str) -> None:
     merged = [r for recs in batch_groups.values() for r in recs]
     _write_batch(merged)
     _rebuild_master(merged)
+    _stamp_rebuild()
 
 
 # ── status command ────────────────────────────────────────────────────────────
@@ -270,9 +285,11 @@ def cmd_status() -> None:
     state = load_state()
     tracked = state.get("files", {})
     last = state.get("last_run", "never")
+    rebuilt = state.get("last_rebuild", "never")
     print(f"State file:      {STATE_FILE}")
     print(f"Tracked files:   {len(tracked)}")
-    print(f"Last run:        {last}")
+    print(f"Last sync scan:  {last}")
+    print(f"Master rebuilt:  {rebuilt}")
     if MASTER_PATH.exists():
         wb = openpyxl.load_workbook(MASTER_PATH)
         ws = wb.active
