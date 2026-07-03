@@ -58,9 +58,12 @@ def save_enrichment(table: dict) -> None:
 
 def _compile_tech(tech_dict: dict) -> list:
     """[(canonical_tag, compiled_regex)]. Each pattern is matched token-boundary aware: it must
-    not be flanked by another token char (letters, digits, or + # . /), so 'java' does not match
-    inside 'javascript' and 'sql' not inside 'mysql', while 'c#', '.net', 'ci/cd' still match."""
-    edge = r'[A-Za-z0-9+#./]'
+    not be flanked by another token char (letters, digits, or + #), so 'java' does not match
+    inside 'javascript' and 'sql' not inside 'mysql'. '.' and '/' are treated as delimiters, not
+    token chars, so trailing punctuation matches (e.g. 'MariaDB.' at a sentence end); patterns
+    that contain '.'/'/' internally ('.net', 'node.js', 'ci/cd', 'rest/json') still match because
+    those characters are literal parts of the pattern, not boundary tests."""
+    edge = r'[A-Za-z0-9+#]'
     compiled = []
     for tag, patterns in tech_dict.items():
         alts = "|".join(re.escape(p) for p in patterns)
