@@ -209,15 +209,44 @@ def _is_template(val: str) -> bool:
 
 # ── fake / unfilled developer name detection ──────────────────────────────────
 
-_FAKE_NAME = (
-    "asiantuntijan nimi",   # header label left unfilled ("Asiantuntijan nimi",
-                            # "Asiantuntijan nimi (nimettävä tarjouksessa)", etc.)
+# Placeholder / non-person values that unfilled templates leave in the name cell. A real expert
+# name never starts with these tokens, ends with a company suffix, or contains a digit / one of
+# the structural characters below. Rejecting them keeps template sheets from being treated as
+# real experts — so the M4 "unclassified sheet" warning fires only for genuinely new *filled*
+# layouts, not for the ~100 blank templates in the corpus (see [[m5-multi-expert-per-sheet]]).
+_FAKE_NAME_PREFIX = (
+    "asiantuntijan nimi",   # header label left unfilled ("Asiantuntijan nimi (nimettävä...)")
     "ohje tarjoajalle",     # template instruction left in the name cell
+    "etunimi", "sukunimi",  # "Etunimi Sukunimi" placeholder (AIPA, KEHA templates)
+    "valitse alasvetovalikosta",  # unfilled dropdown (ORK Power Platform)
+    "täytä",                # "(Täytä: etunimi sukunimi)" CV-lomake placeholder
+    "ks. vaatimus", "ks vaatimus",  # "see requirement" (Metropolia team cards)
+    "n.n", "n. n",          # N.N placeholder
+    "nimi:",                # bare "Nimi:" label
+    "vastaus",              # column header "Vastaus vähimmäisvaatimukseen" mis-read as a name
+    "tarjoaja",             # instruction "Tarjoaja valitsee alasvetovalikosta ..." / "Tarjoajan nimi:"
 )
+# Substrings that only appear in template example/instruction values, never a real name.
+_FAKE_NAME_SUBSTR = ("esimerkki",)  # "Esko Esimerkki" = "Esko Example"
+# A trailing "nimi" is a leftover label ("Projektipäällikön nimi"), never a real surname. NB: a
+# company suffix (" oy"/" ab") is deliberately NOT rejected — the bidder company legitimately
+# appears in the name cell on some filled sheets (e.g. Fintraffic), carrying real experience rows.
+_FAKE_NAME_SUFFIX = ("nimi",)
+# Characters that never occur in a person name but do in template placeholders ("Hinta (€/htp)").
+# '/' is intentionally excluded: real cells list several people as "Sanna/Reko/Antti".
+_FAKE_NAME_CHARS = set("0123456789(€@")
 
 def _is_fake_name(val: str) -> bool:
-    v = val.lower().strip().lstrip("(")
-    return not v or any(v.startswith(t) for t in _FAKE_NAME)
+    v = (val or "").lower().strip().lstrip("(").strip()
+    if not v:
+        return True
+    if any(v.startswith(t) for t in _FAKE_NAME_PREFIX):
+        return True
+    if any(v.endswith(t) for t in _FAKE_NAME_SUFFIX):
+        return True
+    if any(s in v for s in _FAKE_NAME_SUBSTR):
+        return True
+    return any(c in _FAKE_NAME_CHARS for c in v)
 
 
 # ── cell value helper ─────────────────────────────────────────────────────────

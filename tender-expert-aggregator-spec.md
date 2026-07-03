@@ -163,6 +163,16 @@ table is classified as unknown (format `0`): it is skipped with a stderr warning
 rows. This is output-neutral (such sheets never produced rows) but surfaces expert layouts the
 extractor does not yet handle (e.g. `CV-lomake`, `Osaaminen ja kokemus`, `Asiakasprojektit`).
 
+`_is_fake_name()` rejects template placeholder names up front (`Etunimi Sukunimi`, `VALITSE
+ALASVETOVALIKOSTA`, `Ks. Vaatimus`, `(Täytä…)`, `N.N`, `Esko Esimerkki`, header/instruction
+strings like `Vastaus…`/`Tarjoaja…`, values containing digits/`(`/`€` or ending in `nimi`) so
+blank templates are treated as "no expert" rather than "unclassified". It deliberately does NOT
+reject company names (`… Oy`) or multi-person cells (`Sanna/Reko/Antti`), which carry real
+experience rows. This cut the warning from ~106 blank-template false alarms to ~15 genuine ones
+(real people in unhandled layouts), making the warning an actionable signal that a new *filled*
+layout has appeared. The unhandled layout families are catalogued as dormant backlog tasks —
+build an extractor for one only when a filled instance of it appears.
+
 ### Format 1 — Narrative
 
 - `[B]` = requirement number

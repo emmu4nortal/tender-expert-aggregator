@@ -79,7 +79,12 @@ Format detection is per-sheet in `_detect_format()`. Scans all mandatory require
 rows before deciding — does not short-circuit on plain-text rows (e.g. "Koulutus").
 A sheet with a resolved expert name but no requirement rows (and not a Format-4 table) is
 classified unknown (format 0) and skipped with a stderr warning, instead of silently yielding
-0 rows via the Format-3 fallback — surfaces unhandled expert layouts (CV-lomake, etc.).
+0 rows via the Format-3 fallback — surfaces unhandled expert layouts. `_is_fake_name()` rejects
+template placeholder names (`Etunimi Sukunimi`, `VALITSE ALASVETOVALIKOSTA`, `Ks. Vaatimus`,
+`(Täytä…)`, `N.N`, `Esko Esimerkki`, `Vastaus…`/`Tarjoaja…` header/instruction strings, values
+with digits/`(`/`€`, or ending in `nimi`) — but NOT company names (`… Oy`) or multi-person cells
+(`Sanna/Reko/…`), which carry real rows. So the warning fires only for genuinely *filled* new
+layouts (~15 now, down from 106): real people in layouts we don't parse yet.
 Helper (non-expert) sheets are skipped by `_is_helper_sheet()`: `data` (exact/prefixed) and
 `ohje`/`ohjeet`/`pisteet` when followed by space or end-of-name (so `Ohjelmoija` is not skipped).
 
