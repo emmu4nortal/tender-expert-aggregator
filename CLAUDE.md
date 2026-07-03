@@ -40,8 +40,9 @@ Enrichment lives in a content-keyed side table `enrichment.json` (`content_hash(
 re-extraction. Managed by `enrich.py` (`status` / `auto` / `todo` / `apply`); `auto` is pure
 deterministic dictionary matching (`enrich_tech.json`, `enrich_industry.json`) — NO LLM.
 Interactive gap-filling: `enrich.py todo` → Claude Code tags a batch → `enrich.py apply` →
-`python run.py write extraction_batch.json`. First `auto` pass: domain 96%, technologies 27%
-of 872 rows. Remaining: interactive gap-filling (ongoing).
+`python run.py write extraction_batch.json`. Coverage now: domain 96%, technologies 55% of
+872 rows (deterministic `auto` seeds ~27% tech; interactive gap-filling has raised it to 55%,
+ongoing). Live figures: `python3 enrich.py status`.
 
 ## Data model
 The unit of record is a **requirement row**: one master row = one requirement row
@@ -122,7 +123,7 @@ at rebuild time — never only on the regenerated master (see the M6 note above)
   collapses to one row.
 - `dedupe.py` — file-level deduplication (keeps newest mtime per normalised name)
 - `enumerate_candidates.py` — walks sync root, filters by keyword and excluded folders
-- `config.py` — SYNC_ROOT, MASTER_PATH, STATE_FILE, EXCLUDED_TOP_LEVEL constants
+- `config.py` — SYNC_ROOT, MASTER_PATH, STATE_FILE, EXCLUDED_TOP_LEVEL, CANDIDATE_KEYWORDS constants
 - `enrich.py` — M6 enrichment CLI (`status`/`auto`/`todo`/`apply`); pure string matching, no LLM.
   Reuses `load_records`/`dedupe`/`content_hash` from `write_master`.
 - `enrich_tech.json` / `enrich_industry.json` — curated dictionaries for the `auto` pass.

@@ -91,9 +91,11 @@ An item qualifies only if ALL hold:
 ## 5. File-level dedupe (unchanged)
 
 Group candidate files in the same parent directory with the same normalised name; keep
-only the most recently modified. Normalise by stripping version/noise tokens:
-`VANHA`, `LUONNOS`, `draft`, `KORJ`, `KORJATTU`, copy markers `(1)`, trailing dates,
-version suffixes `_ver1`, `V2`. Do not collapse files whose subject words differ.
+only the most recently modified. Normalise by stripping version/noise tokens (see
+`dedupe.py` `_NOISE_TOKENS`): `korjattu`, `korj`, `vanha`, `luonnos`, `draft`, `työstö`,
+`päivitetty`, `mvp`, copy/parenthesised blocks like `(1)`, trailing dates, version suffixes
+`_ver1`, `V2`, and a lone confidential `_s` suffix. Do not collapse files whose subject words
+differ.
 
 ---
 
@@ -593,10 +595,12 @@ This milestone is **optional** for the daily sync (the join is applied automatic
 rebuild, but is a no-op when `enrichment.json` is absent/empty). The master is fully usable
 without it — evidence cells hold all information; technologies/domain are convenience filters.
 
-**First-pass result (deterministic `auto` over 872 unique rows):** domain_or_industry 96%
-(client-folder mapping; the only gap is the ambiguous `IT-konsultointi 2018-2022 (DPS)` framework
-folder), technologies 27% (a precision-first seed — many rows are non-technical roles/education;
-glued Finnish inflections are skipped). Remaining gaps are filled interactively via `todo`/`apply`.
+**Coverage (872 unique rows).** Current: domain_or_industry 96%, technologies 55% (run
+`python3 enrich.py status` for live figures). The deterministic `auto` pass is a precision-first
+seed — domain 96% from client-folder mapping (the only gap is the ambiguous `IT-konsultointi
+2018-2022 (DPS)` framework folder), technologies ~27% (many rows are non-technical
+roles/education; glued Finnish inflections are skipped). The remaining tech gap is filled
+interactively via `todo`/`apply`, which has since raised tech coverage to 55%.
 
 **Exit criteria**: `enrichment.json` exists and the bulk of rows carry non-empty
 `domain_or_industry`; `technologies` populated where the evidence/requirement supports it
