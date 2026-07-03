@@ -116,6 +116,37 @@ rebuild the master. Nothing reads the master back.
 Milestone 6 enrichment therefore lives in a content-keyed side table (`enrichment.json`) joined
 at rebuild time — never only on the regenerated master (see the M6 note above).
 
+## Open backlog / maintenance notes
+
+**Main ongoing task — enrichment gap-filling.** Technologies coverage is ~55%; raise it via the
+`enrich.py todo` → tag → `enrich.py apply` → `run.py write extraction_batch.json` loop described
+above. Domain is ~96% (the one gap is the ambiguous `IT-konsultointi 2018-2022 (DPS)` folder).
+
+**Deliberately-excluded technology terms** — do NOT add these back to `enrich_tech.json` without a
+specific reason (they were excluded on purpose as too ambiguous): UX, CRM, API, SOA, ESB,
+CSV/EDI/HL7/Edifact, and ambiguous AWS/Azure service names (Lambda, RDS, API Management, etc.).
+
+**Unhandled source layouts (dormant — build an extractor ONLY when a *filled* example appears).**
+The extractor prints `WARNING: unclassified sheet skipped ...` for expert sheets in layouts it
+can't parse. Most flagged sheets are empty templates. Known families, none currently worth
+building because no filled instance exists:
+- B1 — AIPA "Roolikortti" role-card sheets
+- **B2 — ORK Power Platform "Liite 6" column-shifted Format 1/3. HIGHEST-PRIORITY LATENT BUG:** its
+  columns are shifted (Nro in col A, not B). A *filled* one would be silently dropped with no
+  error. If ORK/Power-Platform experts ever go missing, this is the cause.
+- B3 — KEHA "Asiakasprojektit" client-projects table
+- B4 — CV-lomake vertical free-form CVs (Business Finland, Hansel PAMU, OKM)
+- B5 — Metropolia team-role cards
+- ORK roster-style Format-4 (several experts sharing one table) — deferred, produces 0 rows today.
+
+Out of scope (not per-expert experience — don't build): expert-count matrices, company-reference
+sheets, price rosters.
+
+**To regenerate the list of unhandled sheets:**
+```bash
+python3 extract_requirements.py --all 2>&1 | grep "unclassified sheet"
+```
+
 ## Scripts
 - `run.py` — main entry point. Commands: `sync`, `write <json>`, `status`
 - `extract_requirements.py` — deterministic requirement-row extractor; `--all` processes all candidates. A workbook that fails to open propagates the error (not silently treated as 0 records), so `run.py sync` reports it failed and retries it next run instead of marking it synced; `--all` logs and skips it.
