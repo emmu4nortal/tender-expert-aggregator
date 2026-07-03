@@ -12,9 +12,11 @@
 
 ## Sync root (config constant in code)
 ```
-/Users/panu/Library/CloudStorage/OneDrive-SharedLibraries-Nortal/Public Sales - Documents
+~/Library/CloudStorage/OneDrive-SharedLibraries-Nortal/Public Sales - Documents
 ```
-Note the spaces in the path. Full sync is used; do not change to selective sync.
+Derived per-machine from the current user's home folder (see `config.py`); override with the
+`TENDER_SYNC_ROOT` env var if your CloudStorage folder name differs. Note the spaces in the
+path. Full sync is used; do not change to selective sync.
 
 ## Excluded folders (enforced in code only — all folders ARE synced)
 - `General`

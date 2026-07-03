@@ -1,9 +1,14 @@
+import os
 from pathlib import Path
 
-SYNC_ROOT = Path(
-    "/Users/panu/Library/CloudStorage/OneDrive-SharedLibraries-Nortal"
-    "/Public Sales - Documents"
+# Per-machine, only the home prefix differs on a Nortal Mac. Default derives from the current
+# user's home so no edit is needed; override with the TENDER_SYNC_ROOT env var if your
+# CloudStorage folder name differs (check ~/Library/CloudStorage/).
+_DEFAULT_SYNC_ROOT = (
+    Path.home() / "Library" / "CloudStorage"
+    / "OneDrive-SharedLibraries-Nortal" / "Public Sales - Documents"
 )
+SYNC_ROOT = Path(os.environ.get("TENDER_SYNC_ROOT", _DEFAULT_SYNC_ROOT))
 
 EXCLUDED_TOP_LEVEL = {
     "General",

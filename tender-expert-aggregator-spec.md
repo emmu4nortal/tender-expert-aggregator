@@ -14,17 +14,17 @@
 3. Copy each step to terminal and run
 
 ### Daily sync — pick up new or changed files and update the master Excel
-1. cd "/Users/panu/Documents/Claude Code Projects/Tender Expert Experience Aggregator"
+1. cd <your-local-repo>
 2. python3 run.py sync
 
 The master Excel at `General/Referenssit/Asiantuntijat/Asiantuntijat_Master.xlsx` is updated automatically and syncs back to OneDrive.
 
 ### Check status — show tracked file count, last run time, and master row count
-1. cd "/Users/panu/Documents/Claude Code Projects/Tender Expert Experience Aggregator"
+1. cd <your-local-repo>
 2. python3 run.py status
 
 ### Full re-extraction — rebuild master from scratch (use after a code change)
-1. cd "/Users/panu/Documents/Claude Code Projects/Tender Expert Experience Aggregator"
+1. cd <your-local-repo>
 2. python3 extract_requirements.py --all
 3. python3 run.py write extraction_batch.json
 
@@ -56,9 +56,10 @@ Personal productivity tool run by one user on macOS. Simple and maintainable ove
 
 ## 3. Source: locally synced SharePoint library (unchanged)
 
-Sync root (config constant):
+Sync root (config constant), derived from the current user's home folder (override via the
+`TENDER_SYNC_ROOT` env var if your CloudStorage folder name differs):
 ```
-/Users/panu/Library/CloudStorage/OneDrive-SharedLibraries-Nortal/Public Sales - Documents
+~/Library/CloudStorage/OneDrive-SharedLibraries-Nortal/Public Sales - Documents
 ```
 
 Full sync is used; all folders are synced. New top-level folders added to SharePoint later
